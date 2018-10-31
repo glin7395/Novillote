@@ -5,47 +5,47 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/estilos.css">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>Restaurante el novillo de oro</title>
-<style type="text/css">
-
+<title>Novillo de Oro</title>
+<style>
 </style>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/estilonovillo.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Restaurante el novillo de oro</title>
 </head>
 
 <body>
 <?php include ('banner.html')
 ?>
-<table width="900" border="0" align="center">
+<font color="white">
+<table width="80" height="140" border="0" align="center">
   <tr>
     <td height="642" align="center" ><form id="form1" name="form1" method="post" action="neg_registrar_productos.php">
-      <p>
-        <label for="id_producto"></label>
-        </p>
-      <p>PRODUCTOS</p>
+      <p>REGISTRO DE PRODUCTOS</p>
       <p></p>
-      <table width="351" height="259" border="0">
+      <center><table width="351" height="259" border="0">
         <tr>
-          <td width="92" bgcolor="#FFFFFF"><div align="center">producto</div></td>
-          <td width="140" bgcolor="#FFFFFF"><div align="center">
-            <input type="text" name="nombre_producto" id="textfield3" />
+          <td width="320"><div align="center">Producto</div></td>
+          <td ><div class="col-xs-3" align="center">
+            <input type="text" name="nombre_producto" id="textfield3"  class="form-control" placeholder="producto" />
           </div></td>
         </tr>
         <tr>
-          <td bgcolor="#FFFFFF"><div align="center">precio</div></td>
-          <td bgcolor="#FFFFFF"><div align="center">
-            <input type="number" name="precio_producto" id="textfield4" />
-          </div></td>
+          <td ><div align="center">Precio</div></td>
+          <td width="40" height="40">
+            <div class="col-xs-3" align="center">
+            <input type="number" name="precio_producto" id="textfield4" class="form-control" placeholder="precio" />
+            </div>
+        </td>
         </tr>
-      
+      </font>
         <tr>
-          <td bgcolor="#FFFFFF"><div align="center">categoria</div></td>
-          <td bgcolor="#FFFFFF"><div align="center">
-            <select name="categoria_idcategoria" id="categoria_idcategoria">
-              <option value="seleccione:" >seleccione</option>
+          <td ><div align="center">categoria</div></td>
+          <td ><div class="col-xs-3" align="center">
+            <select name="categoria_idcategoria" id="categoria_idcategoria" class="form-control" placeholder="categoria" />
+              <option value="seleccione:"  >seleccione</option>
               <?php
 				
 				include ('conexion.php');
@@ -66,22 +66,30 @@
           </div></td>
         </tr>
         <tr>
-          <center><td colspan="2" bgcolor="#FFFFFF"><label for="contrasena">
-            <input type="submit" name="button" id="button" value="Registrar" /></center>
+          <center><td colspan="2" ><label for="Registrar">
+            <input type="submit" name="button" id="button" class="btn btn-success"   value="Registrar" /></center>
             </label></td>
         </tr>
-    </table>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-    </form>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    </td>
-  </tr>
+        <style type="text/css">
+                      .btn{
+                        margin-top: 3px;
+                        margin-left: 960%;
+                      }
+                    </style>
+
+
+
+
+
+
 </table>
+</form>
+</td>
+</tr>
+</table>
+
 </body>
+</center>
 </html>
 <?php
 include('footer.html');

@@ -20,7 +20,7 @@
     ?></td>
   </tr>
   <tr>
-    <td height="642" align="center" bgcolor="transparent"><form class="form-hotizontal"  name="form-hotizontal" method="post" action="">
+    <td height="642" align="center" class="fondotabla" "><form class="form-hotizontal"  name="form-hotizontal" method="post" action="">
       <p>
         <label for="numerodocumento"></label>
         </p>

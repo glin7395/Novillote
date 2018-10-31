@@ -38,7 +38,7 @@ class usuario
 		 $cont='0';
 		 
 		 include ('conexion.php');
-		 $sql = "SELECT * FROM persona  ";
+		 $sql = "SELECT * FROM persona WHERE fk_id_rol_idrol='2' ";
 		 if( !$result = $db->query($sql))
 		 {
 			die ('No conecta ['.$db->error.']');

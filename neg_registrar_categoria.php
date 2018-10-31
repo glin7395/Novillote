@@ -5,29 +5,31 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/estilos.css">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Novillo de Oro</title>
+<style>
+</style>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/estilonovillo.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Restaurante el novillo de oro</title>
-
 </head>
-
+<font color="white">
 <body>
-<table width="900" border="0" align="center">
-  <tr>
-    <td width="790" height="131"><?php include ("banner.html")
-    ?></td>
-  </tr>
-  <tr>
-    <td height="642" align="center" bgcolor="#999999"><form id="form1" name="form1" method="post" action="">
-      <p>
-        <label for="documento"></label>
-        </p>
-      <p>&nbsp;</p>
-      <p>AQUI SE REGISTRAR PRODUCTOS</p>
-      <p><?php
+<center><table width="420" border="2" align="center">
+<tr><td width="790" height="131"><?php include ("banner.html")?></td></tr>
+     
+     <tr>
+<td height="80" align="center" border="2">
+<form id="form1" name="form1" method="post" action="">
+<p><label for="documento"></label></p>
+</center>
+
+
+   <?php
+
+
 	  class categoria
 	  {
 		public function categos($tipo_categoria)  
@@ -53,11 +55,12 @@
 		 					{
 						die ('No conecta ['.$db->error.']');
 						 } 
-			echo "categoria registrado";  
+			echo '<center>Categoria registrada</center>';  
 		  }
 		  if ($existencia!="0")
 		  		{
-			  echo"el categoria No se puede registrar";
+			  echo"la categoria No se puede registrar";
+			  
 			  }		  
 		}	
 	  }
@@ -68,17 +71,16 @@
 	  	  ?>    
         
       </p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-    </form>
-    <p>&nbsp;</p>
-    
-  </tr>
-  <tr>
-    <td height="43"><?php include ("footer.html")
+     
+</form>
+</tr>
+<tr>
+ <td height="43">
+   <?php include ("footer.html")
     ?></td>
   </tr>
+
+</font>
 </table>
 </body>
 </html>

@@ -271,28 +271,35 @@
             </div></td>
         </tr>
 
+              
 
           <center><td colspan="2" ><label for="contrasena"></center>
             
-            <div align="center">>
-                <div class="container-fluid">
-                    <input type="submit" class="btn btn-success "  name="button" id="button" value="Actualizar"/>
+            <div align="center">
+                <div class="container">
                   
-                    </div>
-                  </div>
+                    <input type="submit" class="btn btn-success "  name="button" id="button" value="Actualizar"/>
+                    <br>
+
+                     <input type="submit" class="btn btn-danger" value="Volver" href="index_aplicativo.php"/>   
+                  
                 </div>
+             </div>
+
+              
                 
                       </label>
                     </td>
                     <style type="text/css">
                       .btn{
                         margin-top: 3px;
-                        margin-left: 300%;
+                        margin-left: 750%;
                       }
                     </style>
 
 
         </tr>
+
     </font>    
     </center>    
     </table>
