@@ -1,0 +1,151 @@
+body { 
+
+
+
+   background-image: url('https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg');
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+
+
+}
+
+.dropdown {
+  position: relative;
+   display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: center;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+#form1{
+
+  border-radius: 4px;
+  background: rgba(0,0,0,0.15);
+  border-radius: 5px;
+  margin: 1px auto;
+  padding: 20px;
+}
+
+#form2 { 
+
+
+  border-radius: 4px;
+  background: rgba(0,0,0,0.00);
+  border-radius: 5px;
+  margin: 1px auto;
+  padding: 20px;
+
+
+}
+
+.pglo {
+
+    margin-bottom: 65px; 
+}
+
+.hea {
+
+    height: 140px;
+    text-align: center;
+    margin-top: 200px;
+    color:white;
+}
+.foot{
+
+
+  border-radius: 4px;
+  background: rgba(0,0,0,0.15) none repeat scroll 0 0;
+  border-radius: 5px;
+  margin: 50px auto;
+    
+}
+.contra {
+
+
+  border-radius: 6px;
+
+
+
+}
+.modificarcss {
+
+
+
+  background: rgba(0,0,0,0.15) none repeat scroll 0 0;
+  border-radius: 5px;
+  margin: 2px auto;  
+  padding: 30px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+      
+
+}
+.iniciar {
+
+
+background: rgba(0,0,0,0.20);
+  border-radius: 5px;
+ 
+  font-family: "Comic Sans MS", cursive, sans-serif;
+
+
+
+}
+.loginsirno {
+
+background: rgba(0,0,0,0.15);
+ font-family: "Comic Sans MS", cursive, sans-serif;
+
+
+}
+.campodetexto  {
+
+
+  border-radius: 5px;
+ 
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.error {
+
+background: rgba(0,0,0,0.20);
+ font-family: "Comic Sans MS", cursive, sans-serif;
+
+
+  }
+
+.fondotabla { 
+
+
+  background: rgba(0,0,0,0.15);
+ font-family: "Comic Sans MS", cursive, sans-serif;
+
+   }
+.tablaindex {
+
+ background: rgba(0,0,0,0.15);
+ font-family: "Comic Sans MS", cursive, sans-serif;
+
+
+  }
+.formuentrada { 
+
+
+  background: rgba(0,0,0,0.15);
+ font-family: "Comic Sans MS", cursive, sans-serif;
+
+
+}

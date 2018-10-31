@@ -1,0 +1,127 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acceso Novillo de Oro</title>
+
+<style>
+</style>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/estilonovillo.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+
+
+
+<table width="983" border="0" align="center" >
+ <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="index.html">Novillo de Oro </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"   aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+        </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+         </li>
+
+      <li class="nav-item">
+       
+        <li class="nav-item">
+        
+          <li class="nav-item">
+          
+            <li class="nav-item">
+
+          </li>
+        </ul>
+      <a href="index.html" class="btn btn-outline-success my-2 my-sm-0" role="button" aria-pressed="true">Salir</a>
+    </form>
+  </div>
+</nav>
+
+    <header class="masthead"  class="hea"  >
+      <div class="overlay">
+        <div class="container">
+          <center><h1 class="display-6 text-grey" class="admintext">Administracion</h1>
+            <br>  <br>  <br>
+          <h2 class="display-7 text-white">Administracion Novillo de Oro</h2></center>
+        </div>
+      </div>
+    </header>
+  
+    <td width="360" height="35" border="0"></td>
+      </tr>
+        <td height="200"><form id="form1" name="form1" method="post" action="evaluar_sesion.php"autocomplete ="off" />
+          <table width="200" height="100" border="0" align="center">
+            <tr>
+              <td height="120"><table width="110" border="0" align="center">
+                <tr>
+                  <th width="303" align="center" nowrap="nowrap" bgcolor= "">
+
+
+ <center><img src="images/logosirno.png" width="120" height="120" class="pglo" /></center>
+      <div class="container"><form id="form1" name="form1" method="post" action="evaluar_sesion.php"  required />
+          <input type="text"  class="campodetexto"  name="numerodocumento"  placeholder="Documento o Usuario" required="on">
+            <small id="documento" class="display-7 text-white">Documento de usuario o ID</small>
+              <p align="center"><div class="container">
+                
+
+                <center><label class="display-7 text-white" for="contrasena">Contraseña/Password</label></center>
+                    <input type="password" name="contrasena" class="contra" placeholder="Password" required="on"   >
+                      <small id="documento" class="display-7 text-white">Contraseña</small>
+                          </div>
+                              </th>
+                                  </tr>
+
+          
+              <th width="186" height="90" align="center" nowrap="nowrap">
+                <div align="center">
+                 <div class="row">
+                  <div class="col-md-6">
+                   <input type="submit" class="btn btn-success" value="iniciar sesion" href="index_aplicativo.php" method="post"/>   
+                     </div>
+                      <div class="col-md-3">
+                       <a href="index.html" class="btn btn-primary" role="button" aria-pressed="true">Help</a>
+                        </div>
+                         <div class="col-md-2">
+                          <a href="https://www.google.com/" class="btn btn-danger role"  aria-pressed="true">Salir</a>
+                           </div>
+                            </div>
+                             </div>
+                              </th>
+       
+                </tr>
+                 </table>
+                  </td>
+                   </tr>
+                    </table> 
+
+
+
+
+    <footer  class="foot">
+      <div class="container">
+        <p class="m-0 text-center text-white">Derechos reservados © 2017 Fumanji</p>
+          </div>
+            </footer> 
+              </form>
+                </td>
+                  </tr>
+                    </table>
+                      </body>
+                        </html>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/boostrap.min.js"</script> -->
+
+
+
+
+
