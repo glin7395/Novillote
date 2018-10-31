@@ -47,7 +47,7 @@
 			 // 
 			 if ($existencia=="0")
 			 {
-		 $sql2 = "INSERT INTO  proveedor (idproveedor,representante,empresa,contrasena_pro,$numerodocumento_pro,$tipodocumento_iddocumento) VALUES (NULL,'$representante','$empresa',$contrasena_pro,'$numerodocumento_pro','$tipodocumento_iddocumento')";
+		 $sql2 = "INSERT INTO  proveedor (idproveedor,representante,empresa,contrasena_pro,numerodocumento_pro,tipodocumento_iddocumento) VALUES (NULL,'$representante','$empresa',$contrasena_pro,'$numerodocumento_pro','$tipodocumento_iddocumento')";
 		 if( !$result2 = $db->query($sql2))
 		 					{
 						die ('No conecta ['.$db->error.']');

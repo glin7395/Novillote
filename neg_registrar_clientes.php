@@ -47,7 +47,7 @@
 			 // 
 			 if ($existencia=="0")
 			 {
-		 $sql2 = "INSERT INTO  clientes (idclientes,$nombre_cliente,$apellido_cliente,$celular,$email_cliente,$contrasena_cliente) 
+		 $sql2 = "INSERT INTO  clientes (idclientes,nombre_cliente,apellido_cliente,celular,email_cliente,contrasena_cliente) 
 		 VALUES (NULL,'$nombre_cliente','$apellido_cliente','$celular','$email_cliente','$contrasena_cliente')";
 		 if( !$result2 = $db->query($sql2))
 		 					{

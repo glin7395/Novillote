@@ -34,42 +34,25 @@
       <?php
 	  class venta
 	  { 
-		public function datos ($fecha,$clientes_idclientes,$persona_idpersona,$persona_genero_idgenero,$persona_fk_id_rol_idrol,$persona_tipodocumento_iddocumento)  
+		public function datos ($fecha,$clientes_idclientes,$persona_idpersona)  
 		  { 
 			 include ('conexion.php');
 
 			 // consultar usuario existente
-			 $existencia=0;
-			  $sql = "SELECT * FROM venta WHERE idventa='iddventa' ";
-					 if( !$result = $db->query($sql))
-					 		{
-						die ('No conecta ['.$db->error.']');
-						 }
-						while($row = $result->fetch_assoc())
-						{
-						$iddventa=stripslashes($row["idventa"]);		
-						$existencia=$existencia+1;
-						}	 
-			 // 
-			 if ($existencia=="0")
 			 {
-		 $sql2 = "INSERT INTO  venta (idventa,fecha,clientes_idclientes,persona_idpersona,persona_genero_idgenero,persona_fk_id_rol_idrol,persona_tipodocumento_iddocumento) VALUES (NULL,'$fecha','$clientes_idclientes','$persona_idpersona,'$persona_genero_idgenero','$persona_fk_id_rol_idrol','$persona_tipodocumento_iddocumento')";
+		 $sql2 = "INSERT INTO  venta (idventa,fecha,clientes_idclientes,persona_idpersona) VALUES (NULL,'$fecha','$clientes_idclientes','$persona_idpersona')";
 		 if( !$result2 = $db->query($sql2))
 		 					{
 						die ('No conecta ['.$db->error.']');
 						 } 
 			echo "venta registrada";  
-		  }
-		  if ($existencia!="0")
-		  		{
-			  echo"la venta No se puede registrar";
-			  }		  
+		  }		  
 		}	
 	  }
 	  
 	   
 	$nuevo = new venta();	
-	$nuevo->datos( $_POST["fecha"],$_POST["clientes_idclientes"],$_POST["persona_idpersona"],$_POST["persona_genero_idgenero"],$_POST["persona_fk_id_rol_idrol"],$_POST["persona_tipodocumento_iddocumento"])
+	$nuevo->datos( $_POST["fecha"],$_POST["clientes_idclientes"],$_POST["persona_idpersona"])
 	  	  ?>    
         
       </p>

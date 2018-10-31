@@ -87,78 +87,8 @@
             </select>
           </div></td>
         </tr>
-        <tr>
-          <td bgcolor="#FFFFFF"><div align="center">genero</div></td>
-          <td bgcolor="#FFFFFF"><div align="center">
-            <select name="persona_genero_idgenero" id="persona_genero_idgenero">
-              <option value="seleccione:" >seleccione</option>
-              <?php
-				
-				include ('conexion.php');
-                 $sql4 = "SELECT * FROM genero ";
-					 if( !$result4 = $db->query($sql4))
-					 		{
-						die ('No conecta ['.$db->error.']');
-						 }
-						while($row4 = $result4->fetch_assoc())
-						{
-						$iddgenero=stripslashes($row4["idgenero"]);
-						$ttipo=stripslashes($row4["tipo_de_genero"]);
-						echo "<option value =$iddgenero>$ttipo</option>";
-						}
-                
-                ?>
-            </select>
-          </div></td>
-        </tr>
-          <tr>
-          <td bgcolor="#FFFFFF"><div align="center">Rol del empleado</div></td>
-          <td bgcolor="#FFFFFF"><div align="center">
-            <select name="persona_fk_id_rol_idrol" id="persona_fk_id_rol_idrol">
-              <option value="seleccione:" >seleccione</option>
-              <?php
-        
-        include ('conexion.php');
-                 $sql5 = "SELECT * FROM fk_id_rol ";
-           if( !$result5 = $db->query($sql5))
-              {
-            die ('No conecta ['.$db->error.']');
-             }
-            while($row5 = $result5->fetch_assoc())
-            {
-            $iddrol=stripslashes($row5["idrol"]);
-            $rrol=stripslashes($row5["des_rol"]);
-            echo "<option value =$iddrol>$rrol</option>";
-            }
-                
-                ?>
-              </select>
-            </div></td>
-        </tr>
-        <tr>
-          <td bgcolor="#FFFFFF"><div align="center">Tipo de documento</div></td>
-          <td bgcolor="#FFFFFF"><div align="center">
-            <select name="persona_tipodocumento_iddocumento" id="persona_tipodocumento_iddocumento">
-              <option value="seleccione:" >seleccione</option>
-              <?php
-				
-				include ('conexion.php');
-                 $sql6 = "SELECT * FROM tipodocumento ";
-					 if( !$result6 = $db->query($sql6))
-					 		{
-						die ('No conecta ['.$db->error.']');
-						 }
-						while($row6 = $result6->fetch_assoc())
-						{
-						$iddocumento=stripslashes($row6["iddocumento"]);
-						$ddocumento=stripslashes($row6["tipo_de_documento"]);
-						echo "<option value =$iddocumento>$ddocumento</option>";
-						}
-                
-                ?>
-              </select>
-            </div></td>
-        </tr>
+      
+  
        
        
         <tr>

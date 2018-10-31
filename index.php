@@ -25,7 +25,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
+       
          </li>
 
       <li class="nav-item">
@@ -79,19 +79,21 @@
 
           
               <th width="186" height="90" align="center" nowrap="nowrap">
-                <div align="center">
-                 <div class="row">
+              <center><div class="row">
                   <div class="col-md-6">
                    <input type="submit" class="btn btn-success" value="iniciar sesion" href="index_aplicativo.php" method="post"/>   
+               
                      </div>
+                         <br><br>
                       <div class="col-md-3">
-                       <a href="index.html" class="btn btn-primary" role="button" aria-pressed="true">Help</a>
+                       <a href="index.html" class="btn btn-primary" role="button" aria-pressed="true">Volver</a>
                         </div>
+                        <br><br>
                          <div class="col-md-2">
                           <a href="https://www.google.com/" class="btn btn-danger role"  aria-pressed="true">Salir</a>
                            </div>
                             </div>
-                             </div>
+                             </center>
                               </th>
        
                 </tr>

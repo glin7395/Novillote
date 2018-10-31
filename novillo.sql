@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 25-10-2018 a las 20:22:05
+-- Tiempo de generación: 24-10-2018 a las 19:21:49
 -- Versión del servidor: 5.7.21
 -- Versión de PHP: 5.6.35
 
@@ -35,6 +35,16 @@ CREATE TABLE IF NOT EXISTS `categoria` (
   PRIMARY KEY (`idcategoria`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `categoria`
+--
+
+INSERT INTO `categoria` (`idcategoria`, `tipo_categoria`) VALUES
+(7, 'carnes'),
+(8, 'bebidas'),
+(9, 'pescado'),
+(10, 'granos');
+
 -- --------------------------------------------------------
 
 --
@@ -52,6 +62,15 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   PRIMARY KEY (`idclientes`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`idclientes`, `nombre_cliente`, `apellido_cliente`, `celular`, `email_cliente`, `contrasena_cliente`) VALUES
+(1, 'shirou', 'emiya', '3456', 'fate@hotmail.com', '9876'),
+(2, 'nixon', 'pardo', '308759862', 'gardo@hoymail.rds', '4561'),
+(3, 'angie', 'peralta', '789456', 'angie@hotmai.es', '1234');
+
 -- --------------------------------------------------------
 
 --
@@ -63,12 +82,13 @@ CREATE TABLE IF NOT EXISTS `detalle_venta` (
   `iddetalle_venta` int(11) NOT NULL AUTO_INCREMENT,
   `cantidad_venta` varchar(45) NOT NULL,
   `formadepago_idformadepago` int(11) NOT NULL,
-  `venta_idventa` int(11) NOT NULL,
   `producto_idproducto` int(11) NOT NULL,
-  PRIMARY KEY (`iddetalle_venta`),
+  `producto_categoria_idcategoria` int(11) NOT NULL,
+  `venta_idventa` int(11) NOT NULL,
+  PRIMARY KEY (`iddetalle_venta`,`formadepago_idformadepago`,`producto_idproducto`,`producto_categoria_idcategoria`,`venta_idventa`),
   KEY `fk_detalle_venta_formadepago1_idx` (`formadepago_idformadepago`),
-  KEY `fk_detalle_venta_venta1_idx` (`venta_idventa`),
-  KEY `fk_detalle_venta_producto1_idx` (`producto_idproducto`)
+  KEY `fk_detalle_venta_producto1_idx` (`producto_idproducto`,`producto_categoria_idcategoria`),
+  KEY `fk_detalle_venta_venta1_idx` (`venta_idventa`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -104,6 +124,14 @@ CREATE TABLE IF NOT EXISTS `formadepago` (
   `tipo_de_pago` varchar(45) NOT NULL,
   PRIMARY KEY (`idformadepago`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `formadepago`
+--
+
+INSERT INTO `formadepago` (`idformadepago`, `tipo_de_pago`) VALUES
+(3, 'efectivo'),
+(4, 'tarjeta');
 
 -- --------------------------------------------------------
 
@@ -145,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `persona` (
   `genero_idgenero` int(11) NOT NULL,
   `fk_id_rol_idrol` int(11) NOT NULL,
   `tipodocumento_iddocumento` int(11) NOT NULL,
-  PRIMARY KEY (`idpersona`),
+  PRIMARY KEY (`idpersona`,`genero_idgenero`,`fk_id_rol_idrol`,`tipodocumento_iddocumento`),
   KEY `fk_persona_genero2_idx` (`genero_idgenero`),
   KEY `fk_persona_fk_id_rol2_idx` (`fk_id_rol_idrol`),
   KEY `fk_persona_tipodocumento1_idx` (`tipodocumento_iddocumento`)
@@ -156,7 +184,9 @@ CREATE TABLE IF NOT EXISTS `persona` (
 --
 
 INSERT INTO `persona` (`idpersona`, `nombre`, `apellido`, `telefono`, `direccion`, `email`, `numerodocumento`, `contrasena`, `genero_idgenero`, `fk_id_rol_idrol`, `tipodocumento_iddocumento`) VALUES
-(1, 'andres ', 'chavez', '10', 'calle 20', 'chavez@pglo', 1023959599, '123467', 1, 2, 2);
+(8, 'andres felipe', 'chavez piñeros', '3103408895', 'cll 40 sur 49 -50', 'anfechapi@hotmail.es', 1023959599, '7395', 1, 1, 1),
+(9, 'David', 'aaaaa', '123', 'dsadwcdcdf', 'yazocult@hotmail.com', 4862, '12345', 1, 1, 1),
+(10, 'andres felipe', 'aaaaaaaa', '1264651263', 'David', 'juan-sarmiento@hotmail.com', 1012462411, '7531', 1, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -170,9 +200,18 @@ CREATE TABLE IF NOT EXISTS `producto` (
   `nombre_producto` varchar(45) NOT NULL,
   `precio_producto` decimal(10,2) NOT NULL,
   `categoria_idcategoria` int(11) NOT NULL,
-  PRIMARY KEY (`idproducto`),
+  PRIMARY KEY (`idproducto`,`categoria_idcategoria`),
   KEY `fk_producto_categoria1_idx` (`categoria_idcategoria`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `producto`
+--
+
+INSERT INTO `producto` (`idproducto`, `nombre_producto`, `precio_producto`, `categoria_idcategoria`) VALUES
+(9, 'mojarra frita', '15000.00', 7),
+(10, 'costillas', '12000.00', 7),
+(11, 'arroz con carne', '10000.00', 7);
 
 -- --------------------------------------------------------
 
@@ -188,9 +227,17 @@ CREATE TABLE IF NOT EXISTS `proveedor` (
   `contrasena_pro` varchar(45) NOT NULL,
   `numerodocumento_pro` int(11) NOT NULL,
   `tipodocumento_iddocumento` int(11) NOT NULL,
-  PRIMARY KEY (`idproveedor`),
+  PRIMARY KEY (`idproveedor`,`tipodocumento_iddocumento`),
   KEY `fk_proveedor_tipodocumento1_idx` (`tipodocumento_iddocumento`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `proveedor`
+--
+
+INSERT INTO `proveedor` (`idproveedor`, `representante`, `empresa`, `contrasena_pro`, `numerodocumento_pro`, `tipodocumento_iddocumento`) VALUES
+(1, 'rodriguez', 'postobon', '1234', 1023, 1),
+(2, 'cabezas', 'carnes', '4561', 10234, 1);
 
 -- --------------------------------------------------------
 
@@ -205,7 +252,7 @@ CREATE TABLE IF NOT EXISTS `stock` (
   `salida` varchar(45) DEFAULT NULL,
   `cantidad` varchar(45) NOT NULL,
   `proveedor_idproveedor` int(11) NOT NULL,
-  PRIMARY KEY (`idstock`),
+  PRIMARY KEY (`idstock`,`proveedor_idproveedor`),
   KEY `fk_Stock_proveedor1_idx` (`proveedor_idproveedor`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -242,10 +289,22 @@ CREATE TABLE IF NOT EXISTS `venta` (
   `fecha` date NOT NULL,
   `clientes_idclientes` int(11) NOT NULL,
   `persona_idpersona` int(11) NOT NULL,
-  PRIMARY KEY (`idventa`),
+  `persona_genero_idgenero` int(11) NOT NULL,
+  `persona_fk_id_rol_idrol` int(11) NOT NULL,
+  `persona_tipodocumento_iddocumento` int(11) NOT NULL,
+  PRIMARY KEY (`idventa`,`clientes_idclientes`,`persona_idpersona`,`persona_genero_idgenero`,`persona_fk_id_rol_idrol`,`persona_tipodocumento_iddocumento`),
   KEY `fk_venta_clientes1_idx` (`clientes_idclientes`),
-  KEY `fk_venta_persona1_idx` (`persona_idpersona`)
+  KEY `fk_venta_persona1_idx` (`persona_idpersona`,`persona_genero_idgenero`,`persona_fk_id_rol_idrol`,`persona_tipodocumento_iddocumento`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `venta`
+--
+
+INSERT INTO `venta` (`idventa`, `fecha`, `clientes_idclientes`, `persona_idpersona`, `persona_genero_idgenero`, `persona_fk_id_rol_idrol`, `persona_tipodocumento_iddocumento`) VALUES
+(11, '2018-10-31', 1, 9, 1, 1, 1),
+(12, '2018-10-31', 1, 9, 1, 1, 1),
+(13, '2018-10-26', 2, 8, 1, 1, 1);
 
 --
 -- Restricciones para tablas volcadas
@@ -256,7 +315,7 @@ CREATE TABLE IF NOT EXISTS `venta` (
 --
 ALTER TABLE `detalle_venta`
   ADD CONSTRAINT `fk_detalle_venta_formadepago1` FOREIGN KEY (`formadepago_idformadepago`) REFERENCES `formadepago` (`idformadepago`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_detalle_venta_producto1` FOREIGN KEY (`producto_idproducto`) REFERENCES `producto` (`idproducto`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_detalle_venta_producto1` FOREIGN KEY (`producto_idproducto`,`producto_categoria_idcategoria`) REFERENCES `producto` (`idproducto`, `categoria_idcategoria`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_detalle_venta_venta1` FOREIGN KEY (`venta_idventa`) REFERENCES `venta` (`idventa`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
@@ -290,7 +349,7 @@ ALTER TABLE `stock`
 --
 ALTER TABLE `venta`
   ADD CONSTRAINT `fk_venta_clientes1` FOREIGN KEY (`clientes_idclientes`) REFERENCES `clientes` (`idclientes`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_venta_persona1` FOREIGN KEY (`persona_idpersona`) REFERENCES `persona` (`idpersona`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_venta_persona1` FOREIGN KEY (`persona_idpersona`,`persona_genero_idgenero`,`persona_fk_id_rol_idrol`,`persona_tipodocumento_iddocumento`) REFERENCES `persona` (`idpersona`, `genero_idgenero`, `fk_id_rol_idrol`, `tipodocumento_iddocumento`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
