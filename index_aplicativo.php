@@ -2,7 +2,7 @@
 ?>
 <html>
 	<head>
-		<link rel="shortcut icon" href="mario.ico">
+		<link rel="shortcut icon" href="images/LOGO-SIRNO.ico">
 		<title>Inicio</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
