@@ -50,8 +50,7 @@
     <header class="masthead"  class="hea"  >
       <div class="overlay">
         <div class="container">
-          <center><h1 class="display-6 text-grey" class="admintext">Administracion</h1>
-            <br>  <br>  <br>
+          <center>  <br>
           <h2 class="display-7 text-white">Administracion Novillo de Oro</h2></center>
         </div>
       </div>
@@ -64,41 +63,34 @@
             <tr>
               <td height="120"><table width="110" border="0" align="center">
                 <tr>
-                  <th width="303" align="center" nowrap="nowrap" bgcolor= "">
+                  <th width="120" align="center" nowrap="nowrap" bgcolor= "">
 
 
- <center><img src="images/logosirno.png" width="120" height="120" class="pglo" /></center>
-      <div class="container"><form id="form1" name="form1" method="post" action="evaluar_sesion.php"  required />
+ <center><img src="images/logosirno.png" width="120" height="120" class="pglo" />
+      <div class="container"><form id="form1" name="form1" method="post" action="evaluar_sesion.php"  required="on" />
+        <label class="display-7 text-white" for="contrasena">Documento</label><br>
           <input type="text"  class="campodetexto"  name="numerodocumento"  placeholder="Documento o Usuario" required="on">
-            <small id="documento" class="display-7 text-white">Documento de usuario o ID</small>
-              <p align="center"><div class="container">
+            <small id="documento" class="display-7 text-white">Usuario o ID</small>
+              <p align="center"></center>
                 
 
-                <center><label class="display-7 text-white" for="contrasena">Contraseña/Password</label></center>
+                <center><label class="display-7 text-white" for="contrasena">Contraseña/Password</label><br>
                     <input type="password" name="contrasena" class="contra" placeholder="Password" required="on"   >
-                      <small id="documento" class="display-7 text-white">Contraseña</small>
+                      <small id="documento" class="display-7 text-white">Contraseña</small></center>
                           </div>
                               </th>
                                   </tr>
 
           
-              <th width="186" height="90" align="center" nowrap="nowrap">
-              <center><div class="row">
-                  <div class="col-md-6">
+              <th width="20" height="140" align="center" nowrap="nowrap">
+               <div class="row">
+                  <div class="col-md-12" align="center">
                    <input type="submit" class="btn btn-success" value="iniciar sesion" href="index_aplicativo.php" method="post"/>   
-               
-                     </div>
-                         <br><br>
-                      <div class="col-md-3">
-                       <a href="index.html" class="btn btn-primary" role="button" aria-pressed="true">Volver</a>
-                        </div>
-                        <br><br>
-                         <div class="col-md-2">
+                       <a href="index.html" class="btn btn-primary" role="button" aria-pressed="true">Inicio</a>
                           <a href="https://www.google.com/" class="btn btn-danger role"  aria-pressed="true">Salir</a>
-                           </div>
                             </div>
-                             </center>
                               </th>
+                   
        
                 </tr>
                  </table>
