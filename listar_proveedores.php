@@ -62,7 +62,7 @@
 			$nnombre=stripslashes($row["representante"]);
 			$eempresa=stripslashes($row["empresa"]);
 			$iddocumento=stripslashes($row["tipodocumento_iddocumento"]);
-			$nnumero=stripslashes($row["numerodocumento_pro"]);
+
 			
 			$sql = "SELECT * FROM tipodocumento WHERE iddocumento='$iddocumento' ";
 					 if( !$result = $db->query($sql))
@@ -76,10 +76,10 @@
   
 		  //consulta productos
 		  		echo"<tr>";
+         		echo "<td>$iddproveedor</td>";
 				echo "<td>$nnombre</td>";
        			echo "<td>$eempresa</td>";
 				echo "<td>$ttipodocumento</td>";
-				echo "<td>$nnumero</td>";
 				/*//editar
 				echo "<td>";
 				echo "<form id=form1 name=form1 method=post action='modificardatos.php'>";
