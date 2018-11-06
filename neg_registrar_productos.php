@@ -16,17 +16,17 @@
 <body>
 <?php include('banner.html');
 ?>
+<font color="white">
 <table width="900" border="0" align="center">
   <tr>
-  </tr>
-  <tr>
-    <td height="642" align="center" bgcolor="black"><form id="form1" name="form1" method="post" action="index2.html">
+    <td height="642" align="center" bgcolor="black">
+     <form id="form1" name="form1" method="post" action="index2.html">
       <p>
         <label for="documento"></label>
         </p>
-      <p>&nbsp;</p>
-      <p>AQUI SE REGISTRAR PRODUCTOS</p>
-      <p><?php
+         <p>REGISTRAR PRODUCTOS</p>
+          <p>
+          	<?php
 	  class producto
 	  {
 		public function productos ($nombre_producto,$precio_producto,$categoria_idcategoria)  
@@ -47,37 +47,38 @@
 			 // 
 			 if ($existencia=="0")
 			 {
-		 $sql2 = "INSERT INTO  producto (idproducto,nombre_producto,precio_producto,categoria_idcategoria) VALUES (NULL,'$nombre_producto','$precio_producto','$categoria_idcategoria')";
+		 $sql2 = "INSERT INTO  producto (idproducto,nombre_producto,precio_producto,categoria_idcategoria) 
+		 VALUES (NULL,'$nombre_producto','$precio_producto','$categoria_idcategoria')";
 		 if( !$result2 = $db->query($sql2))
-		 					{
+
+	
+		 				{
 						die ('No conecta ['.$db->error.']');
 						 } 
+
 			echo "producto registrado";  
 		  }
 		  if ($existencia!="0")
 		  		{
 			  echo"el producto No se puede registrar";
-			  }		  
-		}	
-	  }
-	  
-	   
+			   }		  
+		     }	
+	       } 
 	$nuevo = new producto();	
 	$nuevo->productos( $_POST["nombre_producto"],$_POST["precio_producto"],$_POST["categoria_idcategoria"])
 	  	  ?>    
-        
+       
       </p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
+ 
     </form>
-    <p>&nbsp;</p>
-    <p><a href="listar_productos.php">lista de productos</a></p>
-
+ 
+    <p><a href="listar_productos.php" class="btn btn-danger role"   aria-pressed="true">lista de productos</a></p>
+   
   </tr>
   </tr>
 </table>
 <?php include('footer.html');
 ?>
+</font>
 </body>
 </html>

@@ -5,27 +5,37 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/estilos.css">
-<title>Restaurante el novillo de oro</title>
-<style type="text/css">
-
+<title>Novillo de Oro</title>
+<style>
 </style>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/estilonovillo.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Restaurante el novillo de oro</title>
 </head>
 
 <body>
+<font color="white">
 <table width="900" border="0" align="center">
-  <tr>
-    <td width="790" height="131"><?php include ("banner.html")
-    ?></td>
-  </tr>
-  <tr>
-    <td height="642" align="center" bgcolor="transparent"><form class="form-hotizontal"  name="form-hotizontal" method="post" action="">
-      <p>
-        <label for="numerodocumento_pro"></label>
-        </p>
-      <p>&nbsp;</p>
-      <p>REGISTRO DE PROVEEDORES</p>
+<tr>
+<td width="790" height="131"><?php include ("banner.html")?>	
+</td>
+</tr>
+<tr>
+<td height="642" align="center" bgcolor="transparent"><form class="form-hotizontal"  name="form-hotizontal" method="post" action="">
+<p>
+<label for="numerodocumento_pro"></label>
+</p>
+    
 
+      <table width="820" border="0" align="center" class="fondotabla">
+		<tr>
+   		 <td  width="130" height="640"  border="0"  align="center">
+		   <p>REGISTRO DE PROVEEDORES</p>
+		   <br>
+		   <br>
       <p><?php
 	  class Registro 
 	  {
@@ -52,11 +62,11 @@
 		 					{
 						die ('No conecta ['.$db->error.']');
 						 } 
-			echo "proveedor registrado";  
+			echo '<center>"proveedor registrado"</center>';  
 		  }
 		  if ($existencia!="0")
 		  		{
-			  echo"No se puede registrar";
+			  echo'<center>"NO SE PUEDE REGISTRAR"</center>';
 			  }		  
 		}	
 	  }
@@ -65,17 +75,21 @@
 	$nuevo->Registrar($_POST["representante"],$_POST["empresa"],$_POST["contrasena_pro"],$_POST["numerodocumento_pro"],$_POST["tipodocumento_iddocumento"])
 	  	  ?>    
         
-      </p>
-      <p>&nbsp;</p>
-     
-    </form>
-   
-    <p></p></td>
-  </tr>
-  <tr>
-    <td height="43"><?php include ("footer.html")
-    ?></td>
-  </tr>
+	</p>  
+
+
+
+      </td>
+    </tr>  
+</table>
+</form>
+</font>  
+</td>
+</tr>
+<tr>
+<td height="43"><?php include ("footer.html")?>
+</td>
+</tr>
 </table>
 </body>
 </html>

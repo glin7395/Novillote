@@ -15,8 +15,6 @@
 <?php
 include('banner.html');
 ?>
-<br>
-<br>
 
   <font color="white">
    <h1>Welcome SystemSirnoSoftware  </h1>
@@ -24,17 +22,35 @@ include('banner.html');
 
    <table width="820" border="0" align="center" class="fondotabla">
   <tr>
-    <td  width="130" height="640"  border="0" bgcolor="#CCCCCC" align="center">
+    <td  width="130" height="640"  border="0" align="center">
+      <header>
+      
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
 
-  
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Administracion</h1>
+          <p class="lead text-muted">Somos ternera , Somos system , Somos lo que otros quieren ser , SirnoSystem</p>
+
+          <div style="text-align:center;padding:1em 0;"> <h3><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/es/city/3688689"><span style="color:gray;">Hora actual en</span><br />Bogotá, Colombia</a></h3> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=medium&timezone=America%2FBogota" width="100%" height="115" frameborder="0" seamless></iframe> </div>
+          </div>
+      </section>
 
 
+       </main>
 
-   
       </td>
     </tr>  
 </table>
-    
+
+
 
  <footer  class="foot">
       <div class="container">

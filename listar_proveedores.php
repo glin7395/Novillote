@@ -37,7 +37,7 @@
 		 $cont='0';
 		 
 		 include ('conexion.php');
-		 $sql = "SELECT * FROM proveedor";
+		 $sql = " SELECT * FROM proveedor ";
 		 if( !$result = $db->query($sql))
 		 {
 			die ('No conecta ['.$db->error.']');
@@ -64,7 +64,7 @@
 			$iddocumento=stripslashes($row["tipodocumento_iddocumento"]);
 
 			
-			$sql = "SELECT * FROM tipodocumento WHERE iddocumento='$iddocumento' ";
+			$sql = "SELECT * FROM tipodocumento WHERE iddocumento= '$iddocumento' ";
 					 if( !$result = $db->query($sql))
 					 		{
 						die ('No conecta ['.$db->error.']');
@@ -113,7 +113,7 @@
       <center>
   
     <p><a href="index_aplicativo.php" class="btn btn-danger role"  aria-pressed="true">Volver</a>
-    	<a href="reg_categoria.php" class="btn btn-warning role"  aria-pressed="true">Registrar Categoria</a></center>
+    	<a href="reg_proveedor.php" class="btn btn-warning role"  aria-pressed="true">Registrar Proveedor</a></center>
 
     </center>
     	</font>

@@ -5,14 +5,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/estilos.css">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>Registrar Usuarios</title>
-
+<title>Novillo de Oro</title>
+<style>
+</style>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/estilonovillo.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Restaurante el novillo de oro</title>
 </head>
 
 <body>
@@ -22,13 +23,16 @@ include('banner.html');
  
     
 
-  
+  <br>
   <form id="form1" name="form1" method="post" action="neg_registrar_proveedor.php">
-      <p>
+     <font color="white"><p>
         <label for="numerodocumento_pro"></label>
         </p>
        <center>
-      <h1 >REGISTRAR PROVEEDOR</h1>
+      <h1 >Registro de Proveedores</h1>
+
+    <br>
+    <br>
     </center>   
     <!-- Formulario !-->
      <div class="container">
@@ -79,24 +83,20 @@ include('banner.html');
             }
                 
                 ?>
+            </select>
+            <br><br>
+              </div>
+               </div> 
+                <div align="center">                                
+                    <input type="submit" name="button" id="button"  class="btn btn-warning role" value="Registrar proveedor"/>
+                        </div>
 
-      </select>
 
-      </div>
-    </div>
 
-                                    
-<center>
 
- <input type="submit" name="button" id="button" value="Registrar proveedor"/>
-
-</center>
 </div>
-
-
-
+</font> 
 </body>
-
 </html>
 <?php
 include('footer.html');
