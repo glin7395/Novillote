@@ -22,7 +22,6 @@ include('banner.html');
 ?>
  
     
-
   <br>
   <form id="form1" name="form1" method="post" action="neg_registrar_proveedor.php">
      <font color="white"><p>
@@ -39,28 +38,28 @@ include('banner.html');
     <div class="form-group">
       <label class="control-label col-sm-2" for="nombre">Nombre:</label>
       <div class="col-sm-10">
-        <input type="representante" class="form-control" id="representante" placeholder="Ingrese Nombre del representante de la empresa" name="representante">
+        <input type="representante" class="form-control" id="representante" placeholder="Ingrese Nombre del representante de la empresa" name="representante" required="">
       </div>
     </div>
    
     <div class="form-group">
       <label class="control-label col-sm-2" for="empresa">Empresa:</label>
       <div class="col-sm-10">
-        <input type="empresa" class="form-control" id="empresa" placeholder="Ingrese empresa " name="empresa">
+        <input type="empresa" class="form-control" id="empresa" placeholder="Ingrese empresa " name="empresa"required="">
       </div>
     </div>
      
     <div class="form-group">
       <label class="control-label col-sm-2" for="contrasena_pro">Contraseña:</label>
       <div class="col-sm-10">          
-        <input type="contrasena_pro" class="form-control" id="contrasena_pro" placeholder="ingrese contraseña" name="contrasena_pro">
+        <input type="contrasena_pro" class="form-control" id="contrasena_pro" placeholder="ingrese contraseña" name="contrasena_pro"required="">
       </div>
     </div>   
  
       <div class="form-group">
       <label class="control-label col-sm-2" for="numerodocumento_pro">Numero documento:</label>
       <div class="col-sm-10">          
-        <input type="numerodocumento_pro" class="form-control" id="numerodocumento_pro" placeholder="ingrese numero documento" name="numerodocumento_pro">
+        <input type="numerodocumento_pro" class="form-control" id="numerodocumento_pro" placeholder="ingrese numero documento" name="numerodocumento_pro" required="">
       </div>
     </div> 
    <div class="form-group">
@@ -93,11 +92,8 @@ include('banner.html');
 
 
 
-
 </div>
-</font> 
+</font></form>
+<?php include('footer.html');?>
 </body>
 </html>
-<?php
-include('footer.html');
-?> 

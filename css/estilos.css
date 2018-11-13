@@ -182,7 +182,7 @@ th, td {
 
 body{
 
-    background-image: url('https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg');
+    background-image: url(' ');
     background-repeat: no-repeat;
     background-size: 100%;
     width : 100%;
@@ -201,7 +201,7 @@ div{
 
 .titulo        {
 color: white;
-text-shadow: 6px 6px white;
+text-shadow: 6px 6px black;
 
 }
 footer

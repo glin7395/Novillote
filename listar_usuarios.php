@@ -14,11 +14,11 @@
 <?php
 include('banner.html');
 ?>
-<font color="white"><table width="900" border="0" align="center" >
-
+  <font color="white"><table width="900" border="0" align="center" >
   <tr>
     <td height="642" align="center" class="fondotabla" >
       <p align="center">
+   
         <?php 
  class usuario
  {
@@ -152,14 +152,15 @@ include('banner.html');
  $nuevo=new usuario();
  $nuevo->listar();
     ?>
+          </p>
+  </font></td>
+</tr>
+</table>
       <?php
 include('footer.html');
 ?> 
       
-      </p>
-  </font></td>
-</tr>
-</table>
+
 </body>
 </html>
 

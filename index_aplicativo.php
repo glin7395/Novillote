@@ -6,19 +6,19 @@
 		<title>Inicio</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/estilos.css">
-        <link rel="stylesheet" type="text/css" href="css/estilonovillo.css">
-       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="css/estilonovillo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 	</head>
-<body >
+<body>
 <?php
 include('banner.html');
 ?>
 
   <font color="white">
    <h1>Welcome SystemSirnoSoftware  </h1>
-   aceptamos cualquier donacion a la poderosa piramide llamada SystemTernera</font>
+   </font>
 
    <table width="820" border="0" align="center" class="fondotabla">
   <tr>
