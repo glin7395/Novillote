@@ -5,9 +5,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Acceso Novillo de Oro</title>
-
-<style>
-</style>
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/estilonovillo.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,10 +12,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Restaurante el novillo de oro</title>
 </head>
-
-
-
-
+<body class="fondo">
 <table width="983" border="0" align="center" >
  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <a class="navbar-brand" href="index.html">Novillo de Oro </a>
@@ -70,13 +64,13 @@
       <div class="container"><form id="form1" name="form1" method="post" action="evaluar_sesion.php"  required="on" />
         <label class="display-7 text-white" for="contrasena">Documento</label><br>
           <input type="text"  class="campodetexto"  name="numerodocumento"  placeholder="Documento o Usuario" required="on">
-            <small id="documento" class="display-7 text-white">Usuario o ID</small>
+            <small id="documento" class="display-7 text-white"></small>
               <p align="center"></center>
                 
 
-                <center><label class="display-7 text-white" for="contrasena">Contraseña/Password</label><br>
+                <center><label class="display-7 text-white" for="contrasena">Contraseña</label><br>
                     <input type="password" name="contrasena" class="contra" placeholder="Password" required="on"   >
-                      <small id="documento" class="display-7 text-white">Contraseña</small></center>
+                      <small id="documento" class="display-7 text-white"></small></center>
                           </div>
                               </th>
                                   </tr>

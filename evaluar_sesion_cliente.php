@@ -50,5 +50,5 @@ session_start();
  
  $nuevo=new Login_cliente();
  $nuevo->evaluar_inicio($_POST["contrasena"],$_POST["numerodocumento"]);
-    ?>
+ ?>
   

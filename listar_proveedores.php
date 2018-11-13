@@ -21,7 +21,7 @@
     <td width="420" height="120"><?php include ("banner.html")
     ?></td>
   </tr>
-  <font color="white"><tr>
+  <font color="black"><tr>
     <center><td height="420" align="center" >
       <p><br><br>
         <label for="textfield"></label>LISTA DE PROVEEDORES</p>
@@ -53,33 +53,32 @@
        	     echo "</tr>";
 			
 
-
-
-
 			while($row = $result->fetch_assoc())
 			{
-			$iddproveedor=stripslashes($row["idproveedor"]);
+	
 			$nnombre=stripslashes($row["representante"]);
 			$eempresa=stripslashes($row["empresa"]);
 			$iddocumento=stripslashes($row["tipodocumento_iddocumento"]);
+			$nnumero=stripslashes($row["numerodocumento_pro"]);
 
 			
-			$sql = "SELECT * FROM tipodocumento WHERE iddocumento= '$iddocumento' ";
-					 if( !$result = $db->query($sql))
+			$sql2 = "SELECT * FROM tipodocumento WHERE iddocumento= '$iddocumento' ";
+					 if( !$result2 = $db->query($sql2))
 					 		{
 						die ('No conecta ['.$db->error.']');
 						 }
-						while($row = $result->fetch_assoc())
+						while($row2 = $result2->fetch_assoc())
 						{
-						$ttipodocumento=stripslashes($row["tipo_de_documento"]);
+						$ttipodocumento=stripslashes($row2["tipo_de_documento"]);
 						}
   
 		  //consulta productos
 		  		echo"<tr>";
-         		echo "<td>$iddproveedor</td>";
+         		
 				echo "<td>$nnombre</td>";
        			echo "<td>$eempresa</td>";
 				echo "<td>$ttipodocumento</td>";
+				echo "<td>$nnumero</td>";
 				/*//editar
 				echo "<td>";
 				echo "<form id=form1 name=form1 method=post action='modificardatos.php'>";

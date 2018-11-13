@@ -14,11 +14,11 @@
 <?php
 include('banner.html');
 ?>
-<font color="white"><table width="900" border="0" align="center" >
-
+  <font color="white"><table width="900" border="0" align="center" >
   <tr>
     <td height="642" align="center" class="fondotabla" >
       <p align="center">
+   
         <?php 
  class usuario
  {
@@ -127,12 +127,16 @@ include('banner.html');
 				echo "<td>";
 				echo "<form id=form1 name=form1 method=post action='modificardatos.php'>";
 
-				echo "<input type=submit name=submit value=editar class='btn btn-warning' />";
+				echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
+
+				echo "<input type=submit  name=submit value=editar class='btn btn-danger' />";
       echo "</form>";
 	  echo "</td>";
+	  
 	  //eliminar
 	  echo "<td>";
 				echo "<form id=form2 name=form2 method=post action='eliminar_usuario.php'>";
+				echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
 
 				echo "<input type=submit  name=submit value=eliminar class='btn btn-danger' />";
       echo "</form>";
@@ -152,14 +156,15 @@ include('banner.html');
  $nuevo=new usuario();
  $nuevo->listar();
     ?>
+          </p>
+  </font></td>
+</tr>
+</table>
       <?php
 include('footer.html');
 ?> 
       
-      </p>
-  </font></td>
-</tr>
-</table>
+
 </body>
 </html>
 

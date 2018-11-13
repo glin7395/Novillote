@@ -21,7 +21,7 @@
 
 <table width="983" border="0" align="center" >
  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <a class="navbar-brand" href="index.html">Novillo de Oro </a>
+  <a class="navbar-brand" href="index.html">Novillo de Oro Proveedores</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"   aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
         </button>
@@ -51,7 +51,7 @@
       <div class="overlay">
         <div class="container">
           <center>  <br>
-          <h2 class="display-7 text-white">Administracion Novillo de Oro</h2></center>
+          <h2 class="display-7 text-white">Proveedores Novillo de Oro</h2></center>
         </div>
       </div>
     </header>

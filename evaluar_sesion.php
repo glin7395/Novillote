@@ -12,10 +12,6 @@ session_start();
 		 
 		 $sql = "SELECT * FROM persona WHERE numerodocumento='$numerodocumento'";
 
-		 /*$sql2="select id genero , genero, 
-		 from genero
-		 inner join garage on genero.genero_idgenero =genero.idgenero
-		 inner join ciudad on vehiculo.ciudad_idciudad =ciudad.idciudad"*/
 		 if(!$result = $db->query($sql))
 		 {
 			die ('No conecta ['.$db->error.']');
@@ -43,7 +39,12 @@ session_start();
 					$_SESSION["idrol"]="admin";
 				}
 			header ("location:index_aplicativo.php");
-			}		
+			}
+			
+
+
+
+					
 		 
 			if($cont=="0")
 			    {

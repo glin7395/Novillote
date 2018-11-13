@@ -11,21 +11,28 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
 <title>Restaurante el novillo de oro</title>
 <style type="text/css">
-
 </style>
-
 </head>
+
+
+
+
   <td height="642" align="center"><form id="form1" name="form1" method="post" action="neg_registrar_ventadetalle.php">
 <body>
+<font color="white">
 <?php include ('banner.html')
 ?>
-<table width="900" border="0" align="center">
-
+<table width="480" border="0" align="center">
   <tr>
- 
-      <p>VENTA DETALLE</p>
+    <br>
+      <h2>DETALLES DE VENTA</h2>
+
+
+
      <div class="form-group">
       <label class="control-label col-sm-2" for="cantidad_venta">Cantidad:</label>
       <div class="col-sm-10">
@@ -100,12 +107,18 @@
                 
                 ?>
                 </select>
+                 <br><br><br>
         </div>
-  </div>
-        <tr>
-          <td colspan="2" bgcolor="#FFFFFF"><label for="contrasena">
+      </div>
+       
+
+
+
+
+       <tr>
+          <td colspan="2" ><label for="contrasena">
             <div align="center">
-              <input type="submit" name="button" id="button" value="Registrar" />
+              <input type="submit" name="button" id="button"  class="btn btn-danger role" value="Registrar" />
               </div>
             </label></td>
         </tr>
@@ -117,6 +130,7 @@
   <tr>
 
   </tr>
+</font>
 </table>
 <?php include ('footer.html');
 ?>

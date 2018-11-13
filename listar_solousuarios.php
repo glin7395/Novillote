@@ -137,14 +137,18 @@ class usuario
 				echo "<td>";
 				echo "<form id=form1 name=form1 method=post action='modificardatos.php'>";
 
-				echo "<input type=submit name=submit value=editar class='btn btn-warning' />";
+				echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
+
+				echo "<input type=submit  name=submit value=editar class='btn btn-danger' />";
       echo "</form>";
 	  echo "</td>";
+	  
 	  //eliminar
 	  echo "<td>";
 				echo "<form id=form2 name=form2 method=post action='eliminar_usuario.php'>";
+				echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
 
-				echo "<input type=submit  name=submit  class='btn btn-danger' value=eliminar 	 />";
+				echo "<input type=submit  name=submit value=eliminar class='btn btn-danger' />";
       echo "</form>";
 	  echo "</td>";
        			echo "</tr>";

@@ -8,6 +8,7 @@
 <title>Novillo de Oro</title>
 <style>
 </style>
+<link rel="shortcut icon" href="images/LOGO-SIRNO.ico">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/estilonovillo.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -64,9 +65,9 @@
 </td>
 </tr>
 </table>
+<?php include ('footer.html'); 
+?>
 </body>
 </html>
 
 
-<?php include ('footer.html'); 
-?>
