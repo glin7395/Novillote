@@ -14,10 +14,11 @@
 <?php
 include('banner.html');
 ?>
-  <font color="white"><table width="900" border="0" align="center" >
+ <table width="900" border="0" align="center" >
   <tr>
     <td height="642" align="center" class="fondotabla" >
       <p align="center">
+      	 <font color="black">
    
         <?php 
  class usuario
@@ -36,7 +37,7 @@ include('banner.html');
 		 
 		 	
 			echo"<table width='80' height='140' border='0'>";
-			 echo '<tr  bgcolor="#424242">';
+			 echo '<tr  bgcolor="#F5D0A9">';
         	 echo "<td>ID</td>";
 			 echo "<td>Nombre</td>";
          	 echo"<td>Apellido</td>";
@@ -129,19 +130,23 @@ include('banner.html');
 
 				echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
 
-				echo "<input type=submit  name=submit value=editar class='btn btn-danger' />";
+				echo "<input type=submit  name=submit value=editar class='btn btn-warning' />";
       echo "</form>";
 	  echo "</td>";
 	  
 	  //eliminar
 	  echo "<td>";
-				echo "<form id=form2 name=form2 method=post action='eliminar_usuario.php'>";
-				echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
 
-				echo "<input type=submit  name=submit value=eliminar class='btn btn-danger' />";
+
+
+	  // aqui se hace la puta funcion en el puto form2 
+
+	  echo "<form id=form2 name=form2 method=post action='eliminar_usuario.php'>";
+	  echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
+	  echo "<input type=submit  name=submit value=eliminar class='btn btn-danger' />";
       echo "</form>";
 	  echo "</td>";
-       			echo "</tr>";
+      echo "</tr>";
       			
 			}
 			//fin del while
@@ -157,7 +162,7 @@ include('banner.html');
  $nuevo->listar();
     ?>
           </p>
-  </font></td>
+</td>
 </tr>
 </table>
       <?php
