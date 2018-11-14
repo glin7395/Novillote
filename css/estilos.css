@@ -1,6 +1,10 @@
 /*css para dummys */
 @import url(http://fonts.googleapis.com/css?family=Arial);
 #cssmenu {
+
+  text-align: center;
+  position: relative;
+  z-index: 3;
   padding: 0%;
   margin: 0%;
   border: 0%;
@@ -15,6 +19,7 @@
 #cssmenu ul {
   position: relative;
   z-index: 0;
+    align-items : center; 
   
 }
 #cssmenu ul li {
@@ -33,7 +38,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 598;
+  z-index: 408;
   width: 100%;
 }
 #cssmenu ul ul li {
@@ -150,7 +155,7 @@
 }
 #cssmenu ul li.last ul ul {
   left: auto;
-  right: 99.5%;
+  right: 90.5%;
 }
 #cssmenu a {
   background: #333333;

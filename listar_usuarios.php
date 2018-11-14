@@ -37,7 +37,7 @@ include('banner.html');
 		 
 		 	
 			echo"<table width='80' height='140' border='0'>";
-			 echo '<tr  bgcolor="#F5D0A9">';
+			 echo '<tr  bgcolor="#FFFFFF">';
         	 echo "<td>ID</td>";
 			 echo "<td>Nombre</td>";
          	 echo"<td>Apellido</td>";

@@ -26,7 +26,9 @@ include('banner.html');
 	  </center>	  
 	  <!-- Formulario !-->
      <div class="container">
-
+      <br>
+        <br>
+          <br>
   
   <form id="form1" name="form1" method="post" action="neg_registrar_clientes.php">
       <p>

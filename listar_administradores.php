@@ -14,7 +14,7 @@
 
 <body>
 <?php include('banner.html') ?>
-<font color="white"><table width="850" border="0" align="center" >
+<font color="black"><table width="850" border="0" align="center" >
 
   <tr>
     <td height="642" align="center" class="fondotabla" >
@@ -36,7 +36,7 @@
 		 
 		 	
 				echo"<table width='80' height='140' border='0'>";
-			 echo '<tr  bgcolor="#424242">';
+			 echo '<tr  bgcolor="#FFFFFF">';
         	 echo "<td>ID</td>";
 			 echo "<td>Nombre</td>";
          	 echo"<td>Apellido</td>";
@@ -131,6 +131,11 @@
 				echo "<input type=submit  name=submit value=editar class='btn btn-danger' />";
       echo "</form>";
 	  echo "</td>";
+
+
+
+
+	    // aqui se hace la puta funcion en el puto form2 
 	  
 	  //eliminar
 	  echo "<td>";
@@ -158,6 +163,8 @@
     </font>
     <br>
      <p><a href="index_aplicativo.php" class='btn btn-danger'>Volver al Inicio</a>
+
+
      <?php
 include('footer.html');
 ?> 
