@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 24-10-2018 a las 19:21:49
--- Versión del servidor: 5.7.21
--- Versión de PHP: 5.6.35
+-- Tiempo de generación: 16-11-2018 a las 21:17:57
+-- Versión del servidor: 5.7.19
+-- Versión de PHP: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,17 +33,15 @@ CREATE TABLE IF NOT EXISTS `categoria` (
   `idcategoria` int(11) NOT NULL AUTO_INCREMENT,
   `tipo_categoria` varchar(45) NOT NULL,
   PRIMARY KEY (`idcategoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `categoria`
 --
 
 INSERT INTO `categoria` (`idcategoria`, `tipo_categoria`) VALUES
-(7, 'carnes'),
-(8, 'bebidas'),
-(9, 'pescado'),
-(10, 'granos');
+(1, 'carnes'),
+(2, 'bebidas');
 
 -- --------------------------------------------------------
 
@@ -67,9 +65,40 @@ CREATE TABLE IF NOT EXISTS `clientes` (
 --
 
 INSERT INTO `clientes` (`idclientes`, `nombre_cliente`, `apellido_cliente`, `celular`, `email_cliente`, `contrasena_cliente`) VALUES
-(1, 'shirou', 'emiya', '3456', 'fate@hotmail.com', '9876'),
-(2, 'nixon', 'pardo', '308759862', 'gardo@hoymail.rds', '4561'),
-(3, 'angie', 'peralta', '789456', 'angie@hotmai.es', '1234');
+(1, 'angie', 'palacios', '3202023354', 'ahhahahhaha@gmail.com', '123456'),
+(2, 'nixon', 'pardo', '3103408899', 'nixon@gmail.com', '1234'),
+(3, 'loquendo', 'rodriguez', '90000', 'pglo@pglo.mas', '123490');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `compras`
+--
+
+DROP TABLE IF EXISTS `compras`;
+CREATE TABLE IF NOT EXISTS `compras` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `numeroventa` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `imagen` text NOT NULL,
+  `precio` varchar(50) NOT NULL,
+  `cantidad` varchar(50) NOT NULL,
+  `subtotal` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `compras`
+--
+
+INSERT INTO `compras` (`id`, `numeroventa`, `nombre`, `imagen`, `precio`, `cantidad`, `subtotal`) VALUES
+(1, 1, 'cebolla', 'cebolla.jpg', '12222', '1', '12222'),
+(2, 2, 'cebolla', 'cebolla.jpg', '12222', '1', '12222'),
+(3, 3, 'cebolla', 'cebolla.jpg', '12222', '2', '24444'),
+(4, 4, 'cebolla', 'cebolla.jpg', '12222', '2', '24444'),
+(5, 5, 'camara', 'camara.jpg', '3211321', '1', '3211321'),
+(6, 6, 'cebolla', 'cebolla.jpg', '12222', '4', '48888'),
+(7, 6, 'Hamburguesa', 'hambur.jpg', '10000', '1', '10000');
 
 -- --------------------------------------------------------
 
@@ -80,16 +109,23 @@ INSERT INTO `clientes` (`idclientes`, `nombre_cliente`, `apellido_cliente`, `cel
 DROP TABLE IF EXISTS `detalle_venta`;
 CREATE TABLE IF NOT EXISTS `detalle_venta` (
   `iddetalle_venta` int(11) NOT NULL AUTO_INCREMENT,
-  `cantidad_venta` varchar(45) NOT NULL,
+  `cantidad_venta` varchar(45) CHARACTER SET utf8 NOT NULL,
   `formadepago_idformadepago` int(11) NOT NULL,
-  `producto_idproducto` int(11) NOT NULL,
-  `producto_categoria_idcategoria` int(11) NOT NULL,
   `venta_idventa` int(11) NOT NULL,
-  PRIMARY KEY (`iddetalle_venta`,`formadepago_idformadepago`,`producto_idproducto`,`producto_categoria_idcategoria`,`venta_idventa`),
+  `producto_idproducto` int(11) NOT NULL,
+  PRIMARY KEY (`iddetalle_venta`),
   KEY `fk_detalle_venta_formadepago1_idx` (`formadepago_idformadepago`),
-  KEY `fk_detalle_venta_producto1_idx` (`producto_idproducto`,`producto_categoria_idcategoria`),
-  KEY `fk_detalle_venta_venta1_idx` (`venta_idventa`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  KEY `fk_detalle_venta_venta1_idx` (`venta_idventa`),
+  KEY `fk_detalle_venta_producto1_idx` (`producto_idproducto`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `detalle_venta`
+--
+
+INSERT INTO `detalle_venta` (`iddetalle_venta`, `cantidad_venta`, `formadepago_idformadepago`, `venta_idventa`, `producto_idproducto`) VALUES
+(1, '10', 1, 1, 1),
+(2, '2', 1, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -123,15 +159,15 @@ CREATE TABLE IF NOT EXISTS `formadepago` (
   `idformadepago` int(11) NOT NULL AUTO_INCREMENT,
   `tipo_de_pago` varchar(45) NOT NULL,
   PRIMARY KEY (`idformadepago`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `formadepago`
 --
 
 INSERT INTO `formadepago` (`idformadepago`, `tipo_de_pago`) VALUES
-(3, 'efectivo'),
-(4, 'tarjeta');
+(1, 'efectivo'),
+(2, 'cheque');
 
 -- --------------------------------------------------------
 
@@ -173,20 +209,45 @@ CREATE TABLE IF NOT EXISTS `persona` (
   `genero_idgenero` int(11) NOT NULL,
   `fk_id_rol_idrol` int(11) NOT NULL,
   `tipodocumento_iddocumento` int(11) NOT NULL,
-  PRIMARY KEY (`idpersona`,`genero_idgenero`,`fk_id_rol_idrol`,`tipodocumento_iddocumento`),
+  PRIMARY KEY (`idpersona`),
   KEY `fk_persona_genero2_idx` (`genero_idgenero`),
   KEY `fk_persona_fk_id_rol2_idx` (`fk_id_rol_idrol`),
   KEY `fk_persona_tipodocumento1_idx` (`tipodocumento_iddocumento`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `persona`
 --
 
 INSERT INTO `persona` (`idpersona`, `nombre`, `apellido`, `telefono`, `direccion`, `email`, `numerodocumento`, `contrasena`, `genero_idgenero`, `fk_id_rol_idrol`, `tipodocumento_iddocumento`) VALUES
-(8, 'andres felipe', 'chavez piñeros', '3103408895', 'cll 40 sur 49 -50', 'anfechapi@hotmail.es', 1023959599, '7395', 1, 1, 1),
-(9, 'David', 'aaaaa', '123', 'dsadwcdcdf', 'yazocult@hotmail.com', 4862, '12345', 1, 1, 1),
-(10, 'andres felipe', 'aaaaaaaa', '1264651263', 'David', 'juan-sarmiento@hotmail.com', 1012462411, '7531', 1, 2, 1);
+(1, 'andres ', 'chavez', '10', 'calle 20', 'afchavez99@misena.edu.co', 1023959599, '7395', 1, 1, 1),
+(2, 'Hector', 'Vallejo', '3514789', 'cll 10 sur mini mordor', 'germangal1996@gmail.com', 1000, '1200', 1, 1, 1),
+(7, 'carlos yulliann', 'castro', '1234555', 'carrera este #69-96', 'cycastro62@misena.edu.co', 1013692109, '1234', 1, 2, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `plato`
+--
+
+DROP TABLE IF EXISTS `plato`;
+CREATE TABLE IF NOT EXISTS `plato` (
+  `idPlato` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) NOT NULL,
+  `descripcion` varchar(45) NOT NULL,
+  `imagen` text NOT NULL,
+  `precio` varchar(45) NOT NULL,
+  PRIMARY KEY (`idPlato`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `plato`
+--
+
+INSERT INTO `plato` (`idPlato`, `nombre`, `descripcion`, `imagen`, `precio`) VALUES
+(1, 'cebolla', 'gfgfgfgfgd', 'cebolla.jpg', '12222'),
+(2, 'camara', 'gfgfdgdffddg', 'camara.jpg', '3211321'),
+(3, 'Hamburguesa', 'Esta es muy deliciosa', 'hambur.jpg', '10000');
 
 -- --------------------------------------------------------
 
@@ -200,18 +261,17 @@ CREATE TABLE IF NOT EXISTS `producto` (
   `nombre_producto` varchar(45) NOT NULL,
   `precio_producto` decimal(10,2) NOT NULL,
   `categoria_idcategoria` int(11) NOT NULL,
-  PRIMARY KEY (`idproducto`,`categoria_idcategoria`),
+  PRIMARY KEY (`idproducto`),
   KEY `fk_producto_categoria1_idx` (`categoria_idcategoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `producto`
 --
 
 INSERT INTO `producto` (`idproducto`, `nombre_producto`, `precio_producto`, `categoria_idcategoria`) VALUES
-(9, 'mojarra frita', '15000.00', 7),
-(10, 'costillas', '12000.00', 7),
-(11, 'arroz con carne', '10000.00', 7);
+(1, 'coca cola', '2000.00', 2),
+(2, 'carne a la parrilla', '12000.00', 1);
 
 -- --------------------------------------------------------
 
@@ -227,17 +287,18 @@ CREATE TABLE IF NOT EXISTS `proveedor` (
   `contrasena_pro` varchar(45) NOT NULL,
   `numerodocumento_pro` int(11) NOT NULL,
   `tipodocumento_iddocumento` int(11) NOT NULL,
-  PRIMARY KEY (`idproveedor`,`tipodocumento_iddocumento`),
+  PRIMARY KEY (`idproveedor`),
   KEY `fk_proveedor_tipodocumento1_idx` (`tipodocumento_iddocumento`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `proveedor`
 --
 
 INSERT INTO `proveedor` (`idproveedor`, `representante`, `empresa`, `contrasena_pro`, `numerodocumento_pro`, `tipodocumento_iddocumento`) VALUES
-(1, 'rodriguez', 'postobon', '1234', 1023, 1),
-(2, 'cabezas', 'carnes', '4561', 10234, 1);
+(1, 'rodrigo', 'cocacola', '1234', 5178946, 3),
+(2, 'camilo', 'carnes', '321', 52817192, 3),
+(3, 'cardenas', 'pescaderia', '1222', 51234, 3);
 
 -- --------------------------------------------------------
 
@@ -252,7 +313,7 @@ CREATE TABLE IF NOT EXISTS `stock` (
   `salida` varchar(45) DEFAULT NULL,
   `cantidad` varchar(45) NOT NULL,
   `proveedor_idproveedor` int(11) NOT NULL,
-  PRIMARY KEY (`idstock`,`proveedor_idproveedor`),
+  PRIMARY KEY (`idstock`),
   KEY `fk_Stock_proveedor1_idx` (`proveedor_idproveedor`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -267,7 +328,7 @@ CREATE TABLE IF NOT EXISTS `tipodocumento` (
   `iddocumento` int(11) NOT NULL AUTO_INCREMENT,
   `tipo_de_documento` varchar(45) NOT NULL,
   PRIMARY KEY (`iddocumento`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tipodocumento`
@@ -275,7 +336,8 @@ CREATE TABLE IF NOT EXISTS `tipodocumento` (
 
 INSERT INTO `tipodocumento` (`iddocumento`, `tipo_de_documento`) VALUES
 (1, 'cedula de ciudadania'),
-(2, 'tarjeta de identidad');
+(2, 'tarjeta de identidad'),
+(3, 'NIT');
 
 -- --------------------------------------------------------
 
@@ -289,22 +351,18 @@ CREATE TABLE IF NOT EXISTS `venta` (
   `fecha` date NOT NULL,
   `clientes_idclientes` int(11) NOT NULL,
   `persona_idpersona` int(11) NOT NULL,
-  `persona_genero_idgenero` int(11) NOT NULL,
-  `persona_fk_id_rol_idrol` int(11) NOT NULL,
-  `persona_tipodocumento_iddocumento` int(11) NOT NULL,
-  PRIMARY KEY (`idventa`,`clientes_idclientes`,`persona_idpersona`,`persona_genero_idgenero`,`persona_fk_id_rol_idrol`,`persona_tipodocumento_iddocumento`),
+  PRIMARY KEY (`idventa`),
   KEY `fk_venta_clientes1_idx` (`clientes_idclientes`),
-  KEY `fk_venta_persona1_idx` (`persona_idpersona`,`persona_genero_idgenero`,`persona_fk_id_rol_idrol`,`persona_tipodocumento_iddocumento`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+  KEY `fk_venta_persona1_idx` (`persona_idpersona`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `venta`
 --
 
-INSERT INTO `venta` (`idventa`, `fecha`, `clientes_idclientes`, `persona_idpersona`, `persona_genero_idgenero`, `persona_fk_id_rol_idrol`, `persona_tipodocumento_iddocumento`) VALUES
-(11, '2018-10-31', 1, 9, 1, 1, 1),
-(12, '2018-10-31', 1, 9, 1, 1, 1),
-(13, '2018-10-26', 2, 8, 1, 1, 1);
+INSERT INTO `venta` (`idventa`, `fecha`, `clientes_idclientes`, `persona_idpersona`) VALUES
+(1, '2018-10-31', 1, 1),
+(2, '2018-10-31', 1, 2);
 
 --
 -- Restricciones para tablas volcadas
@@ -315,7 +373,7 @@ INSERT INTO `venta` (`idventa`, `fecha`, `clientes_idclientes`, `persona_idperso
 --
 ALTER TABLE `detalle_venta`
   ADD CONSTRAINT `fk_detalle_venta_formadepago1` FOREIGN KEY (`formadepago_idformadepago`) REFERENCES `formadepago` (`idformadepago`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_detalle_venta_producto1` FOREIGN KEY (`producto_idproducto`,`producto_categoria_idcategoria`) REFERENCES `producto` (`idproducto`, `categoria_idcategoria`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_detalle_venta_producto1` FOREIGN KEY (`producto_idproducto`) REFERENCES `producto` (`idproducto`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_detalle_venta_venta1` FOREIGN KEY (`venta_idventa`) REFERENCES `venta` (`idventa`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
@@ -349,7 +407,7 @@ ALTER TABLE `stock`
 --
 ALTER TABLE `venta`
   ADD CONSTRAINT `fk_venta_clientes1` FOREIGN KEY (`clientes_idclientes`) REFERENCES `clientes` (`idclientes`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_venta_persona1` FOREIGN KEY (`persona_idpersona`,`persona_genero_idgenero`,`persona_fk_id_rol_idrol`,`persona_tipodocumento_iddocumento`) REFERENCES `persona` (`idpersona`, `genero_idgenero`, `fk_id_rol_idrol`, `tipodocumento_iddocumento`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_venta_persona1` FOREIGN KEY (`persona_idpersona`) REFERENCES `persona` (`idpersona`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
