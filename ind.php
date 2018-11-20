@@ -30,17 +30,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-       
          </li>
-
       <li class="nav-item">
-       
         <li class="nav-item">
-        
           <li class="nav-item">
-          
             <li class="nav-item">
-
           </li>
         </ul>
       <a href="index.html" class="btn btn-outline-success my-2 my-sm-0" role="button" aria-pressed="true">Salir</a>
@@ -67,7 +61,7 @@
                   <th width="120" align="center" nowrap="nowrap" bgcolor= "">
 
 
- <center><img src="images/logosirno.png" width="120" height="120" class="pglo" />
+      <center><img src="images/logosirno.png" width="120" height="120" class="pglo" />
       <div class="container"><form id="form1" name="form1" method="post" action="evaluar_sesion_cliente.php"  required="on" />
         <label class="display-7 text-white" for="contrasena">Documento</label><br>
           <input type="text"  class="campodetexto"  name="numerodocumento"  placeholder="Documento o Usuario" required="on">

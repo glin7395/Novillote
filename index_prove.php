@@ -68,9 +68,9 @@
 
  <center><img src="images/logosirno.png" width="120" height="120" class="pglo" />
       <div class="container"><form id="form1" name="form1" method="post" action="evaluar_sesion_pro.php"  required="on" />
-        <label class="display-7 text-white" for="contrasena">Documento</label><br>
+        <label class="display-7 text-white" for="contrasena"></label><br>
           <input type="text"  class="campodetexto"  name="numerodocumento"  placeholder="Documento o Usuario" required="on">
-            <small id="documento" class="display-7 text-white">Usuario o ID</small>
+            <small id="documento" class="display-7 text-white"></small>
               <p align="center"></center>
                 
 

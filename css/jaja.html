@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<title>Ingreso al sistema</title> 
+<link rel="STYLESHEET" type="text/css" href="Css/estilos.css"> 
+<link rel="stylesheet" href="style.css" type="text/css" /> 
+<script type="text/javascript" src="script.js"></script> 
+<link rel="stylesheet" type="text/css" media="all" href="Calendario/jsDatePick_ltr.min.css" /> 
+<script type="text/javascript" src="Calendario/jsDatePick.min.1.3.js"></script> 
+<style type="text/css"> 
+//* pushes the page to the full capacity of the viewing area */ 
+html {height:100%;} 
+body {height:100%; margin:0; padding:0;} 
+/* prepares the background image to full capacity of the viewing area */ 
+#bg {position:fixed; top:0; left:0; width:100%; height:100%;} 
+#fondo {position:fixed; top:0; left:0;} 
+/* places the content ontop of the background image */ 
+#content {position:relative; z-index:1;} 
+</style> 
+<!--[if IE 6]> 
+<style type="text/css"> 
+/* some css fixes for IE browsers */ 
+html {overflow-y:hidden;} 
+body {overflow-y:auto;} 
+#bg {position:absolute; z-index:-1;} 
+#content {position:static;} 
+</style> 
+<![endif]--> 
+<?php 
+/*include_once "BasedeDatos/ConsultasDAO.php"; 
+//buscar usuario y login en la base de datos 
+ $dao=new ConsultasDAO(); 
+ if($_POST['usuario']!=null){ 
+   $dao->buscar_con($_POST['usuario'],$_POST['login']); 
+  }*/ 
+?> 
+</head> 
+<body> 
+<center> 
+<div id="fondo"> 
+          <img src="images/fondop.jpg" style="width:100%; height:100%; position:fixed; z-index:-1;" /> 
+     <div align="center" id="bg"> 
+        <img   src="images/fondo5.png" width="1419" height="180"></div></center> 
+      <div id="bg"> 
+       <img src="images/logo.png" width="194" height="90" style=" margin-top:20px;margin-left:20px">        </div> 
+        <div align="center" id="fondo"> 
+     <img   src="images/Morelco/Imagen1.jpg" name="Fotos" align="right" width="300" height="150" id="Fotos" style=" margin-right:30px; margin-top:20px"></div> 
+       <script language="JavaScript"> 
+         RunSlideShow("Fotos","images/Morelco/Imagen1.jpg;images/Morelco/Imagen2.jpg;images/Morelco/Imagen3.jpg;images/Morelco/Imagen4.jpg;images/Morelco/Imagen4.jpg",2); 
+       </script> 
+       </div> 
+     <div id="bg"> 
+        <center><img src="images/letrero.png" width="500" height="200" style="margin-top:27px;margin-left:150px"></center> 
+</div> 
+
+     <div id="bg" style="margin-top:176px; z-index:1; "> 
+      <table width="1419" cellpadding="0" cellspacing="0" style=" z-index:1 "> 
+        <tr><td> 
+        <ul class="menu" id="menu"> 
+        <li><a href="#" class="menulin"></a></li> 
+        <li><a href="#" class="menulink">Inicio</a>    </li> 
+    <li><a href="#" class="menulink">Nomina</a></li> 
+    <li> 
+        <a href="#" class="menulink">Facturacion</a> 
+        <ul> 
+            <li><a href="#" class="sub">Actas de liquidacion</a> 
+            <ul> 
+                    <li class="topline"><a href="#">ALP 01</a></li> 
+                    <li><a href="#">ALP 02</a></li> 
+                    <li><a href="#">ALP 03</a></li> 
+              </ul> 
+            </li> 
+            <li> 
+                <a href="#" class="sub">Orden de Trabajo</a> 
+                <ul> 
+                    <li class="topline"><a href="#">Nueva OT</a></li> 
+                    <li><a href="#" class="sub">Buscar OT</a></li>  
+                </ul> 
+            </li> 
+            <li><a href="#" class="sub">Reportes</a> 
+            <ul> 
+                    <li class="topline"><a href="#">Ingresar Reporte</a></li> 
+                    <li><a href="#">Buscar Reporte</a></li> 
+              </ul> 
+            </li> 
+        </ul> 
+    </li> 
+    <li> 
+        <a href="#" class="menulink">Viaticos</a> 
+        <ul> 
+            <li><a href="#">Nuevo Viatico</a></li> 
+            <li><a href="#" class="sub">Buscar Viatico</a> 
+                <ul> 
+                    <li class="topline"><a href="#">Navigation Item 1</a></li> 
+                    <li><a href="#">Navigation Item 2</a></li> 
+                </ul></li> 
+        </ul> 
+    </li> 
+    <li> 
+        <a href="#" class="menulink">Personal</a> 
+        <ul> 
+            <li><a href="#">Ingresar H.V</a></li> 
+            <li><a href="#" class="sub">Buscar Personal</a> 
+            <ul> 
+                    <li class="topline"><a href="#">Buscar por Nombre</a></li> 
+                    <li><a href="#">Buscar por Cedula</a></li> 
+              </ul> 
+            </li> 
+            <li><a href="#">Actualizar H.V</a></li> 
+            <li><a href="#">Eliminar H.V</a></li> 
+        </ul> 
+    </li> 
+    <li><a href="#" class="menulin"></a></li> 
+</ul> 
+<script type="text/javascript"> 
+    var menu=new menu.dd("menu"); 
+    menu.init("menu","menuhover"); 
+</script> 
+</td></tr></table> 
+</div> 
+          <div id="content"> 
+          <div id="div4_example" style="margin-top:300px; margin-left:3px"></div> 
+          <iframe width="800"></iframe> 
+        </div> 
+     </div> 
+</body> 
+</html>
