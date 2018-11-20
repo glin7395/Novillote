@@ -15,27 +15,22 @@
 <title>Registrar Usuarios</title>
 
 </head>
-
 <body>
+<font  color="white" >
 <?php
 include('banner.html');
 ?>
  
         <center>
-      <h1 >REGISTRAR CLIENTES</h1>
+          <br>
+      <h1 >REGISTRO DE CLIENTES</h1>
 	  </center>	  
 	  <!-- Formulario !-->
      <div class="container">
       <br>
-        <br>
-          <br>
-  
-  <form id="form1" name="form1" method="post" action="neg_registrar_clientes.php">
-      <p>
-        <label for="celular"></label>
-        </p>
-    <label for="celular"></label>
-        </p>
+    
+  <form id="form3" name="form1" method="post" action="neg_registrar_clientes.php">
+      
     <div class="form-group">
       <label class="control-label col-sm-2" for="nombre_cliente">Nombre:</label>
       <div class="col-sm-10">
@@ -64,14 +59,16 @@ include('banner.html');
       <label class="control-label col-sm-2" for="contrasena_cliente">Contraseña:</label>
       <div class="col-sm-10">          
         <input type="contrasena_cliente" class="form-control" id="contrasena_cliente" placeholder="ingrese contraseña" name="contrasena_cliente">
+         <br> <br>
       </div>
-    </div>   
+    </div> 
+
 
 
                                      
 <center>
-
- <input type="submit" name="button" id="button" value="Registrar usuario" />
+</font>
+ <input type="submit" name="button" id="button"   class="btn btn-danger role"  value="Registrar Cliente" />
 </center>
 </div>
 

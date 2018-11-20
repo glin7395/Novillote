@@ -44,14 +44,14 @@
 		 }
 		 
 		 	
-			echo"<center><table width='40' height='180' border='0'></center>";
+			echo"<center><table width='40' height='180' class='fondotablas' border='0'></center>";
 			 echo '<tr  bgcolor="#424242">';
         	 echo "<td>ID</td>";
 			 echo "<td>Nombre</td>";
 			 echo "<td>Apellido</td>";
 			 echo "<td>Celular</td>";
 			 echo "<td>email</td>";
-			 echo "<td>contraseña</td>";
+			
        	     echo "</tr>";
 			
 			while($row = $result->fetch_assoc())
@@ -61,7 +61,7 @@
 			$aapellido=stripslashes($row["apellido_cliente"]);
 			$ccelular=stripslashes($row["celular"]);
 			$eemail=stripslashes($row["email_cliente"]);
-			$ccontrasena=stripslashes($row["contrasena_cliente"]);
+		
 
   
 		  //consulta productos
@@ -71,7 +71,7 @@
 				echo "<td>$aapellido</td>";
 				echo "<td>$ccelular</td>";
 				echo "<td>$eemail</td>";
-				echo "<td>$ccontrasena</td>";
+			
        			
 				/*//editar
 				echo "<td>";
@@ -107,3 +107,16 @@
     </center>
     	</font>
     	</center>
+
+
+    	 <br>
+     <center><p><a href="index_aplicativo.php" class='btn btn-danger'>Volver al Inicio</a></center>
+
+
+     <?php
+include('footer.html');
+?> 
+      
+      
+      </p>
+     

@@ -16,13 +16,16 @@
 include('banner.html');
 ?>
 
-  <font color="white">
-   <h1>Welcome SystemSirnoSoftware  </h1>
-   </font>
+ 
 
    <table width="820" border="0" align="center" class="fondotabla">
+
   <tr>
     <td  width="130" height="640"  border="0" align="center">
+
+       <font color="white">
+   <h1>Welcome SystemSirnoSoftware  </h1>
+   </font>
       <header>
       
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">

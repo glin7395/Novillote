@@ -29,14 +29,14 @@ include('banner.html');
 		 $cont='0';
 		 
 		 include ('conexion.php');
-		 $sql = "SELECT * FROM venta";
+		 $sql = "SELECT * FROM ventas";
 		 if( !$result = $db->query($sql))
 		 {
 			die ('No conecta ['.$db->error.']');
 		 }
 		 
 		 	
-			echo"<table width='80' height='140' border='0'>";
+			echo"<table width='80' height='140' class='fondotablas' border='0'>";
 			 echo '<tr  bgcolor="#FFFFFF">';
         	 echo "<td>ID</td>";
 			 echo "<td>Nombre</td>";

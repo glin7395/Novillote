@@ -21,10 +21,12 @@
     <td width="420" height="120"><?php include ("banner.html")
     ?></td>
   </tr>
-  <font color="black"><tr>
+  <font color="white"><tr>
     <center><td height="420" align="center" >
       <p><br><br>
-        <label for="textfield"></label>LISTA DE PROVEEDORES</p>
+        <label for="textfield">
+        	
+        </label>LISTA DE PROVEEDORES</p>
 
 
 
@@ -44,8 +46,8 @@
 		 }
 		 
 		 	
-			echo"<center><table width='40' height='180' border='0'></center>";
-			 echo '<tr  bgcolor="#FFFFFF">';
+			echo"<center><table width='40' height='180' class='fondotablas' border='0'></center>";
+			 echo '<tr  bgcolor="#424242">';
         	 echo "<td>Representante</td>";
 			 echo "<td>Empresa</td>";
 			 echo "<td>Documento</td>";
@@ -112,8 +114,20 @@
       <center>
   
     <p><a href="index_aplicativo.php" class="btn btn-danger role"  aria-pressed="true">Volver</a>
-    	<a href="reg_proveedor.php" class="btn btn-warning role"  aria-pressed="true">Registrar Proveedor</a></center>
+    	<a href="reg_proveedor.php" class="btn btn-warning role"  aria-pressed="true">Registrar Proveedor</a></p>
+    </center>
 
     </center>
     	</font>
     	</center>
+
+
+
+
+     <?php
+include('footer.html');
+?> 
+      
+      
+      </p>
+     

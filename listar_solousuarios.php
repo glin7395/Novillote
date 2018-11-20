@@ -45,7 +45,7 @@ class usuario
 		 }
 		 
 		 	
-			echo"<table width='80' height='140' border='0'>";
+			echo"<table width='80' height='140' class='fondotablas' border='0'>";
 			 echo '<tr  bgcolor="#424242">';
         	 echo "<td>ID</td>";
 			 echo "<td>Nombre</td>";
@@ -139,7 +139,7 @@ class usuario
 
 				echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
 
-				echo "<input type=submit  name=submit value=editar class='btn btn-danger' />";
+				echo "<input type=submit  name=submit value=editar class='btn btn-warning' />";
       echo "</form>";
 	  echo "</td>";
 	  
@@ -166,9 +166,15 @@ class usuario
  $nuevo=new usuario();
  $nuevo->listar();
     ?>
+
+    <br>
+    <p><a href="index_aplicativo.php" class='btn btn-danger'>Volver al Inicio</a></p>
       <?php
 include('footer.html');
 ?> 
+
+
+
 </p>
   </font></td>
 </tr>

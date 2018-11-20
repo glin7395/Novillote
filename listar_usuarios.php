@@ -14,12 +14,12 @@
 <?php
 include('banner.html');
 ?>
- <table width="900" border="0" align="center" >
+ <font color="white"><table width="900" border="0" align="center" >
   <tr>
+  	 
     <td height="642" align="center" class="fondotabla" >
-      <p align="center">
-      	 <font color="black">
-   
+      	
+
         <?php 
  class usuario
  {
@@ -36,8 +36,8 @@ include('banner.html');
 		 }
 		 
 		 	
-			echo"<table width='80' height='140' border='0'>";
-			 echo '<tr  bgcolor="#FFFFFF">';
+			echo"<table width='80' height='140' class='fondotablas' border='0'>";
+			 echo '<tr  bgcolor="#424242">';
         	 echo "<td>ID</td>";
 			 echo "<td>Nombre</td>";
          	 echo"<td>Apellido</td>";
@@ -160,17 +160,20 @@ include('banner.html');
  
  $nuevo=new usuario();
  $nuevo->listar();
-    ?>
-          </p>
+    ?><br>
+         <p><a href="index_aplicativo.php" class='btn btn-danger'>Volver al Inicio</a>
+          </p></font>
 </td>
 </tr>
 </table>
-      <?php
+ 
+
+
+
+     <?php
 include('footer.html');
 ?> 
       
-
-</body>
-</html>
-
+      
+      </p>
      
