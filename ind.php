@@ -6,10 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Acceso Novillo de Oro</title>
 
-<style>
-</style>
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-
+<link href="css/estilonovillo.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -22,7 +20,7 @@
 
 <table width="983" border="0" align="center" >
  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <a class="navbar-brand" href="index.html">Novillo de Oro Clientes</a>
+  <a class="navbar-brand" href="index.html">Restaurante Novillo de Oro </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"   aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,7 +35,7 @@
             <li class="nav-item">
           </li>
         </ul>
-      <a href="index.html" class="btn btn-outline-success my-2 my-sm-0" role="button" aria-pressed="true">Salir</a>
+      
     </form>
   </div>
 </nav>
@@ -46,7 +44,7 @@
       <div class="overlay">
         <div class="container">
           <center>  <br>
-          <h2 class="display-7 text-white">Clientes Novillo de Oro</h2></center>
+          <h2 class="display-7 text-white">Cliente</h2></center>
         </div>
       </div>
     </header>
@@ -62,16 +60,16 @@
 
 
       <center><img src="images/logosirno.png" width="120" height="120" class="pglo" />
-      <div class="container"><form id="form1" name="form1" method="post" action="evaluar_sesion_cliente.php"  required="on" />
-        <label class="display-7 text-white" for="contrasena">Documento</label><br>
-          <input type="text"  class="campodetexto"  name="numerodocumento"  placeholder="Documento o Usuario" required="on">
-            <small id="documento" class="display-7 text-white">Usuario o ID</small>
+      <div class="container"><form " name="form1" method="post" action="evaluar_sesion_cliente.php"  required="on" />
+        <label class="display-7 text-white" for="contrasena">E-mail</label><br>
+          <input type="text"  class="campodetexto"  name="numerodocumento"  placeholder="e-mail" required="on">
+            <small id="documento" class="display-7 text-white"></small>
               <p align="center"></center>
                 
 
-                <center><label class="display-7 text-white" for="contrasena">Contraseña/Password</label><br>
+                <center><label class="display-7 text-white" for="contrasena">Contraseña</label><br>
                     <input type="password" name="contrasena" class="contra" placeholder="Password" required="on"   >
-                      <small id="documento" class="display-7 text-white">Contraseña</small></center>
+                      <small id="documento" class="display-7 text-white"></small></center>
                           </div>
                               </th>
                                   </tr>
@@ -81,8 +79,14 @@
                <div class="row">
                   <div class="col-md-12" align="center">
                    <input type="submit" class="btn btn-success" value="iniciar sesion" href="index_aplicativo.php" method="post"/>   
+                   </form>
                        <a href="index.html" class="btn btn-primary" role="button" aria-pressed="true">Inicio</a>
                           <a href="https://www.google.com/" class="btn btn-danger role"  aria-pressed="true">Salir</a>
+                           <form  method="post" action="recuperar.php">
+                          <input type="hidden" name="algo" value="Clientes">
+                          <input type="submit" name="" class="btn btn-dark" value="Recuperar Contrasena">
+                          </form>
+                          
                             </div>
                               </th>
                    
@@ -101,7 +105,7 @@
         <p class="m-0 text-center text-white">Derechos reservados © 2017 Fumanji</p>
           </div>
             </footer> 
-              </form>
+              
                 </td>
                   </tr>
                     </table>

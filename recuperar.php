@@ -67,7 +67,20 @@
                 <center><img src="images/logosirno.png" width="120" height="120" class="pglo" />
                   <label class="display-7 text-white" for="contrasena">Ingrese su Documento</label><br>
                    <form action="recuperar_contrasena.php" method="post">
-                    <input type="text" name="contrasena" " placeholder="Documento" required="on"   >
+                    
+                     <?php $variable=$_POST["algo"]; 
+                               echo "<input type='hidden' name='rol' value='$variable'>";
+                               if ($variable=="Clientes") {
+                                 echo "<input type='text' name='email' placeholder='Email Cliente' required='on' >";
+                               }
+                               if ($variable!="Clientes") {
+                                echo "<input type='text' name='contrasena' placeholder='Documento ' required='on' >";
+                               }
+
+                           ?>
+                           <br>   <br>   
+                           <input type="submit" name="" class="btn btn-primary" value="Recuperar">
+                               
                     </center>
                           </div>
                               </th>
@@ -77,8 +90,10 @@
               <th width="20" height="140" align="center" nowrap="nowrap">
                <div class="row">
                   <div class="col-md-12" align="center">
-                           
-                              <input type="submit" name="" value="Enviar" class="btn btn-success">
+                                              
+                             
+                              
+                            
 
                             </form>
                             </div>
