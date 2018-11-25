@@ -14,7 +14,7 @@
 <title>Restaurante el novillo de oro</title>
 </head>
 <body>
-<table width="983" border="0" align="center" >
+<table width="240" height="180" border="0" align="center"  class="fondotabla"  >
  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <a class="navbar-brand" href="index.html">Restaurante Novillo de Oro </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"   aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation">
@@ -37,14 +37,18 @@
 
           </li>
         </ul>
+
+     
+
     
   </div>
+  <a href="index.php" class="btn btn-dark" role="button" aria-pressed="true">Salir</a>
 </nav>
 
     <header class="masthead"  class="hea"  >
       <div class="overlay">
         <div class="container" >
-          <center>  <br>
+          <center>
           <h2 class="display-7 text-white">Administrador</h2></center>
         </div>
       </div>
@@ -79,15 +83,25 @@
           
               <th width="20" height="140" align="center" nowrap="nowrap">
                <div class="row">
-                  <div class="col-md-12" align="center">
-                   <input type="submit" class="btn btn-success" value="iniciar sesion" href="index_aplicativo.php" method="post"/>   
-                       <a href="index.html" class="btn btn-primary" role="button" aria-pressed="true">Inicio</a>
-                          <a href="index.html" class="btn btn-danger role"  aria-pressed="true">Salir</a>
+                 <div class="col-md-12" align="center">
+                  <span class="icon-uno user" aria-hidden="true"></span>
+                   <input type="submit" class="btn btn-success" value="Iniciar Sesion" href="index_aplicativo.php" method="post"/>   
+                          <a href="index.html" class="btn btn-danger"  aria-pressed="true">Salir</a>
                           </form>
+
+
+                   
+               
+
+
                           <form  method="post" action="recuperar.php">
                           <input type="hidden" name="algo" value="Administrador">
-                          <input type="submit" name="" class="btn btn-dark" value="Recuperar Contrasena">
+                          <br>
+                          <input type="submit" name="" class="btn btn-dark" value="Olvidaste La Contrasena ?">
                           </form>
+
+
+
                             </div>
                               </th>
                    

@@ -69,6 +69,10 @@ body.fondo {
     color:white;
 }
 .foot{
+
+
+
+  background: rgba(0,0,0,0.20) ;
   border-color: blue;
   border-radius: 4px;
   border-radius: 5px;
@@ -85,7 +89,7 @@ body.fondo {
 }
 .modificarcss {
 
-  background: rgba(0,0,0,0.20) none repeat scroll 0 0;
+  background: rgba(0,0,0,0.20) ;
   border-radius: 5px;
   margin: 2px auto;  
   padding: 30px;
@@ -127,7 +131,7 @@ font-family: "Comic Sans MS", cursive, sans-serif;
 .fondotabla { 
 
 
-  background: rgba(0,0,0,0.10);
+  background: rgba(0,0,0,0.15);
   font-family: "Comic Sans MS", cursive, sans-serif;
 
 
