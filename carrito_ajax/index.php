@@ -7,6 +7,7 @@
 		<title>CARRITO</title>
 		<script src="js/jquery.min.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="Novillote/css/estilonovillo.css">
 		<script src="js/bootstrap.min.js"></script>
 		<style>
 		.popover
@@ -16,7 +17,7 @@
 		}
 		</style>
 	</head>
-	<body>
+	<body class="hola">
 		<div class="container">
 			<br />
 			<h3 align="center">¡BIENVENIDO!</h3>
