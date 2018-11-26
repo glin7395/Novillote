@@ -36,12 +36,12 @@ session_start();
 			{
 				$_SESSION["estado"]="1";
 				$_SESSION["email_cliente"]=$eemail;
-			header ("location:index_cliente.php");
+			header ("location:carrito_ajax/index.php");
 			}		
 		 
 			if($cont=="0")
 			    {
-				header ("location:index_a.php");
+				header ("location:carrito_ajax/index.php");
 				}
 	 
 	 }
