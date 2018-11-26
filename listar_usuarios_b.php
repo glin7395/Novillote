@@ -18,60 +18,62 @@ include('banner.html');
   <tr>
   	 
     <td height="642" align="center" class="fondotabla" >
-      	
-
         <?php 
+
  class usuario
  {
-	 public function listar ()
+	 public function listar ($busqueda)
 	 {
 		 //session_start();
+	 	
 		 $cont='0';
 		 
 		 include ('conexion.php');
+		 $texto = '';	
+		  $busqueda = trim($_POST['buscar']);
+		  
+		  if (empty($busqueda)){
+			  $texto = 'Búsqueda sin resultados';
+		  }else{
+			  
+			  $sql = "SELECT * FROM persona WHERE nombre LIKE '%" .$busqueda. "%' ORDER BY nombre";
+			  
+			  	 if( !$resultado = $db->query($sql))
+				 {
+					die ('No conecta ['.$db->error.']');
+		 		}
+			 	 if (mysqli_num_rows($resultado) > 0){ 
+			     // Se recoge el número de resultados
+				 $registros = '<p>HEMOS ENCONTRADO ' . mysqli_num_rows($resultado) . ' registros </p>';
+			     // Se almacenan las cadenas de resultado
+				 while($row = mysqli_fetch_assoc($resultado)){ 
 
-		 $sql = "SELECT * FROM persona";
-		 if( !$result = $db->query($sql))
-		 {
-			die ('No conecta ['.$db->error.']');
-		 }
-		 	echo "<form id='buscador' name='buscador' method='post' action='listar_usuarios_b'>"; 
-			echo "<input id='buscar' name='buscar' type='search' placeholder='Buscar aquí...' autofocus >";
-			echo  "<input type='submit' name='buscador' value='buscar'>";
-			echo "</form>";
-				
-			echo"<table width='80' height='140' class='fondotablas' border='0'>";
-			 echo '<tr  bgcolor="#424242">';
-        	 echo "<td>ID</td>";
-			 echo "<td>Nombre</td>";
-         	 echo"<td>Apellido</td>";
-         	 echo"<td>Telefono</td>";
-          	 echo"<td>direccion</td>";
-         	 echo"<td>email</td>";
-         	 echo"<td>Documento</td>";
-			 echo"<td>Genero</td>";
-			 echo"<td>rol</td>";
-			 echo"<td>Tipo de Documento</td>";
-			  echo"<td>editar</td>";
-			   echo"<td>eliminar</td>";
-       	     echo "</tr>";
-			
-			while($row = $result->fetch_assoc())
-			{
-			$iddpersona=stripslashes($row["idpersona"]);
-			$nnombre=stripslashes($row["nombre"]);
-			$aapellido=stripslashes($row["apellido"]);
-			$ttelefono=stripslashes($row["telefono"]);
-			$ddireccion=stripslashes($row["direccion"]);
-			$eemail=stripslashes($row["email"]);	
-			$ddocumento=stripslashes($row["numerodocumento"]);
-			$iddgenero=stripslashes($row["genero_idgenero"]);
-			$iddrol=stripslashes($row["fk_id_rol_idrol"]);
-			$iddocumento=stripslashes($row["tipodocumento_iddocumento"]);
-		
-			
-			
-			
+					echo"<table width='80' height='140' class='fondotablas' border='0'>";
+					 echo "<tr  bgcolor='#424242'>";
+		        	 echo "<td>ID</td>";
+					 echo "<td>Nombre</td>";
+		         	 echo"<td>Apellido</td>";
+		         	 echo"<td>Telefono</td>";
+		          	 echo"<td>direccion</td>";
+		         	 echo"<td>email</td>";
+		         	 echo"<td>Documento</td>";
+					 echo"<td>Genero</td>";
+					 echo"<td>rol</td>";
+					 echo"<td>Tipo de Documento</td>";
+					  echo"<td>editar</td>";
+					   echo"<td>eliminar</td>";
+		       	     echo "</tr>";
+		       	     $iddpersona=stripslashes($row["idpersona"]);
+					$nnombre=stripslashes($row["nombre"]);
+					$aapellido=stripslashes($row["apellido"]);
+					$ttelefono=stripslashes($row["telefono"]);
+					$ddireccion=stripslashes($row["direccion"]);
+					$eemail=stripslashes($row["email"]);	
+					$ddocumento=stripslashes($row["numerodocumento"]);
+					$iddgenero=stripslashes($row["genero_idgenero"]);
+					$iddrol=stripslashes($row["fk_id_rol_idrol"]);
+					$iddocumento=stripslashes($row["tipodocumento_iddocumento"]);
+
 			 //subconsulta
 			   $sql1 = "SELECT * FROM genero WHERE idgenero='$iddgenero' ";
 					 if( !$result1 = $db->query($sql1))
@@ -106,17 +108,6 @@ include('banner.html');
 						{
 						$ttipodocumento=stripslashes($row3["tipo_de_documento"]);
 						}
-		  
-		  
-		  //fun consulta
-		  // otra consubta
-		      
-                
-		  
-		  // fin de otra consuta
-		 
-  
-		  //consulta productos
 		  		echo"<tr >";
          		echo "<td>$iddpersona</td>";
 				echo "<td>$nnombre</td>";
@@ -135,37 +126,40 @@ include('banner.html');
 				echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
 
 				echo "<input type=submit  name=submit value=editar class='btn btn-warning' />";
-      echo "</form>";
-	  echo "</td>";
+			      echo "</form>";
+				  echo "</td>";
 	  
-	  //eliminar
-	  echo "<td>";
+	 			 //eliminar
+	 			 echo "<td>";
 
 
 
 	  // aqui se hace la puta funcion en el puto form2 
 
-	  echo "<form id=form2 name=form2 method=post action='eliminar_usuario.php'>";
-	  echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
-	  echo "<input type=submit  name=submit value=eliminar class='btn btn-danger' />";
-      echo "</form>";
-	  echo "</td>";
-      echo "</tr>";
+				  echo "<form id=form2 name=form2 method=post action='eliminar_usuario.php'>";
+				  echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
+				  echo "<input type=submit  name=submit value=eliminar class='btn btn-danger' />";
+			      echo "</form>";
+				  echo "</td>";
+			      echo "</tr>";
       			
 			}
 			//fin del while
 			echo"</table>";
-	
-	 }//fin del metodo
-	 
-	 
+	  
+	  }else{
+			   echo "NO HAY RESULTADOS EN LA BBDD";	
+	  }
+	  
+	 }
+  }
+}
+ $nuevo= new  usuario();
+ $nuevo->listar($_POST['buscar']);
 
- }//fin de la clase
- 
- $nuevo=new usuario();
- $nuevo->listar();
-    ?><br>
-         <p><a href="index_aplicativo.php" class='btn btn-danger'>Volver al Inicio</a>
+ ?> 
+    <br>
+         <p><a href="listar_usuarios.php" class='btn btn-danger'>Volver a todos los usuarios</a>
           </p></font>
 </td>
 </tr>
@@ -175,9 +169,11 @@ include('banner.html');
 
 
      <?php
-include('footer.html');
-?> 
+include("footer.html");
+ ?>
+ 
       
       
       </p>
+      </html>
      
