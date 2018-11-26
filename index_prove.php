@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="images/LOGO-SIRNO.ico" />
 <title>Restaurante el novillo de oro</title>
 </head>
 
@@ -86,8 +87,8 @@
                   <div class="col-md-12" align="center">
                    <input type="submit" class="btn btn-success" value="iniciar sesion" href="index_proveedor.php" method="post"/>
                    </form>   
-                       <a href="index.html" class="btn btn-primary" role="button" aria-pressed="true">Inicio</a>
-                          <a href="https://www.google.com/" class="btn btn-danger role"  aria-pressed="true">Salir</a>
+                      
+                          
                             <form  method="post" action="recuperar.php">
                           <input type="hidden" name="algo" value="Proveedor">
                           <input type="submit" name="" class="btn btn-dark" value="Recuperar Contrasena">
@@ -107,7 +108,7 @@
 
     <footer  class="foot">
       <div class="container">
-        <p class="m-0 text-center text-white">Derechos reservados © 2017 Fumanji</p>
+        <p class="m-0 text-center text-white">Derechos reservados © 2018 Novillo de Oro</p>
           </div>
             </footer> 
               

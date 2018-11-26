@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="images/LOGO-SIRNO.ico" />
 <title>Restaurante el novillo de oro</title>
 </head>
 <body>
@@ -42,7 +43,7 @@
 
     
   </div>
-  <a href="index.php" class="btn btn-dark" role="button" aria-pressed="true">Salir</a>
+  <a href="index.html" class="btn btn-dark" role="button" aria-pressed="true">Salir</a>
 </nav>
 
     <header class="masthead"  class="hea"  >
@@ -86,7 +87,7 @@
                  <div class="col-md-12" align="center">
                   <span class="icon-uno user" aria-hidden="true"></span>
                    <input type="submit" class="btn btn-success" value="Iniciar Sesion" href="index_aplicativo.php" method="post"/>   
-                          <a href="index.html" class="btn btn-danger"  aria-pressed="true">Salir</a>
+                          
                           </form>
 
 
@@ -117,7 +118,7 @@
 
     <footer  class="foot">
       <div class="container">
-        <p class="m-0 text-center text-white">Derechos reservados © 2017 Fumanji</p>
+        <p class="m-0 text-center text-white">Derechos reservados © 2018 Novillo de Oro</p>
           </div>
             </footer> 
               

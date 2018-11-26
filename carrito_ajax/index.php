@@ -7,8 +7,9 @@
 		<title>CARRITO</title>
 		<script src="js/jquery.min.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="Novillote/css/estilonovillo.css">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		<script src="js/bootstrap.min.js"></script>
+		<link rel="shortcut icon" href="images/LOGO-SIRNO.ico" />
 		<style>
 		.popover
 		{
@@ -20,7 +21,7 @@
 	<body class="hola">
 		<div class="container">
 			<br />
-			<h3 align="center">¡BIENVENIDO!</h3>
+			<h3 align="center"><font size="10%" color="black">	<img src="images/LOGOSIRNO.png" width="95" height="85">¡BIENVENIDO!</font></h3>
 			<br />
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="container-fluid">
@@ -137,7 +138,7 @@ $(document).ready(function(){
 	$(document).on('click', '.delete', function(){
 		var product_id = $(this).attr("id");
 		var action = 'remove';
-		if(confirm("Are you sure you want to remove this product?"))
+		if(confirm("¿Estás seguro de que quieres eliminar este producto?"))
 		{
 			$.ajax({
 				url:"action.php",
@@ -147,7 +148,7 @@ $(document).ready(function(){
 				{
 					load_cart_data();
 					$('#cart-popover').popover('hide');
-					alert("Item has been removed from Cart");
+					alert("El artículo ha sido retirado del carrito");
 				}
 			})
 		}

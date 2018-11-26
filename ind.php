@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="images/LOGO-SIRNO.ico" />
 <title>Restaurante el novillo de oro</title>
 </head>
 
@@ -39,7 +40,7 @@
     </form>
   </div>
 
-<a href="index.php" class="btn btn-dark role="button" aria-pressed="true">Salir</a>
+<a href="index.html" class="btn btn-dark role="button" aria-pressed="true">Salir</a>
 
 
 </nav>
@@ -66,32 +67,32 @@
       <center><img src="images/logosirno.png" width="120" height="120" class="pglo" />
       <div class="container"><form " name="form1" method="post" action="evaluar_sesion_cliente.php"  required="on" />
         <label class="display-7 text-white" for="contrasena">E-mail Cliente</label><br>
-          <input type="text"  class="campodetexto"  name="numerodocumento"  placeholder="e-mail" required="on">
+          <input type="text"  class="campodetexto"  name="numerodocumento"  placeholder="e-mail" required="off">
             <small id="documento" class="display-7 text-white"></small>
               <p align="center"></center>
                 
 
                 <center><label class="display-7 text-white" for="contrasena">Contraseña</label><br>
-                    <input type="password" name="contrasena" class="contra" placeholder="Password" required="on"   >
+                    <input type="password" name="contrasena" class="contra" placeholder="Password" required="off"   ><br><br>
                       <small id="documento" class="display-7 text-white"></small></center>
+                      <br>  
                           </div>
                               </th>
-                                  </tr>
+                                  </tr><br>
 
           
               <th width="20" height="140" align="center" nowrap="nowrap">
                <div class="row">
+                <br>
                   <div class="col-md-12" align="center">
-                   <input type="submit" class="btn btn-success" value="iniciar sesion" href="index_aplicativo.php" method="post"/>   
+                   <input type="submit" class="btn btn-success" value="iniciar sesion" href="index_aplicativo.php" method="post"/> 
                    </form>
-
-
-
-
-                
-                          <a href="https://www.google.com/" class="btn btn-danger role"  aria-pressed="true">Salir</a>
-
-
+                   <br><br>
+                    <form  method="post" action="registro_cliente.php">
+                       <input type="submit" class="btn btn-success" value="Registrate" href="registro_cliente.php" method="post"/> 
+                      <br>
+                   </form>
+                   
                            <form  method="post" action="recuperar.php">
                           <input type="hidden" name="algo" value="Clientes">
                           <br>
@@ -100,8 +101,6 @@
                           
                             </div>
                               </th>
-                   
-       
                 </tr>
                  </table>
                   </td>
@@ -113,7 +112,7 @@
 
     <footer  class="foot">
       <div class="container">
-        <p class="m-0 text-center text-white">Derechos reservados © 2017 Fumanji</p>
+        <p class="m-0 text-center text-white">Derechos reservados © 2018 Novillo de Oro</p>
           </div>
             </footer> 
               
