@@ -22,10 +22,11 @@
 <font color="white">
 <table width="80" height="140" border="0" align="center">
   <tr>
-    <td height="642" align="center" ><form id="form1" name="form1" method="post" action="neg_registrar_productos.php">
+    <br>
+    <div class="container">
+    <td height="180" align="center" ><form id="form1" name="form1" method="post" action="neg_registrar_productos.php">
       <p>REGISTRO DE PRODUCTOS</p>
-      <p></p>
-      <center><table width="351" height="259" border="0">
+      <center><table width="100" height="160" border="0">
         <tr>
           <td width="320"><div align="center">Producto</div></td>
           <td ><div class="col-xs-3" align="center">
@@ -73,7 +74,7 @@
         <style type="text/css">
                       .btn{
                         margin-top: 3px;
-                        margin-left: 960%;
+                        margin-left: 700%;
                       }
                     </style>
 
@@ -84,6 +85,7 @@
 
 </table>
 </form>
+</div>
 </td>
 </tr>
 </table>

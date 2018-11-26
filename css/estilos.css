@@ -69,8 +69,8 @@
 }
 /* Custom CSS Styles */
 #cssmenu {
-  background: #333333;
-  border-bottom: 4px solid #CD6E0F  ;
+  background: #424242;
+  border-bottom: 4px solid #FF0040  ;
   font-family: Arial, sans-serif;
   font-size: 20px;
 }
@@ -108,7 +108,7 @@
   position: relative;
 }
 #cssmenu ul ul li:first-child > a {
-  border-top: 1px solid #CD6E0F;
+  border-top: 1px solid #424242;
 }
 #cssmenu ul ul li:hover > a {
   background: #CD6E0F;
@@ -126,6 +126,7 @@
   box-shadow: 0 1px 0 darkorange;
 }
 #cssmenu ul ul li:last-child:hover > a {
+  content: ;
   -moz-border-radius: 0 0 0 3px;
   -webkit-border-radius: 0 0 0 3px;
   border-radius: 0 0 0 3px;
@@ -134,7 +135,7 @@
   background-clip: padding-box;
 }
 #cssmenu ul ul li.has-sub > a:after {
-  content: '+';
+  content: ;
   position: absolute;
   top: 50%;
   right: 15px;
@@ -142,11 +143,11 @@
 }
 #cssmenu ul li:hover > a,
 #cssmenu ul li.active > a {
-  background: #373532;
+  background: #424242;
   color: #ffffff;
 }
 #cssmenu ul li.has-sub > a:after {
-  content: '+';
+  content: ;
   margin-left: 5px;
 }
 #cssmenu ul li.last ul {
@@ -158,13 +159,13 @@
   right: 90.5%;
 }
 #cssmenu a {
-  background: #333333;
+  background: #424242;
   color: #CBCBCB;
   padding: 0 20px;
 }
 #cssmenu > ul > li > a {
-  line-height: 48px;
-  font-size: 25px;
+  line-height: 36px;
+  font-size: 18px;
 }
 
 
@@ -216,8 +217,7 @@ text-shadow: 6px 6px black;
 }
 footer
 {
-    background-color: black;
-    vertical-align:middle;
+    background-color: #424242;
      text-align: center;
     
 }
@@ -229,8 +229,6 @@ footer
     background-color: white;
     text-align: center;
 }
-
-
 
      
      

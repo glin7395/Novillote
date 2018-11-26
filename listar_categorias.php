@@ -44,7 +44,7 @@
 		 }
 		 
 		 	
-			echo"<center><table width='40' height='180' border='0'></center>";
+			echo"<center><table width='40' height='180'  class='fondotablas' border='0'></center>";
 			 echo '<tr  bgcolor="#424242">';
         	 echo "<td>ID</td>";
 			 echo "<td>Nombre</td>";

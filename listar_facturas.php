@@ -40,7 +40,7 @@
 		 }
 		 
 		 	
-			echo"<table width='650' height='250' border='2'>";
+			echo"<table width='650' height='250' class='fondotablas' border='0'>";
 			 echo '<tr  bgcolor="#B9CEEB">';
         	 echo "<td>ID</td>";
 			 echo "<td>Numero factura</td>";

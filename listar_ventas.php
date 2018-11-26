@@ -4,33 +4,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="css/estilos.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
-
-
+<link rel="stylesheet" type="text/css" href="css/estilonovillo.css">
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <title>Restaurante el novillo de oro</title>
-<style type="text/css">
-#f
-	font-family: Verdana, Geneva, sans-serif;
-}
-</style>
+
 </head>
 
 <body>
 <?php
 include('banner.html');
 ?>
-<font color="white"><table width="850" border="0" align="center" >
-
+ <table width="900" border="0" align="center" >
   <tr>
     <td height="642" align="center" class="fondotabla" >
       <p align="center">
-
-      
-
-
-      	<?php 
-class usuario
+      	 <font color="black">
+   
+        <?php 
+ class usuario
  {
 	 public function listar ()
 	 {
@@ -38,7 +29,7 @@ class usuario
 		 $cont='0';
 		 
 		 include ('conexion.php');
-		 $sql = "SELECT * FROM persona WHERE fk_id_rol_idrol='2' ";
+		 $sql = "SELECT * FROM ventas";
 		 if( !$result = $db->query($sql))
 		 {
 			die ('No conecta ['.$db->error.']');
@@ -46,7 +37,7 @@ class usuario
 		 
 		 	
 			echo"<table width='80' height='140' class='fondotablas' border='0'>";
-			 echo '<tr  bgcolor="#424242">';
+			 echo '<tr  bgcolor="#FFFFFF">';
         	 echo "<td>ID</td>";
 			 echo "<td>Nombre</td>";
          	 echo"<td>Apellido</td>";
@@ -145,13 +136,17 @@ class usuario
 	  
 	  //eliminar
 	  echo "<td>";
-				echo "<form id=form2 name=form2 method=post action='eliminar_usuario.php'>";
-				echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
 
-				echo "<input type=submit  name=submit value=eliminar class='btn btn-danger' />";
+
+
+	  // aqui se hace la puta funcion en el puto form2 
+
+	  echo "<form id=form2 name=form2 method=post action='eliminar_usuario.php'>";
+	  echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
+	  echo "<input type=submit  name=submit value=eliminar class='btn btn-danger' />";
       echo "</form>";
 	  echo "</td>";
-       			echo "</tr>";
+      echo "</tr>";
       			
 			}
 			//fin del while
@@ -166,18 +161,16 @@ class usuario
  $nuevo=new usuario();
  $nuevo->listar();
     ?>
-
-    <br>
-    <p><a href="index_aplicativo.php" class='btn btn-danger'>Volver al Inicio</a></p>
+          </p>
+</td>
+</tr>
+</table>
       <?php
 include('footer.html');
 ?> 
+      
 
-
-
-</p>
-  </font></td>
-</tr>
-</table>
 </body>
 </html>
+
+     

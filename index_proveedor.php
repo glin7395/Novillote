@@ -1,4 +1,5 @@
-
+<?php include ("seguridad_admin.php")
+?>
 <html>
 	<head>
 		<link rel="shortcut icon" href="images/LOGO-SIRNO.ico">

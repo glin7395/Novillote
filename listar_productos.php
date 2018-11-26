@@ -40,7 +40,7 @@
 		 }
 		 
 		 	
-			 echo"<table width='80' height='140' border='0'>";
+			 echo"<table width='80' height='140' class='fondotablas' border='0'>";
 			 echo '<tr  bgcolor="#424242">';
         	 echo "<td>ID</td>";
 			 echo "<td>Producto</td>";

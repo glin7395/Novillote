@@ -11,7 +11,7 @@ class login
 		
 		}
 		
-	    if ($contrasena!="1234")
+	if ($contrasena!="1234")
 		{
 		header ("location: index_a.php");
 		}	

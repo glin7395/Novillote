@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/estilos.css">
+            <link rel="stylesheet" type="text/css" href="css/estilonovillo.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,17 +22,22 @@
 
 
 
-  <td height="642" align="center"><form id="form1" name="form1" method="post" action="neg_registrar_ventadetalle.php">
+  
 <body>
-<font color="white">
+
 <?php include ('banner.html')
 ?>
-<table width="480" border="0" align="center">
+<font color="white">
+
+<table width="80" border="0" align="center" >
   <tr>
     <br>
       <h2>DETALLES DE VENTA</h2>
 
+<div class="container" >
 
+
+  <form id="form2" name="form1" method="post" action="neg_registrar_ventadetalle.php">
 
      <div class="form-group">
       <label class="control-label col-sm-2" for="cantidad_venta">Cantidad:</label>
@@ -125,7 +131,7 @@
     </table>
       
     </form>
-  
+  </div>
   </tr>
   <tr>
 

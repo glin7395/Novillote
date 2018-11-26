@@ -41,6 +41,11 @@ session_start();
 			header ("location:index_aplicativo.php");
 			}
 			
+
+
+
+					
+		 
 			if($cont=="0")
 			    {
 				header ("location:index_a.php");

@@ -14,7 +14,7 @@
 
 <body>
 <?php include('banner.html') ?>
-<font color="black"><table width="850" border="0" align="center" >
+<font color="white"><table width="850" border="0" align="center" >
 
   <tr>
     <td height="642" align="center" class="fondotabla" >
@@ -35,8 +35,8 @@
 		 }
 		 
 		 	
-				echo"<table width='80' height='140' border='0'>";
-			 echo '<tr  bgcolor="#FFFFFF">';
+				echo"<table width='80' height='140' class='fondotablas' border='0'>";
+			 echo '<tr  bgcolor="#424242">';
         	 echo "<td>ID</td>";
 			 echo "<td>Nombre</td>";
          	 echo"<td>Apellido</td>";
@@ -123,15 +123,16 @@
 			
       			
 				//editar
+
+				
 				echo "<td>";
 				echo "<form id=form1 name=form1 method=post action='modificardatos.php'>";
 
 				echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
 
-				echo "<input type=submit  name=submit value=editar class='btn btn-danger' />";
+				echo "<input type=submit  name=submit value=editar class='btn btn-success' />";
       echo "</form>";
 	  echo "</td>";
-
 
 
 
