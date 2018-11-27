@@ -47,7 +47,7 @@
 
   </div>
 
-        <a href="" class="btn btn-dark role="button" aria-pressed="true">Salir</a>
+        <a href="index.html" class="btn btn-dark role="button" aria-pressed="true">Salir</a>
 
 </nav>
 

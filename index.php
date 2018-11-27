@@ -49,13 +49,15 @@
     <header class="masthead"  class="hea"  >
       <div class="overlay">
         <div class="container" >
-          <center>
-          <h2 class="display-7 text-white">Administrador</h2></center>
+          <center> 
+          <font color="white"><h2 class="fondoheaders">Administrador</h2></center></font>
         </div>
       </div>
     </header>
-    <center>
- <td width="360" height="35" border="0"></td>
+
+
+
+<br><center><td width="360" height="35" border="0"></td>
       </tr>
       <td height="200">
           <table width="200" height="100" border="0" align="center">
@@ -66,7 +68,9 @@
           
 
 
- <center ><img src="images/logosirno.png" width="120" height="120" class="pglo" />
+ <center>
+  <p class="display-12 text-white" >Novillo de Oro Restaurante y Parrilla</p>
+  <img src="images/logosirno.png" width="120" height="120" class="pglo" />
       <div class="container"><form  name="form1" method="post" action="evaluar_sesion.php"  required="on" />
         <label class="display-7 text-white" for="contrasena">Documento</label><br>
           <input type="text"  class="campodetexto"  name="numerodocumento"  placeholder="Documento o Usuario" required="on">

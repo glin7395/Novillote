@@ -41,22 +41,22 @@
   </div>
 
 <a href="index.html" class="btn btn-dark role="button" aria-pressed="true">Salir</a>
-
-
 </nav>
+
+
 
     <header class="masthead"  class="hea"  >
       <div class="overlay">
         <div class="container">
-          <center>
-          <h2 class="display-7 text-white">Clientes</h2></center>
+         <center> 
+          <font color="white"><h2 class="fondoheaders">Bienvenidos Clientes</h2></center></font>
         </div>
       </div>
     </header>
   
     <td width="360" height="35" border="0"></td>
       </tr>
-        <td height="240" height="180"><form id="form1" name="form1" method="post" action="evaluar_sesion_cliente.php"autocomplete ="on" />
+        <td height="180"><form id="form1" name="form1" method="post" action="evaluar_sesion_cliente.php"autocomplete ="on" />
           <table width="200" height="100" border="0" align="center">
             <tr>
               <td height="120"><table width="110" border="0" align="center">
@@ -64,15 +64,18 @@
                   <th width="120" align="center" nowrap="nowrap" bgcolor= "">
 
 
-      <center><img src="images/logosirno.png" width="120" height="120" class="pglo" />
+      <center>
+        <p class="display-12 text-white" >Novillo de Oro Restaurante y Parrilla</p>
+        <img src="images/logosirno.png" width="120" height="120" class="pglo" />
+
       <div class="container"><form " name="form1" method="post" action="evaluar_sesion_cliente.php"  required="on" />
-        <label class="display-7 text-white" for="contrasena">E-mail Cliente</label><br>
+        <label class="display-8 text-white" for="contrasena">E-mail Cliente</label><br>
           <input type="text"  class="campodetexto"  name="numerodocumento"  placeholder="e-mail" required="off">
             <small id="documento" class="display-7 text-white"></small>
               <p align="center"></center>
                 
 
-                <center><label class="display-7 text-white" for="contrasena">Contraseña</label><br>
+                <center><label class="display-8 text-white" for="contrasena">Contraseña</label><br>
                     <input type="password" name="contrasena" class="contra" placeholder="Password" required="off"   ><br><br>
                       <small id="documento" class="display-7 text-white"></small></center>
                       <br>  
@@ -89,7 +92,7 @@
                    </form>
                    <br><br>
                     <form  method="post" action="registro_cliente.php">
-                       <input type="submit" class="btn btn-success" value="Registrate" href="registro_cliente.php" method="post"/> 
+                       <input type="submit" class="btn btn-primary" value="Registrate" href="registro_cliente.php" method="post"/> 
                       <br>
                    </form>
                    
