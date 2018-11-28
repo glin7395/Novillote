@@ -20,9 +20,9 @@ header.masthead {
 header.masthead>.overlay {
   padding: 5rem 0;
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.10);
 }
-@media (min-width: 992px) {
+@media (min-width: 780px) {
   header.masthead>.overlay {
     padding: 10rem 0;
   }
@@ -33,7 +33,7 @@ header.masthead>.overlay {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #424242;
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
@@ -43,7 +43,7 @@ header.masthead>.overlay {
     display: block;
 }
 #form1 table {
-  font-family: Verdana, Geneva, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 }
 </style>
@@ -52,65 +52,62 @@ header.masthead>.overlay {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" type="text/css" href="css/estilopagina.css">
+     <link rel="stylesheet" type="text/css" href="css/estilonovillo.css">
        <link rel="shortcut icon" href="images/LOGO-SIRNO.ico" />
     <title>Novillo de oro</title>
   </head>
+
   <body class="pagina">
-  	<nav class="navbar navbar-expand-lg navbar-light bg-light ">
-  <a class="navbar-brand" href="index.html">Novillo de Oro </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="">Restaurante Novillo de Oro </a>
+    <a class="navbar-brand" href="inicio_sesion.php">Iniciar Sesion</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"   aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+        </button>
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
        
-      </li>
+         </li>
+
       <li class="nav-item">
        
-       <li class="nav-item">
-        
-       <li class="nav-item">
-        
         <li class="nav-item">
-        <div class="dropdown">
-   
-      </div>
-      </li>
+        
+          <li class="nav-item">
+          
+            <li class="nav-item">
 
-
-<!-- login -->
-      <li class="nav-item ">
-        <a class="navbar-brand" href="inicio_sesion.php">Inicio de sesion</a>
-         
+          </li>
         </ul>
-<!-- Carrito -->
+
      
+
     
-<!-- Fin Carrito -->
-
-
-        
-        
-
-
-
-        <a href="" class="btn btn-outline-success my-2 my-sm-0" role="button" aria-pressed="true">Salir</a>
-
-    </form>
   </div>
-</nav>
+
+ <!-- form de registro del puto cliente-->
+
+   <form  method="post" action="registro_cliente.php">
+                       <input type="submit" class="btn btn-primary" value="Registrate" href="registro_cliente.php" method="post"/> 
+                      <br>
+                   </form>
+        <a href="" class="btn btn-dark" role="button" aria-pressed="true">Salir</a>
+
+   </nav>
+
+
+
+
 
 <header class="masthead">
       <div class="overlay">
         <div class="container">
-       		<br>
-       		<br>
-       		<br>
-       		<br>
           <center><h1 class="display-2 text-white">Bienvenidos</h1>
-          <h2 class="display-3 text-white">Al Restaurante Novillo de Oro</h2></center>
+          <h2 class="display-3 text-white">Restaurante Novillo de Oro</h2></center>
         </div>
       </div>
     </header>
@@ -124,12 +121,12 @@ header.masthead>.overlay {
 
             </div>
           </div>
-          <div class="col-md-6 order-1">
+          <div class="col-md-6 order-1" style="background-color: rgb(25,45,45);opacity:0.8;}  ">
             <div class="p-5">
-              <h2 class="display-3 text-black">Donde nos encontramos.</h2>
-              <div style= 'color:#000000; font-size:19px;'>INFORMACION DEL RESTAURANTE
+              <h2 class="display-3 text-white">Donde nos encontramos.</h2>
+              <div style= 'color:#FFFFFF; font-size:19px;'>INFORMACION DEL RESTAURANTE
                   Ubicacion Cra. 52 #21-10, Bogota, Sede Barrio San Eusebio,
-                  da a servir platos a la carta, parrillado y bebidas.</div>
+                 platos a la carta, parrillado y bebidas.</div>
             </div>
           </div>
         </div>
@@ -146,7 +143,7 @@ header.masthead>.overlay {
           <div class="col-md-6 order-1">
             <div class="p-5">
               <h2 class="display-4 text-black">Contactenos </h2>
-              <center><div style= 'color:#000000; font-size:19px;'>celular + 05 3103408895 , Bogota</div> 
+              <center><div style= 'color-interpolation-filters: :#000000; font-size:16px;'>celular + 05 3103408895 , Bogota</div> 
               </center>
             </div>
           </div>
@@ -155,13 +152,12 @@ header.masthead>.overlay {
 
 
 
-
-      <footer class="py-5 bg-dark">
+ <footer  class="foot">
       <div class="container">
-        <p class="m-0 text-center text-white">Derechos reservados © 2018 </p>
-      </div>
-    </footer>
-
+        <p class="m-0 text-center text-white">Derechos reservados © 2018 Novillo de Oro</p>
+          </div>
+            </footer> 
+              
 
 
 
@@ -169,6 +165,6 @@ header.masthead>.overlay {
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="js/boostrap.min.js"</script>
+    <script src="js/boostrap.min.js"></script>
   </body>
 </html>

@@ -16,7 +16,7 @@
 <body>
 <table width="240" height="180" border="0" align="center" >
  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <a class="navbar-brand" href="index.html">Novillo de Oro </a>
+  <a class="navbar-brand" href="index.html">Restaurante Novillo de Oro </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"   aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
         </button>
@@ -51,27 +51,25 @@
 
 </nav>
 
-    <header class="masthead"  class="hea"  >
-      <div class="overlay">
-        <div class="container">
-
+   
+     
+        <div class="container" style="background-color: rgb(25,45,45);opacity:0.8;}  ">
             <center>  
-            <br>
-
-
           <h2 class="display-7 text-white">¡BIENVENIDO!</h2></center>
-          <center><h2><font color="black">Eligen tu usuario</font></h2></center>
-               <center><img src="images/logosirno.png" width="120" height="120" class="pglo" /></center>
+          <center><h2><font color="white">Elige tu usuario</font></h2></center>
+               <center>
+                <p class="display-6 text-white" >Novillo de Oro Restaurante y Parrilla</p>
+                <img src="images/logosirno.png" width="120" height="120" class="pglo" /></center>
         </div>
       </div>
     
-    </header>
+  
             
         <center>
           <br>
-              <a href="index.php"><button class="button button1">Administrador</button></a>
-              <a href="ind.php"><button class="button button2">Cliente</button></a>
-              <a href="index_prove.php"><button class="button button3">Provedor</button></a>
+              <a href="index.php"><button class="button btn-warning">Administrador</button></a>
+              <a href="ind.php"><button class="button btn-primary">Cliente</button></a>
+              <a href="index_prove.php"><button class="button btn-danger">Proveedor</button></a>
                         
      </div>
        </center>

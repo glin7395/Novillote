@@ -1,11 +1,13 @@
-<?php
-//index.php
-?>
+
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>CARRITO</title>
+		<title>Carro de Compras El Novillo</title>
+
 		<script src="js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/estilonovillo.css">
+        <link rel="shortcut icon" href="images/LOGO-SIRNO.ico" />
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		<script src="js/bootstrap.min.js"></script>
@@ -18,10 +20,17 @@
 		}
 		</style>
 	</head>
+
+
+
+
+
+
+
 	<body class="hola">
 		<div class="container">
 			<br />
-			<h3 align="center"><font size="10%" color="black">	<img src="images/LOGOSIRNO.png" width="95" height="85">¡BIENVENIDO!</font></h3>
+			<h3 align="center"><font size="10%" color="white">	<img src="images/LOGOSIRNO.png" width="95" height="85">¡BIENVENIDO!</font></h3>
 			<br />
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="container-fluid">

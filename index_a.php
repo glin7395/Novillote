@@ -14,7 +14,7 @@
 <body>
 <table width="800"  height="250" border="0" align="center" class="error">
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <a class="navbar-brand" href="index.html">Novillo de Oro </a>
+  <a class="navbar-brand"  href="inicio_sesion.php">Novillo de Oro </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"   aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
         </button>
@@ -59,6 +59,14 @@
   <tr>
     <td height="43"></td>
   </tr>
+
+
+  
+    <footer  class="foot">
+      <div class="container">
+        <p class="m-0 text-center text-white">Derechos reservados © 2018 Novillo de Oro</p>
+          </div>
+            </footer> 
 </table>
 </body>
 </html>

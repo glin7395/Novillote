@@ -14,11 +14,14 @@
 <?php
 include('banner.html');
 ?>
- <table width="900" border="0" align="center" >
+<font color="white">
+ <table width="160" border="0" align="center" >
   <tr>
-    <td height="642" align="center" class="fondotabla" >
+  	 <br>
+      <h2 class="fondoheaders">VENTAS</h2>
+    <td height="160" align="center"  >
       <p align="center">
-      	 <font color="black">
+      	 
    
         <?php 
  class usuario
@@ -29,7 +32,7 @@ include('banner.html');
 		 $cont='0';
 		 
 		 include ('conexion.php');
-		 $sql = "SELECT * FROM ventas";
+		 $sql = "SELECT * FROM venta";
 		 if( !$result = $db->query($sql))
 		 {
 			die ('No conecta ['.$db->error.']');
@@ -37,38 +40,24 @@ include('banner.html');
 		 
 		 	
 			echo"<table width='80' height='140' class='fondotablas' border='0'>";
-			 echo '<tr  bgcolor="#FFFFFF">';
+			 echo '<tr  bgcolor="#424242">';
         	 echo "<td>ID</td>";
-			 echo "<td>Nombre</td>";
-         	 echo"<td>Apellido</td>";
-         	 echo"<td>Telefono</td>";
-          	 echo"<td>direccion</td>";
-         	 echo"<td>email</td>";
-         	 echo"<td>Documento</td>";
-			 echo"<td>Genero</td>";
-			 echo"<td>rol</td>";
-			 echo"<td>Tipo de Documento</td>";
-			  echo"<td>editar</td>";
-			   echo"<td>eliminar</td>";
+			 echo "<td>fecha</td>";
+         	 echo"<td>cliente</td>";
+         	 echo"<td>Vendedor</td>";
        	     echo "</tr>";
 			
 			while($row = $result->fetch_assoc())
 			{
-			$iddpersona=stripslashes($row["idpersona"]);
-			$nnombre=stripslashes($row["nombre"]);
-			$aapellido=stripslashes($row["apellido"]);
-			$ttelefono=stripslashes($row["telefono"]);
-			$ddireccion=stripslashes($row["direccion"]);
-			$eemail=stripslashes($row["email"]);	
-			$ddocumento=stripslashes($row["numerodocumento"]);
-			$iddgenero=stripslashes($row["genero_idgenero"]);
-			$iddrol=stripslashes($row["fk_id_rol_idrol"]);
-			$iddocumento=stripslashes($row["tipodocumento_iddocumento"]);
-		
+			$iddventa=stripslashes($row["idventa"]);
+			$ffechav=stripslashes($row["fecha"]);
+			$ccliente=stripslashes($row["clientes_idclientes"]);
+			$ppersona=stripslashes($row["persona_idpersona"]);
 			
 			
 			
-			 //subconsulta
+			
+			 /*subconsulta
 			   $sql1 = "SELECT * FROM genero WHERE idgenero='$iddgenero' ";
 					 if( !$result1 = $db->query($sql1))
 					 		{
@@ -104,7 +93,7 @@ include('banner.html');
 						}
 		  
 		  
-		  //fun consulta
+		  */    //fin consulta
 		  // otra consubta
 		      
                 
@@ -114,37 +103,32 @@ include('banner.html');
   
 		  //consulta productos
 		  		echo"<tr >";
-         		echo "<td>$iddpersona</td>";
-				echo "<td>$nnombre</td>";
-          		echo"<td>$aapellido</td>";
-          		echo"<td>$ttelefono</td>";
-          		echo"<td>$ddireccion</td>";
-          		echo"<td>$eemail</td>";
-          		echo"<td>$ddocumento</td>";
-				echo"<td>$ttipogenero</td>";
-				echo "<td>$rrol</td>";
-			    echo"<td>$ttipodocumento</td>";
+         		echo "<td>$iddventa</td>";
+				echo "<td>$ffechav</td>";
+          		echo"<td>$ccliente</td>";
+          		echo"<td>$ppersona</td>";
+          		
 				//editar
-				echo "<td>";
-				echo "<form id=form1 name=form1 method=post action='modificardatos.php'>";
+				//echo "<td>";
+				//echo "<form id=form1 name=form1 method=post action='modificardatos.php'>";
 
-				echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
+				//echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
 
-				echo "<input type=submit  name=submit value=editar class='btn btn-warning' />";
-      echo "</form>";
-	  echo "</td>";
+				//echo "<input type=submit  name=submit value=editar class='btn btn-warning' />";
+     // echo "</form>";
+	  //echo "</td>";
 	  
 	  //eliminar
-	  echo "<td>";
+	 // echo "<td>";
 
 
 
 	  // aqui se hace la puta funcion en el puto form2 
 
-	  echo "<form id=form2 name=form2 method=post action='eliminar_usuario.php'>";
-	  echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
-	  echo "<input type=submit  name=submit value=eliminar class='btn btn-danger' />";
-      echo "</form>";
+	  //echo "<form id=form2 name=form2 method=post action='eliminar_usuario.php'>";
+	  //echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
+	  //echo "<input type=submit  name=submit value=eliminar class='btn btn-danger' />";
+      //echo "</form>";
 	  echo "</td>";
       echo "</tr>";
       			

@@ -21,7 +21,7 @@
 
 <table width="240" height="180" border="0" align="center" >
  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <a class="navbar-brand" href="index.html">Restaurante Novillo de Oro </a>
+  <a class="navbar-brand"  href="inicio_sesion.php">Restaurante Novillo de Oro </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"   aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
         </button>

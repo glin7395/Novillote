@@ -32,9 +32,10 @@
 <table width="80" border="0" align="center" >
   <tr>
     <br>
-      <h2>DETALLES DE VENTA</h2>
+      <h2 class="fondoheaders">Detalles de las ventas</h2>
+      <br>
 
-<div class="container" >
+<div class="container"  style="background-color: rgb(0,0,0);opacity:0.4;}  ">
 
 
   <form id="form2" name="form1" method="post" action="neg_registrar_ventadetalle.php">

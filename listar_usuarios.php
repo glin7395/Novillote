@@ -35,12 +35,12 @@ include('banner.html');
 		 {
 			die ('No conecta ['.$db->error.']');
 		 }
-		 	echo "<form id='buscador' name='buscador' method='post' action='listar_usuarios_b'>"; 
-			echo "<input id='buscar' name='buscar' type='search' placeholder='Buscar aquí...' autofocus >";
-			echo  "<input type='submit' name='buscador' value='buscar'>";
+		 	echo "<form id='buscador' name='buscador' method='post' action='listar_usuarios_b.php'>"; 
+			echo "<input id='buscar' name='buscar' type='search' placeholder='Buscar usuario :' autofocus >";
+			echo  "<input type='submit' name='buscador' class='btn-dark' value='Buscar'>";
 			echo "</form>";
-				
-			echo"<table width='80' height='140' class='fondotablas' border='0'>";
+			echo "<br>";
+			echo"<table width='80' height='140' class='fondotablas' border='1'>";
 			 echo '<tr  bgcolor="#424242">';
         	 echo "<td>ID</td>";
 			 echo "<td>Nombre</td>";

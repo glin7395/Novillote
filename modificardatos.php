@@ -13,15 +13,15 @@
 </head>
 
 <body>
-  <table width="900" border="0" align="center" >
+  <table width="400" border="0" align="center" >
     <tr>
      <font color="white">
-      <td width="790" height="131"><?php include ("banner.html")?></td>
+      <td width="480" height="131"><?php include ("banner.html")?></td>
         </tr>
           <tr>
-            <td height="642" align="center"  border="0">
-             
-                <center><h2>Update data</h2>
+            <td height="480" align="center"  border="0">
+             <br>
+                <center><h3>Actualizar Datos</h3>
      
       <?php 
  class usuario
@@ -38,8 +38,8 @@
       die ('No conecta ['.$db->error.']');
      }
      
-       
-       echo"<table width='80' height='140' border='0'>";
+        echo"<br>";
+       echo"<table width='80' height='110' border='0'>";
        echo '<tr bgcolor="#424242">';
        echo "<td>Id usuario</td>";
        echo "<td>Nombre</td>";
@@ -110,7 +110,7 @@
       
   
         
-        echo '<tr bgcolor="">';
+        echo '<tr bgcolor="#777777">';
             //echo "<td>$ffk_id_rol</td>";
         echo "<td>$iidusuario</td>";
         echo "<td>$nnombre</td>";
@@ -142,9 +142,7 @@
     ?>
 
      <form id="form1" name="form1" method="post" action="modifiardatos2.php">
-      <br>
-      <br>
-      <table width="351" height="259" style="background-color: transparent; color: white;" border="0">
+      <table width="180" height="140" style="background-color: transparent; color: white;" border="0">
          <tr>
           <td ><div align="center">IdUSUARIO</div></td>
           <td ><div align="center">
@@ -281,7 +279,7 @@
                     <input type="submit" class="btn btn-success "  name="button" id="button" value="Actualizar"/>
                     <br>
 
-                     <input type="submit" class="btn btn-danger" value="Volver" href="index_aplicativo.php"/>   
+                     <input type="submit" class="btn btn-danger" value="Volver" href="listar_usuarios.php"/>   
                   
                 </div>
              </div>
@@ -293,7 +291,7 @@
                     <style type="text/css">
                       .btn{
                         margin-top: 3px;
-                        margin-left: 750%;
+                        margin-left: 550px;
                       }
                     </style>
 
