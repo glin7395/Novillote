@@ -15,7 +15,7 @@
 <title>Restaurante el novillo de oro</title>
 </head>
 <body>
-<table width="240" height="180" border="0" align="center"  class="fondotabla"  >
+<table width="60" height="140" border="0" align="center"  class="fondotabla"  >
  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <a class="navbar-brand" href="inicio_sesion.php">Restaurante Novillo de Oro </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"   aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,7 @@
       <div class="overlay">
         <div class="container" >
           <center> 
-          <font color="white"><h2 class="fondoheaders">Administrador</h2></center></font>
+          <font color="white"><h2 class="fondoheaders">Administradores</h2></center></font>
         </div>
       </div>
     </header>

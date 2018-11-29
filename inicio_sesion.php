@@ -73,6 +73,16 @@
                         
      </div>
        </center>
-         </form>         
+         </form>   
+
+
+
+ <footer  class="foot">
+      <div class="container">
+        <p class="m-0 text-center text-white">Derechos reservados © 2018 Novillo de Oro</p>
+          </div>
+            </footer> 
+
+               
                       </body>
                         </html>

@@ -40,13 +40,13 @@
   </div>
 </nav>
   <tr>
-    <td width="790">
+    <td width="260">
   </tr>
   <tr>
-    <td height="642" align="center" ><form id="form1" name="form1" method="post" action="index.php">
+    <td height="200" align="center" ><form id="form1" name="form1" method="post" action="index.php">
       <p>&nbsp;</p>
       <font color="white">
-      <p>Contraseña incorrecta vuelve a intentarlo</p>
+      <p><--------- Contraseña  o Numero de Documento incorrecto vuelve a intentarlo ---------> </p>
       <p>
         <label for="textfield"></label></font>
         <input type="submit" class="btn btn-success"  name="button" id="button" value="Volver a intentarlo" />
@@ -62,11 +62,14 @@
 
 
   
-    <footer  class="foot">
+   
+</table>
+
+
+ <footer  class="foot">
       <div class="container">
         <p class="m-0 text-center text-white">Derechos reservados © 2018 Novillo de Oro</p>
           </div>
             </footer> 
-</table>
 </body>
 </html>
