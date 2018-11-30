@@ -32,7 +32,7 @@ include('banner.html');
 		 $cont='0';
 		 
 		 include ('conexion.php');
-		 $sql = "SELECT * FROM venta";
+		 $sql = "SELECT fecha, clientes.nombre_cliente, persona.nombre from venta INNER JOIN clientes on venta.clientes_idclientes = clientes.idclientes  INNER JOIN persona on venta.persona_idpersona = persona.idpersona";
 		 if( !$result = $db->query($sql))
 		 {
 			die ('No conecta ['.$db->error.']');
@@ -41,18 +41,18 @@ include('banner.html');
 		 	
 			echo"<table width='80' height='140' class='fondotablas' border='0'>";
 			 echo '<tr  bgcolor="#424242">';
-        	 echo "<td>ID</td>";
+        	 
 			 echo "<td>fecha</td>";
          	 echo"<td>cliente</td>";
-         	 echo"<td>Vendedor</td>";
+         	 echo "<tD>Nombre del vendedor</TD>";
+         	
        	     echo "</tr>";
 			
 			while($row = $result->fetch_assoc())
-			{
-			$iddventa=stripslashes($row["idventa"]);
+			{	
 			$ffechav=stripslashes($row["fecha"]);
-			$ccliente=stripslashes($row["clientes_idclientes"]);
-			$ppersona=stripslashes($row["persona_idpersona"]);
+			$ccliente=stripslashes($row["nombre_cliente"]);
+			$ppersona=stripslashes($row["nombre"]);
 			
 			
 			
@@ -103,7 +103,6 @@ include('banner.html');
   
 		  //consulta productos
 		  		echo"<tr >";
-         		echo "<td>$iddventa</td>";
 				echo "<td>$ffechav</td>";
           		echo"<td>$ccliente</td>";
           		echo"<td>$ppersona</td>";

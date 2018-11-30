@@ -30,6 +30,8 @@ include('banner.html');
 		 
 		 include ('conexion.php');
 
+		  //SELECT idventa, fecha, clientes.nombre_cliente , persona.nombre FROM venta INNER JOIN clientes on venta.clientes_idclientes = clientes.idclientes INNER JOIN persona on venta.persona_idpersona = persona.idpersona
+
 		 $sql = "SELECT * FROM persona";
 		 if( !$result = $db->query($sql))
 		 {
