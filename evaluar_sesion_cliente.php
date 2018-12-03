@@ -7,7 +7,7 @@ session_start();
 	 public function evaluar_inicio ($contrasena_cliente,$email_cliente)
 	 {
 
-		 $cont='0';
+		 $cont=0;
 		 include ("conexion.php");
 		 
 		 $sql = "SELECT * FROM clientes WHERE email_cliente='$email_cliente'";
@@ -24,6 +24,8 @@ session_start();
 			{
 			$eemail=stripslashes($row["email_cliente"]);
 			$ccontrasena=stripslashes($row["contrasena_cliente"]);
+			$_SESSION["nnombre_cliente"]=stripslashes($row["nombre_cliente"]);
+			$_SESSION["id_clientes"]=stripslashes($row["idclientes"]);
 			}
 		
 			if(($eemail==$email_cliente)&&($ccontrasena==$contrasena_cliente))
@@ -35,13 +37,14 @@ session_start();
 		if($cont!="0")
 			{
 				$_SESSION["estado"]="1";
-				$_SESSION["email_cliente"]=$eemail;
-			header ("location:carrito_ajax/index.php");
+				$_SESSION["email_cliente"]=$email_cliente;
+			     header ("location:index_cliente.php");
+
 			}		
 		 
 			if($cont=="0")
 			    {
-				header ("location:carrito_ajax/index.php");
+				 header ("location:cliente/login_error_cliente.php");
 				}
 	 
 	 }
@@ -49,6 +52,6 @@ session_start();
  }
  
  $nuevo=new Login_cliente();
- $nuevo->evaluar_inicio($_POST["contrasena"],$_POST["numerodocumento"]);
+ $nuevo->evaluar_inicio($_POST["contrasena_cliente"],$_POST["email_cliente"]);
  ?>
   

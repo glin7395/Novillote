@@ -21,7 +21,7 @@
 
 <table width="60" height="140" border="0" align="center" >
  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <a class="navbar-brand"  href="inicio_sesion.php">Restaurante Novillo de Oro </a>
+  <a class="navbar-brand"  href="index.html">Restaurante Novillo de Oro </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"   aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,8 +36,6 @@
             <li class="nav-item">
           </li>
         </ul>
-      
-    </form>
   </div>
 
 <a href="index.html" class="btn btn-dark role="button" aria-pressed="true">Salir</a>
@@ -56,7 +54,7 @@
   
     <td width="120" height="35" border="0"></td>
       </tr>
-        <td height="140"><form id="form1" name="form1" method="post" action="evaluar_sesion_cliente.php"autocomplete ="on" />
+        <td height="140">
           <table width="100" height="100" border="0" align="center">
             <tr>
               <td height="120"><table width="110" border="0" align="center">
@@ -68,27 +66,28 @@
         <p class="display-12 text-white" >Novillo de Oro Restaurante y Parrilla</p>
         <img src="images/logosirno.png" width="120" height="120" class="pglo" />
 
-      <div class="container"><form " name="form1" method="post" action="evaluar_sesion_cliente.php"  required="on" />
+      <div class="container">
+        <form " name="form1" method="post" action="evaluar_sesion_cliente.php"  required="on" />
         <label class="display-8 text-white" for="contrasena">E-mail Cliente</label><br>
-          <input type="text"  class="campodetexto"  name="numerodocumento"  placeholder="e-mail" required="on">
-            <small id="documento" class="display-7 text-white"></small>
+          <input type="text"  class="campodetexto"  name="email_cliente"  placeholder="e-mail" required="on">
+            <small id="email_cliente" class="display-7 text-white"></small>
               <p align="center"></center>
                 
 
                 <center><label class="display-8 text-white" for="contrasena">Contraseña</label><br>
-                    <input type="password" name="contrasena" class="contra" placeholder="Password" required="off"   ><br><br>
-                      <small id="documento" class="display-7 text-white"></small></center>
+                    <input type="password" name="contrasena_cliente" class="contra" placeholder="Password" required="off"   ><br><br>
+                      <small id="contrasena_cliente" class="display-7 text-white"></small></center>
                       <br>  
                           </div>
                               </th>
                                   </tr><br>
 
           
-              <th width="20" height="120" align="center" nowrap="nowrap">
+              <th width="20" height="120" align="center" nowrap="now|rap">
                <div class="row">
                 <br>
                   <div class="col-md-12" align="center">
-                   <input type="submit" class="btn btn-success" value="iniciar sesion" href="index_aplicativo.php" method="post"/> 
+                   <input type="submit" class="btn btn-success" value="iniciar sesion" /> 
                    </form>
                    <br><br>
                     <form  method="post" action="registro_cliente.php">

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 03-12-2018 a las 21:27:08
+-- Tiempo de generación: 02-12-2018 a las 22:57:55
 -- Versión del servidor: 5.7.21
--- Versión de PHP: 7.0.29
+-- Versión de PHP: 5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `detalle_pedido` (
   PRIMARY KEY (`iddetalle_pedido`,`pedidos_idpedidos`,`plato_idplato`),
   KEY `fk_detalle_pedido_pedidos1_idx` (`pedidos_idpedidos`),
   KEY `fk_detalle_pedido_plato1_idx` (`plato_idplato`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `detalle_pedido`
@@ -101,10 +101,7 @@ INSERT INTO `detalle_pedido` (`iddetalle_pedido`, `pedidos_idpedidos`, `plato_id
 (4, 3, 2, 1, 15.000),
 (5, 4, 1, 10, 10.000),
 (6, 5, 1, 1, 10.000),
-(7, 6, 2, 1, 15.000),
-(8, 7, 1, 10, 10.000),
-(9, 8, 2, 10, 15.000),
-(10, 9, 2, 10, 15.000);
+(7, 6, 2, 1, 15.000);
 
 -- --------------------------------------------------------
 
@@ -234,7 +231,7 @@ CREATE TABLE IF NOT EXISTS `pedidos` (
   PRIMARY KEY (`idpedidos`,`clientes_idclientes`,`estados_idestados`),
   KEY `fk_pedidos_clientes1_idx` (`clientes_idclientes`),
   KEY `fk_pedidos_estados1_idx` (`estados_idestados`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `pedidos`
@@ -246,10 +243,7 @@ INSERT INTO `pedidos` (`idpedidos`, `clientes_idclientes`, `fecha_pedido`, `tota
 (3, 1, '2018-12-02 21:29:35', 15.000, 1),
 (4, 2, '2018-12-02 22:01:34', 100.000, 1),
 (5, 1, '2018-12-02 22:06:19', 10.000, 1),
-(6, 1, '2018-12-02 22:54:06', 15.000, 1),
-(7, 1, '2018-12-03 20:21:46', 100.000, 1),
-(8, 1, '2018-12-03 20:23:14', 150.000, 1),
-(9, 1, '2018-12-03 20:24:08', 150.000, 1);
+(6, 1, '2018-12-02 22:54:06', 15.000, 1);
 
 -- --------------------------------------------------------
 
@@ -304,7 +298,7 @@ CREATE TABLE IF NOT EXISTS `plato` (
   `categoria_idcategoria` int(11) NOT NULL,
   PRIMARY KEY (`idplato`,`categoria_idcategoria`),
   KEY `fk_plato_categoria1_idx` (`categoria_idcategoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `plato`
@@ -312,10 +306,7 @@ CREATE TABLE IF NOT EXISTS `plato` (
 
 INSERT INTO `plato` (`idplato`, `nombre_plato`, `descripcion_plato`, `imagen_plato`, `fecha_plato`, `precio_plato`, `categoria_idcategoria`) VALUES
 (1, 'Carne', 'con papas', '1.jpg', '2018-12-01 05:35:17', 10.000, 1),
-(2, 'pollo', 'en salsa', '2.jpg', '2018-12-01 06:29:19', 15.000, 1),
-(3, 'Arroz con Pollo', 'Arroz amarillo con pollo y salsas', '3.jpg', '2018-12-03 00:00:00', 10.000, 1),
-(4, 'Mondogo', 'Sopa de mondongo  con carne', '4.jpg', '2018-12-03 00:00:00', 8.000, 1),
-(5, 'Carne a la plancha', 'Carne a la plancha con chimicurri ', '5.jpg', '2018-12-04 00:00:00', 15.000, 1);
+(2, 'pollo', 'en salsa', '2.jpg', '2018-12-01 06:29:19', 15.000, 1);
 
 -- --------------------------------------------------------
 

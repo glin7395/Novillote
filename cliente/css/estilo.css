@@ -1,0 +1,185 @@
+body { 
+   background-image: url('https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ea7aeb5fc4e3623a3f16af817ec12129&auto=format&fit=crop&w=1355&q=80');
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+@import url(http://fonts.googleapis.com/css?family=Arial);
+#cssmenu {
+
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  padding: 0%;
+  margin: 0%;
+  border: 0%;
+  width: auto;
+}
+#cssmenu ul,
+#cssmenu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu ul {
+  position: relative;
+  z-index: 0;
+    align-items : center; 
+  
+}
+#cssmenu ul li {
+  float: left;
+  min-height: 1px;
+  vertical-align: middle;
+}
+#cssmenu ul li.hover,
+#cssmenu ul li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+#cssmenu ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 408;
+  width: 100%;
+}
+#cssmenu ul ul li {
+  float: none;
+}
+#cssmenu ul ul ul {
+  top: 0;
+  left: 190px;
+  width: 190px;
+}
+#cssmenu ul li:hover > ul {
+  visibility: visible;
+}
+#cssmenu ul ul {
+  bottom: 0;
+  left: 0;
+}
+#cssmenu ul ul {
+  margin-top: 0;
+}
+#cssmenu ul ul li {
+  font-weight: normal;
+}
+#cssmenu a {
+  display: block;
+  line-height: 1em;
+  text-decoration: none;
+}
+/* Custom CSS Styles */
+#cssmenu {
+  background: #424242;
+  border-bottom: 4px solid #FF0040  ;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+#cssmenu > ul {
+  *display: inline-block;
+}
+#cssmenu:after,
+#cssmenu ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#cssmenu ul {
+  align-content: center;
+  text-transform: uppercase ;
+}
+#cssmenu ul ul {
+  border-top: 4px solid #CD6E0F;
+  text-transform: none;
+  min-width: 190px;
+}
+#cssmenu ul ul a {
+  background: #373532  ;
+  color: #ffffff;
+  border: 1px solid #CD6E0F ;
+  border-top: 0 none;
+  line-height: 150%;
+  padding: 16px 20px;
+  font-size: 20px;
+}
+#cssmenu ul ul ul {
+  border-top: 0 none;
+}
+#cssmenu ul ul li {
+  position: relative;
+}
+#cssmenu ul ul li:first-child > a {
+  border-top: 1px solid #424242;
+}
+#cssmenu ul ul li:hover > a {
+  background: #CD6E0F;
+  color: #ffffff;
+}
+#cssmenu ul ul li:last-child > a {
+  -moz-border-radius: 0 0 3px 3px;
+  -webkit-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -moz-box-shadow: 0 1px 0 darkorange;
+  -webkit-box-shadow: 0 1px 0 darkorange;
+  box-shadow: 0 1px 0 darkorange;
+}
+#cssmenu ul ul li:last-child:hover > a {
+  content: ;
+  -moz-border-radius: 0 0 0 3px;
+  -webkit-border-radius: 0 0 0 3px;
+  border-radius: 0 0 0 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#cssmenu ul ul li.has-sub > a:after {
+  content: ;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -8px;
+}
+#cssmenu ul li:hover > a,
+#cssmenu ul li.active > a {
+  background: #424242;
+  color: #ffffff;
+}
+#cssmenu ul li.has-sub > a:after {
+  content: ;
+  margin-left: 5px;
+}
+#cssmenu ul li.last ul {
+  left: auto;
+  right: 0;
+}
+#cssmenu ul li.last ul ul {
+  left: auto;
+  right: 90.5%;
+}
+#cssmenu a {
+  background: #424242;
+  color: #CBCBCB;
+  padding: 0 20px;
+}
+#cssmenu > ul > li > a {
+  line-height: 36px;
+  font-size: 18px;
+}
+.titulo        {
+<<<<<<< HEAD
+color: black;
+
+=======
+color: white;
+text-shadow: 6px 6px black;
+>>>>>>> master
+
+}
