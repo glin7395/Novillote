@@ -145,6 +145,34 @@ include('banner.html');
 
       </div>
     </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="estado_idEstado">Estado:</label>
+      <div class="col-sm-10">
+      <select name="estado_idestado" class="form-control">
+          <?php
+        
+        include ('conexion.php');
+                 $sql3 = "SELECT * FROM estado ";
+           if( !$result3 = $db->query($sql3))
+              {
+            die ('No conecta ['.$db->error.']');
+             }
+            while($row3 = $result3->fetch_assoc())
+            {
+            $iddestado=stripslashes($row3["idestado"]);
+            $estadonulo=stripslashes($row3["descripcion_estado"]);
+            echo "<option value =$iddestado>$estadonulo</option>";
+            }
+                
+                ?>
+
+      </select>
+
+      </div>
+    </div>
+
+
+
 
     <input type="submit" name="button" id="button" value="Registrar usuario"  class="btn btn-danger role=" />
   </form>

@@ -32,7 +32,7 @@ include('banner.html');
 		 $cont='0';
 		 
 		 include ('conexion.php');
-		 $sql = "SELECT fecha, clientes.nombre_cliente, persona.nombre from venta INNER JOIN clientes on venta.clientes_idclientes = clientes.idclientes  INNER JOIN persona on venta.persona_idpersona = persona.idpersona";
+		 $sql = "SELECT * from plato;
 		 if( !$result = $db->query($sql))
 		 {
 			die ('No conecta ['.$db->error.']');
@@ -57,18 +57,24 @@ include('banner.html');
 			
 			
 			
-			 /*subconsulta
-			   $sql1 = "SELECT * FROM genero WHERE idgenero='$iddgenero' ";
-					 if( !$result1 = $db->query($sql1))
+			 //subconsulta
+			  
+				
+				include ('conexion.php');
+                 $sql = "SELECT * FROM categoria ";
+					 if( !$result = $db->query($sql))
 					 		{
 						die ('No conecta ['.$db->error.']');
 						 }
-						while($row1 = $result1->fetch_assoc())
+						while($row = $result->fetch_assoc())
 						{
-						$ttipogenero=stripslashes($row1["tipo_de_genero"]);
-						}	
-
-
+						$ffk_id_categoria=stripslashes($row["idcategoria"]);
+						$categoria=stripslashes($row["tipo_categoria"]);
+						echo "<option value =$ffk_id_categoria>$categoria</option>";
+						}
+                
+                
+/*
 						///	
 			$sql2 = "SELECT * FROM fk_id_rol WHERE idrol='$iddrol' ";
 					 if( !$result2 = $db->query($sql2))
