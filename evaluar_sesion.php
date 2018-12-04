@@ -20,7 +20,7 @@ session_start();
 			{
 			$ddocumento=stripslashes($row["numerodocumento"]);
 			$ccontrasena=stripslashes($row["contrasena"]);
-			$eestado_ingreso=stripcslashes($row["estado_idEstado"]);
+			//$eestado_ingreso=stripcslashes($row["estado_idestado"]);
 
 			}
 			$ffk_id_rol=stripslashes($row["des_rol"]);
@@ -32,7 +32,7 @@ session_start();
 			//fin del while
 					
 		if($cont!="0")
-					$_SESSION["numerodocumento"]=$ddocumento;
+				/*	$_SESSION["numerodocumento"]=$ddocumento;
 				
 					switch ($eestado_ingreso) 
 					{
@@ -46,11 +46,11 @@ session_start();
 							break;
 
 				
-					}
+					}*/
 
 
 
-			/*{
+			{
 				$_SESSION["estado"]="1";
 				$_SESSION["numerodocumento"]=$ddocumento;
 				
@@ -60,7 +60,7 @@ session_start();
 				}
 			header ("location:index_aplicativo.php");
 			}
-			*/
+			
 
 
 
