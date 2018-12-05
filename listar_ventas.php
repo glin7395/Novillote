@@ -32,81 +32,85 @@ include('banner.html');
 		 $cont='0';
 		 
 		 include ('conexion.php');
-		 $sql = "SELECT fecha, clientes.nombre_cliente, persona.nombre from venta INNER JOIN clientes on venta.clientes_idclientes = clientes.idclientes  INNER JOIN persona on venta.persona_idpersona = persona.idpersona";
+		 $sql = "SELECT * from pedidos";
 		 if( !$result = $db->query($sql))
 		 {
 			die ('No conecta ['.$db->error.']');
 		 }
-		 
+		 	echo "<form id='buscador' name='buscador' method='post' action='listar_ventas_b.php'>"; 
+			echo "<input id='buscar' name='buscar' type='search' placeholder='Buscar usuario :' autofocus >";
+			echo  "<input type='submit' name='buscador' class='btn-dark' value='Buscar'>";
+			echo "</form>";
+			echo "<br>";	
 		 	
-			echo"<table width='80' height='140' class='fondotablas' border='0'>";
+		     echo"<table width='80' height='140' class='fondotablas' border='1'>";
 			 echo '<tr  bgcolor="#424242">';
-        	 
-			 echo "<td>fecha</td>";
-         	 echo"<td>cliente</td>";
-         	 echo "<tD>Nombre del vendedor</TD>";
+			 echo "<td>cliente</td>";
+			 echo "<td>nombre del cliente</td>";
+         	 echo"<td>fecha</td>";
+         	 echo "<tD>total</TD>";
+         	 echo"<tD>estado </td>";
          	
        	     echo "</tr>";
 			
 			while($row = $result->fetch_assoc())
-			{	
-			$ffechav=stripslashes($row["fecha"]);
-			$ccliente=stripslashes($row["nombre_cliente"]);
-			$ppersona=stripslashes($row["nombre"]);
-			
-			
-			
-			
-			 /*subconsulta
-			   $sql1 = "SELECT * FROM genero WHERE idgenero='$iddgenero' ";
+			{
+			$iddpedidos=stripslashes($row["idpedidos"]);
+			$iddclientes=stripslashes($row["clientes_idclientes"]);
+			$ffechav=stripslashes($row["fecha_pedido"]);
+			$ppedidos=stripslashes($row["total_pedido"]);
+			$iddestados=stripslashes($row["estados_idestados"]);
+			$iddforma=stripslashes($row["formadepago_idformadepago"]);
+
+			 //subconsulta
+			  
+				
+				include ('conexion.php');
+                 $sql1 = "SELECT * FROM clientes WHERE idclientes='$iddclientes'";
 					 if( !$result1 = $db->query($sql1))
 					 		{
 						die ('No conecta ['.$db->error.']');
 						 }
 						while($row1 = $result1->fetch_assoc())
 						{
-						$ttipogenero=stripslashes($row1["tipo_de_genero"]);
-						}	
-
-
+						$nnombre=stripslashes($row1["nombre_cliente"]);
+						}
 						///	
-			$sql2 = "SELECT * FROM fk_id_rol WHERE idrol='$iddrol' ";
+			$sql2 = "SELECT * FROM estados WHERE idestados='$iddestados' ";
 					 if( !$result2 = $db->query($sql2))
 					 		{
 						die ('No conecta ['.$db->error.']');
 						 }
 						while($row2 = $result2->fetch_assoc())
 						{
-						$rrol=stripslashes($row2["des_rol"]);
-						
+						$descripcion=stripslashes($row2["nombre_estado"]);
 						}
-          //finsubconsulta
-		   //consulta
-		   $sql3 = "SELECT * FROM tipodocumento WHERE iddocumento='$iddocumento' ";
-					 if( !$result3 = $db->query($sql3))
-					 		{
-						die ('No conecta ['.$db->error.']');
-						 }
-						while($row3 = $result3->fetch_assoc())
-						{
-						$ttipodocumento=stripslashes($row3["tipo_de_documento"]);
-						}
-		  
-		  
-		  */    //fin consulta
-		  // otra consubta
-		      
-                
-		  
-		  // fin de otra consuta
-		 
-  
+
+
+			$sql3 = "SELECT * FROM formadepago where idformadepago='$iddforma'";
+           if( !$result3 = $db->query($sql2))
+              {
+            die ('No conecta ['.$db->error.']');
+             }
+            while($row3 = $result3->fetch_assoc())
+            {
+      
+            $ttipopago=stripslashes($row3["tipo_de_pago"]);
+            }
+
+
+
+
+
 		  //consulta productos
 		  		echo"<tr >";
-				echo "<td>$ffechav</td>";
-          		echo"<td>$ccliente</td>";
-          		echo"<td>$ppersona</td>";
-          		
+		  		echo "<td>$iddpedidos</td>";
+				echo "<td>$nnombre</td>";
+          		echo"<td>$ffechav</td>";
+          		echo"<td>$ppedidos</td>";
+          		echo"<td>$descripcion</td>";
+          		echo"<td>$ttipopago</td>";
+
 				//editar
 				//echo "<td>";
 				//echo "<form id=form1 name=form1 method=post action='modificardatos.php'>";
@@ -154,6 +158,4 @@ include('footer.html');
       
 
 </body>
-</html>
-
-     
+</html>     

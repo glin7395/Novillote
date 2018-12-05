@@ -48,7 +48,7 @@
 			 // 
 			 if ($existencia=="0")
 			 {
-		 $sql2 = "INSERT INTO  persona (idpersona,nombre,apellido,telefono,direccion,email,numerodocumento,contrasena,genero_idgenero,fk_id_rol_idrol,tipodocumento_iddocumento,estado_idestado) VALUES (NULL,'$nombre','$apellido','$telefono','$direccion','$email','$numerodocumento','$contrasena','$genero_idgenero','$fk_id_rol_idrol','$tipodocumento_iddocumento','estado_idestado')";
+		 $sql2 = "INSERT INTO  persona (idpersona,nombre,apellido,telefono,direccion,email,numerodocumento,contrasena,genero_idgenero,fk_id_rol_idrol,tipodocumento_iddocumento,estado_idestado) VALUES (NULL,'$nombre','$apellido','$telefono','$direccion','$email','$numerodocumento','$contrasena','$genero_idgenero','$fk_id_rol_idrol','$tipodocumento_iddocumento','$estado_idestado')";
 		 if( !$result2 = $db->query($sql2))
 		 					{
 						die ('No conecta ['.$db->error.']');
