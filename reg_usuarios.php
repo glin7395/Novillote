@@ -22,62 +22,62 @@ include('banner.html');
 ?>
  
         <center>
-       <font color="white"><h2 >Registro de Usuarios</h2>
+       <font color="white"><h2   class="fondoheaders">Registro de Usuarios</h2>
 	  </center>	  
 	  <!-- Formulario !-->
-     <div class="container">
+     <div class="container" >
 
   
-  <form class="form-horizontal" id="form1" name="form1" method="post" action="neg_registrar_usuarios.php">
+  <form class="form-horizontal" role="form" width="40" heigth="40" id="form1" name="form1" method="post" action="neg_registrar_usuarios.php">
       
        
     <div class="form-group">
-     <label class="control-label col-sm-2"  for="nombre">Nombre:</label> 
-      <div class="col-sm-10">
+     <label class="control-label col-sm-3"  for="nombre">Nombre:</label> 
+      <div class="col-sm-6">
         <input type="nombre"  class="form-control" id="nombre" placeholder="Ingrese Nombre" name="nombre">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="apellido">Apellido:</label>
-      <div class="col-sm-10">
+      <label class="control-label col-sm-3" for="apellido">Apellido:</label>
+      <div class="col-sm-6">
         <input type="apellido" class="form-control" id="apellido" placeholder="ingrese apellido" name="apellido">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="telefono">Telefono:</label>
-      <div class="col-sm-10">
+      <label class="control-label col-sm-3" for="telefono">Telefono:</label>
+      <div class="col-sm-6">
         <input type="telefono" class="form-control" id="telefono" placeholder="Ingrese numero telefonico " name="telefono">
       </div>
     </div>
      <div class="form-group">
-      <label class="control-label col-sm-2" for="direccion">Direccion:</label>
-      <div class="col-sm-10">
+      <label class="control-label col-sm-3" for="direccion">Direccion:</label>
+      <div class="col-sm-6">
         <input type="direccion" class="form-control" id="direccion" placeholder="Ingrese direccion" name="direccion">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Email:</label>
-      <div class="col-sm-10">
+      <label class="control-label col-sm-3" for="email">Email:</label>
+      <div class="col-sm-6">
         <input type="email" class="form-control" id="email" placeholder="Ingrese correo electronico" name="email">
       </div>
     </div>
      <div class="form-group">
-      <label class="control-label col-sm-2" for="numerodocumento">Numero Documento:</label>
-      <div class="col-sm-10">
+      <label class="control-label col-sm-3" for="numerodocumento">Numero Documento:</label>
+      <div class="col-sm-6">
         <input type="numerodocumento" class="form-control" id="numerodocumento" placeholder="ingrese numero de identificacion" name="numerodocumento">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="contrasena">Contraseña:</label>
-      <div class="col-sm-10">          
+      <label class="control-label col-sm-3" for="contrasena">Contraseña:</label>
+      <div class="col-sm-6">          
         <input type="contrasena" class="form-control" id="contrasena" placeholder="ingrese contraseña" name="contrasena">
       </div>
     </div>   
 
 
  <div class="form-group">
-      <label class="control-label col-sm-2" for="genero_idgenero">Genero:</label>
-      <div class="col-sm-10">
+      <label class="control-label col-sm-3" for="genero_idgenero">Genero:</label>
+      <div class="col-sm-6">
       <select name="genero_idgenero" class="form-control">
         <?php
         
@@ -98,8 +98,8 @@ include('banner.html');
                 </select></div></div>
    
       <div class="form-group">
-      <label class="control-label col-sm-2" for="fk_id_rol_idrol">Rol:</label>
-      <div class="col-sm-10">
+      <label class="control-label col-sm-3" for="fk_id_rol_idrol">Rol:</label>
+      <div class="col-sm-6">
       <select name="fk_id_rol_idrol" class="form-control">
           <?php
         
@@ -121,8 +121,8 @@ include('banner.html');
 
 
    <div class="form-group">
-      <label class="control-label col-sm-2" for="tipodocumento_iddocumento">Tipo de documento:</label>
-      <div class="col-sm-10">
+      <label class="control-label col-sm-3" for="tipodocumento_iddocumento">Tipo de documento:</label>
+      <div class="col-sm-6">
       <select name="tipodocumento_iddocumento" class="form-control">
           <?php
         
@@ -146,8 +146,8 @@ include('banner.html');
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="estado_idEstado">Estado:</label>
-      <div class="col-sm-10">
+      <label class="control-label col-sm-3" for="estado_idEstado">Estado:</label>
+      <div class="col-sm-6">
       <select name="estado_idestado" class="form-control">
           <?php
         
@@ -167,15 +167,15 @@ include('banner.html');
                 ?>
 
       </select>
-
       </div>
     </div>
 
 
 
-
-    <input type="submit" name="button" id="button" value="Registrar usuario"  class="btn btn-danger role=" />
+<input type="submit" name="button" id="button" value="Registrar usuario"  class="btn btn-danger role=" />
+   
   </form>
+
 </div>
 </font>
 </center>
