@@ -38,7 +38,7 @@ include('banner.html');
 			die ('No conecta ['.$db->error.']');
 		 }
 		 	echo "<form id='buscador' name='buscador' method='post' action='listar_ventas_b.php'>"; 
-			echo "<input id='buscar' name='buscar' type='search' placeholder='Buscar usuario :' autofocus >";
+			echo "<input id='buscar' name='buscar' type='search' placeholder='Buscar venta :' autofocus >";
 			echo  "<input type='submit' name='buscador' class='btn-dark' value='Buscar'>";
 			echo "</form>";
 			echo "<br>";	
@@ -60,7 +60,7 @@ include('banner.html');
 			$ffechav=stripslashes($row["fecha_pedido"]);
 			$ppedidos=stripslashes($row["total_pedido"]);
 			$iddestados=stripslashes($row["estados_idestados"]);
-			$iddforma=stripslashes($row["formadepago_idformadepago"]);
+			//$iddforma=stripslashes($row["formadepago_idformadepago"]);
 
 			 //subconsulta
 			  
@@ -87,7 +87,7 @@ include('banner.html');
 						}
 
 
-			$sql3 = "SELECT * FROM formadepago where idformadepago='$iddforma'";
+			/*$sql3 = "SELECT * FROM formadepago where idformadepago='$iddforma'";
            if( !$result3 = $db->query($sql2))
               {
             die ('No conecta ['.$db->error.']');
@@ -97,7 +97,7 @@ include('banner.html');
       
             $ttipopago=stripslashes($row3["tipo_de_pago"]);
             }
-
+			*/
 
 
 
@@ -109,17 +109,17 @@ include('banner.html');
           		echo"<td>$ffechav</td>";
           		echo"<td>$ppedidos</td>";
           		echo"<td>$descripcion</td>";
-          		echo"<td>$ttipopago</td>";
+          		//echo"<td>$ttipopago</td>";
 
 				//editar
-				//echo "<td>";
-				//echo "<form id=form1 name=form1 method=post action='modificardatos.php'>";
+				echo "<td>";
+				echo "<form id=form1 name=form1 method=post action='modificardatospe.php'>";
 
-				//echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
+				echo "<input type='hidden'  name=idpedidos value=$iddpedidos />";
 
-				//echo "<input type=submit  name=submit value=editar class='btn btn-warning' />";
-     // echo "</form>";
-	  //echo "</td>";
+				echo "<input type=submit  name=submit value=editar class='btn btn-warning' />";
+      echo "</form>";
+	  echo "</td>";
 	  
 	  //eliminar
 	 // echo "<td>";
