@@ -66,8 +66,8 @@
 
          <li class='has-sub'><a href='#'><span>Platos</span></a>
             <ul>
-               <li><a href='reg_categoria_admin.php'><span>Registrar Plato nuevo</span></a></li>
-               <li class='last'><a href='listar_categorias_admin.php'><span>Listar Platos</span></a></li>
+               <li><a href='neg_registrarplatos.php'><span>Registrar Plato nuevo</span></a></li>
+               <li class='last'><a href='listar_productos.php'><span>Listar Platos</span></a></li>
             
             </ul>
          </li>

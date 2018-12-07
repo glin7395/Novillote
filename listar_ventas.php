@@ -38,11 +38,11 @@ include('banner.php');
 			die ('No conecta ['.$db->error.']');
 		 }
 		 	echo "<form id='buscador' name='buscador' method='post' action='listar_ventas_b.php'>"; 
-<<<<<<< HEAD
+
 			echo "<input id='buscar' name='buscar' type='search' placeholder='Buscar Cliente :' autofocus >";
-=======
+
 			echo "<input id='buscar' name='buscar' type='search' placeholder='Buscar venta :' autofocus >";
->>>>>>> master
+
 			echo  "<input type='submit' name='buscador' class='btn-dark' value='Buscar'>";
 			echo "</form>";
 			echo "<br>";	
@@ -64,11 +64,11 @@ include('banner.php');
 			$ffechav=stripslashes($row["fecha_pedido"]);
 			$ppedidos=stripslashes($row["total_pedido"]);
 			$iddestados=stripslashes($row["estados_idestados"]);
-<<<<<<< HEAD
+
 		
-=======
+
 			//$iddforma=stripslashes($row["formadepago_idformadepago"]);
->>>>>>> master
+
 
 			 //subconsulta
 			  
@@ -95,9 +95,6 @@ include('banner.php');
 						}
 
 
-<<<<<<< HEAD
-		
-=======
 			/*$sql3 = "SELECT * FROM formadepago where idformadepago='$iddforma'";
            if( !$result3 = $db->query($sql2))
               {
@@ -109,7 +106,7 @@ include('banner.php');
             $ttipopago=stripslashes($row3["tipo_de_pago"]);
             }
 			*/
->>>>>>> master
+
 
 
 
@@ -121,11 +118,11 @@ include('banner.php');
           		echo"<td>$ffechav</td>";
           		echo"<td>$ppedidos</td>";
           		echo"<td>$descripcion</td>";
-<<<<<<< HEAD
+
           	
-=======
+
           		//echo"<td>$ttipopago</td>";
->>>>>>> master
+
 
 				//editar
 				echo "<td>";
