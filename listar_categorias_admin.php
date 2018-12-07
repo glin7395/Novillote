@@ -94,8 +94,8 @@
     ?>
       </p>
       <center><p><img src="images/carne.jpg" width="194" height="146" />
-      	<img src="images/fruta.jpg" width="187" height="140" />
-      	<img src="images/bebidas.jpg" width="216" height="133" /></p>
+      	<img src="images/sopas.jpg" width="187" height="140" />
+      	<img src="images/pollo.jpg" width="216" height="133" /></p>
   
     <p><a href="index_aplicativo.php" class="btn btn-danger role"  aria-pressed="true">Volver</a>
     	<a href="reg_categoria.php" class="btn btn-warning role"  aria-pressed="true">Registrar Categoria</a></center>
