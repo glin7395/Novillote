@@ -17,12 +17,7 @@
 <title>Restaurante el novillo de oro</title>
 <style type="text/css">
 </style>
-</head>
-
-
-
-
-  
+</head> 
 <body>
 
 <?php include ('banner.php')
@@ -40,76 +35,49 @@
 
   <form id="form2" name="form1" method="post" action="neg_registrar_ventadetalle.php">
 
-     <div class="form-group">
-      <label class="control-label col-sm-2" for="cantidad_venta">Cantidad:</label>
-      <div class="col-sm-10">
-        <input type="cantidad_venta" class="form-control" id="cantidad_venta"  name="cantidad_venta">
-      </div>
-    </div>
 
  <div class="form-group">
-      <label class="control-label col-sm-2" for="formadepago_idformadepago">Forma de pago:</label>
+      <label class="control-label col-sm-2" for="pedidos_idpedidos">Pedido:</label>
       <div class="col-sm-10">
-      <select name="formadepago_idformadepago" class="form-control">
+      <select name="pedidos_idpedidos" class="form-control">
         <?php
         
         include ('conexion.php');
-                 $sql2 = "SELECT * FROM formadepago ";
-           if( !$result2 = $db->query($sql2))
+                 $sql1 = "SELECT * FROM pedidos ";
+           if( !$result1 = $db->query($sql1))
               {
             die ('No conecta ['.$db->error.']');
              }
-            while($row2 = $result2->fetch_assoc())
+            while($row1 = $result1->fetch_assoc())
             {
-            $iddforma=stripslashes($row2["idformadepago"]);
-            $ttipopago=stripslashes($row2["tipo_de_pago"]);
-            echo "<option value =$iddforma>$ttipopago</option>";
+            $iddpedidos=stripslashes($row1["idpedidos"]);
+            $ttipopago=stripslashes($row1["estados_idestados"]);
+            
+            echo "<option value =$iddpedidos>$ttipopago</option>";
             }
                 
                 ?>
                 </select>
         </div>
   </div>
-  <div class="form-group">
-      <label class="control-label col-sm-2" for="venta_idventa">Numero de venta:</label>
-      <div class="col-sm-10">
-      <select name="venta_idventa" class="form-control">
-        <?php
-        
-        include ('conexion.php');
-                 $sql3 = "SELECT * FROM venta ";
-           if( !$result3 = $db->query($sql3))
-              {
-            die ('No conecta ['.$db->error.']');
-             }
-            while($row3 = $result3->fetch_assoc())
-            {
-            $iddventa=stripslashes($row3["idventa"]);
-           
-            echo "<option value =$iddventa>$iddventa</option>";
-            }
-                
-                ?>
-                </select>
-        </div>
-  </div>
+
  <div class="form-group">
-      <label class="control-label col-sm-2" for="producto_idproducto">Producto:</label>
+      <label class="control-label col-sm-2" for="plato_idplato">Producto:</label>
       <div class="col-sm-10">
-      <select name="producto_idproducto" class="form-control">
+      <select name="plato_idplato" class="form-control">
         <?php
         
         include ('conexion.php');
-                 $sql2 = "SELECT * FROM producto ";
+                 $sql2 = "SELECT * FROM plato ";
            if( !$result2 = $db->query($sql2))
               {
             die ('No conecta ['.$db->error.']');
              }
             while($row2 = $result2->fetch_assoc())
             {
-            $iddproducto=stripslashes($row2["idproducto"]);
-            $nnombrepro=stripslashes($row2["nombre_producto"]);
-            echo "<option value =$iddproducto>$nnombrepro</option>";
+            $iddplato=stripslashes($row2["idplato"]);
+            $nnombrepla=stripslashes($row2["nombre_plato"]);
+            echo "<option value =$iddplato>$nnombrepla</option>";
             }
                 
                 ?>
@@ -117,10 +85,21 @@
                  <br><br><br>
         </div>
       </div>
-       
 
 
+          <div class="form-group">
+      <label class="control-label col-sm-2" for="cantidad_venta">Cantidad:</label>
+      <div class="col-sm-10">
+        <input type="cantidad_pedido" class="form-control" id="cantidad_pedido"  name="cantidad_pedido">
+      </div>
+    </div>
 
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="cantidad_venta">precio del pedido:</label>
+      <div class="col-sm-10">
+        <input type="precio_pedido" class="form-control" id="precio_pedido"  name="precio_pedido">
+      </div>
+    </div>
 
        <tr>
           <td colspan="2" ><label for="contrasena">

@@ -36,7 +36,7 @@ include('banner.php');
 			  $texto = 'Búsqueda sin resultados';
 		  }else{
 			  
-			  $sql = "SELECT * FROM pedidos WHERE clientes_idclientes LIKE '%" .$busqueda. "%' ORDER BY clientes_idclientes";
+			  $sql = "SELECT * FROM pedidos WHERE idpedidos LIKE '%" .$busqueda. "%' ORDER BY idpedidos";
 			  
 			  	 if( !$resultado = $db->query($sql))
 				 {
@@ -55,7 +55,7 @@ include('banner.php');
          	 echo"<td>fecha</td>";
          	 echo "<tD>total</TD>";
          	 echo"<tD>estado </td>";
-       	     echo "</tr>"
+       	     echo "</tr>";
 		    $iddpedidos=stripslashes($row["idpedidos"]);
 			$iddclientes=stripslashes($row["clientes_idclientes"]);
 			$ffechav=stripslashes($row["fecha_pedido"]);

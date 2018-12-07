@@ -30,14 +30,38 @@
         <tr>
           <td width="320"><div align="center">Producto</div></td>
           <td ><div class="col-xs-3" align="center">
-            <input type="text" name="nombre_producto" id="textfield3"  class="form-control" placeholder="producto" />
+            <input type="text" name="nombre_plato" id="textfield3"  class="form-control" placeholder="producto" />
+          </div></td>
+        </tr>
+
+         <tr>
+          <td width="320"><div align="center">informacion </div></td>
+          <td ><div class="col-xs-3" align="center">
+            <input type="text" name="descripcion_plato" id="textfield3"  class="form-control" placeholder="informacion del productoproducto" />
+          </div></td>
+        </tr>
+
+           <tr>
+          <td width="320"><div align="center">imagen</div></td>
+          <td ><div class="col-xs-3" align="center">
+            <input type="text" name="imagen_plato" id="textfield3"  class="form-control" placeholder="imagen del producto" />
+          </div></td>
+        </tr>
+
+
+            <tr>
+          <td bgcolor="#FFFFFF"><div align="center">fecha</div></td>
+          <td bgcolor="black"><div align="center">
+
+ <input type="date" name="fecha_plato" min="2018-10-25"
+                                 max="2020-12-30" >
           </div></td>
         </tr>
         <tr>
           <td ><div align="center">Precio</div></td>
           <td width="40" height="40">
             <div class="col-xs-3" align="center">
-            <input type="number" name="precio_producto" id="textfield4" class="form-control" placeholder="precio" />
+            <input type="number" name="precio_plato" id="textfield4" class="form-control" placeholder="precio" />
             </div>
         </td>
         </tr>
@@ -77,12 +101,6 @@
                         margin-left: 700%;
                       }
                     </style>
-
-
-
-
-
-
 </table>
 </form>
 </div>

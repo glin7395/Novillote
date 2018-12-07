@@ -33,7 +33,7 @@
 		 $cont='0';
 		 
 		 include ('conexion.php');
-		 $sql = "SELECT * FROM producto  ";
+		 $sql = "SELECT * FROM plato  ";
 		 if( !$result = $db->query($sql))
 		 {
 			die ('No conecta ['.$db->error.']');
@@ -44,6 +44,9 @@
 			 echo '<tr  bgcolor="#424242">';
         	 echo "<td>ID</td>";
 			 echo "<td>Producto</td>";
+			 echo "<td>Informacion</td>";
+			 echo "<td>imagen</td>";
+			 echo "<td>Fecha</td>";
          	 echo"<td>Precio</td>";
          	 echo"<td>Categoria</td>";
 			 echo"<td>Editar</td>";
@@ -52,9 +55,12 @@
 			
 			while($row = $result->fetch_assoc())
 			{
-			$iddproducto=stripslashes($row["idproducto"]);
-			$nnombreproducto=stripslashes($row["nombre_producto"]);
-			$pprecioproducto=stripslashes($row["precio_producto"]);
+			$iddplato=stripslashes($row["idplato"]);
+			$nnombreplato=stripslashes($row["nombre_plato"]);
+			$ddescripcion=stripslashes($row["descripcion_plato"]);
+			$img=stripslashes($row["imagen_plato"]);
+			$ffecha=stripslashes($row["fecha_plato"]);
+			$pprecio=stripslashes($row["precio_plato"]);
 			$iddcategoria=stripslashes($row["categoria_idcategoria"]);
 			
 			
@@ -68,26 +74,23 @@
 						 }
 						while($row2 = $result2->fetch_assoc())
 						{
-						$categoria=stripslashes($row2["tipo_categoria"]);
+						$categorias=stripslashes($row2["tipo_categoria"]);
 						}
           //finsubconsulta
-		  
-		   //subconsulta
-       
-          //finsubconsulta
-	
-	
 	      		echo"<center<tr>";
-				echo "<td>$iddproducto</td>";
-         		echo "<td>$nnombreproducto</td>";
-				echo "<td>$pprecioproducto</td>";
-				echo"<td>$categoria</td>";
+				echo "<td>$iddplato</td>";
+         		echo "<td>$nnombreplato</td>";
+				echo "<td>$ddescripcion</td>";
+				echo "<td>$img</td>";
+				echo "<td>$ffecha</td>";
+				echo "<td>$pprecio</td>";
+				echo"<td>$categorias</td>";
 	
 			
           			//editar
 				echo "<td>";
 				echo "<form id=form2 name=form2 method=post action='modificardatosproducto.php'>";
-				echo "<input type=hidden name=id value='$iddproducto' />";
+				echo "<input type=hidden name=id value='$iddplato' />";
 				
 				echo "<input type=submit name=submit  class='btn btn-warning' value=editar >";
       echo "</form>";

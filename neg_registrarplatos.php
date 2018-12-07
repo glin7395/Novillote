@@ -29,26 +29,26 @@
           	<?php
 	  class producto
 	  {
-		public function productos ($nombre_producto,$precio_producto,$categoria_idcategoria)  
+		public function productos ($nombre_plato,$descripcion_plato,$imagen_plato,$fecha_plato,$precio_plato,$categoria_idcategoria)  
 		  { 
 			 include ('conexion.php');
 			 // consultar usuario existente
 			 $existencia=0;
-			  $sql = "SELECT * FROM producto WHERE idproducto='iddproducto' ";
+			  $sql = "SELECT * FROM plato WHERE idplato='iddplato' ";
 					 if( !$result = $db->query($sql))
 					 		{
 						die ('No conecta ['.$db->error.']');
 						 }
 						while($row = $result->fetch_assoc())
 						{
-						$iddproducto=stripslashes($row["idproducto"]);		
+						$iddplato=stripslashes($row["idplato"]);		
 						$existencia=$existencia+1;
 						}	 
 			 // 
 			 if ($existencia=="0")
 			 {
-		 $sql2 = "INSERT INTO  producto (idproducto,nombre_producto,precio_producto,categoria_idcategoria) 
-		 VALUES (NULL,'$nombre_producto','$precio_producto','$categoria_idcategoria')";
+		 $sql2 = "INSERT INTO  plato (idplato,nombre_plato,descripcion_plato,imagen_plato,fecha_plato,precio_plato,categoria_idcategoria) 
+		 VALUES (NULL,'$nombre_plato','$descripcion_plato','$imagen_plato','$fecha_plato','$precio_plato','$categoria_idcategoria')";
 		 if( !$result2 = $db->query($sql2))
 
 	
@@ -65,7 +65,7 @@
 		     }	
 	       } 
 	$nuevo = new producto();	
-	$nuevo->productos( $_POST["nombre_producto"],$_POST["precio_producto"],$_POST["categoria_idcategoria"])
+	$nuevo->productos( $_POST["nombre_plato"],$_POST["descripcion_plato"],$_POST["imagen_plato"],$_POST["fecha_plato"],$_POST["precio_plato"],$_POST["categoria_idcategoria"])
 	  	  ?>    
        
       </p>
