@@ -66,7 +66,7 @@
 
          <li class='has-sub'><a href='#'><span>Platos</span></a>
             <ul>
-               <li><a href='neg_registrarplatos.php'><span>Registrar Plato nuevo</span></a></li>
+               <li><a href='reg_productos.php'><span>Registrar Plato nuevo</span></a></li>
                <li class='last'><a href='listar_productos.php'><span>Listar Platos</span></a></li>
             
             </ul>
