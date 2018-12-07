@@ -41,8 +41,6 @@ include('banner.php');
 
 			echo "<input id='buscar' name='buscar' type='search' placeholder='Buscar Cliente :' autofocus >";
 
-			echo "<input id='buscar' name='buscar' type='search' placeholder='Buscar venta :' autofocus >";
-
 			echo  "<input type='submit' name='buscador' class='btn-dark' value='Buscar'>";
 			echo "</form>";
 			echo "<br>";	
