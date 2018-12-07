@@ -29,7 +29,7 @@
       	<?php 
  class usuario
  {
-	 public function listar ($idpersona,$nombre,$apellido,$telefono,$direccion,$email,$numerodocumento,$contrasena,$genero_idgenero,$fk_id_rol_idrol,$tipodocumento_iddocumento )
+	 public function listar ($idpersona,$nombre,$apellido,$telefono,$direccion,$email,$numerodocumento,$contrasena,$genero_idgenero,$fk_id_rol_idrol,$tipodocumento_iddocumento,$estado_idestado)
 	 
 	 {
 	 	
@@ -37,7 +37,7 @@
 		 include ('conexion.php');
 
 
-		 $sql = " UPDATE persona SET nombre='$nombre' , apellido='$apellido' , telefono='$telefono', direccion='$direccion',email='$email',contrasena='$contrasena', genero_idgenero = '$genero_idgenero' , fk_id_rol_idrol =' $fk_id_rol_idrol' , tipodocumento_iddocumento = '$tipodocumento_iddocumento ' WHERE idpersona = '$idpersona' ";
+		 $sql = " UPDATE persona SET nombre='$nombre' , apellido='$apellido' , telefono='$telefono', direccion='$direccion',email='$email',contrasena='$contrasena', genero_idgenero = '$genero_idgenero' , fk_id_rol_idrol =' $fk_id_rol_idrol' , tipodocumento_iddocumento = '$tipodocumento_iddocumento ', estado_idestado ='$estado_idestado' WHERE idpersona = '$idpersona' ";
 		 if( !$result = $db->query($sql))
 		 {
 			die ('No conecta cambios no realizados    ['.$db->error.']');
@@ -56,7 +56,7 @@
  }//fin de la clase
  
  $nuevo=new usuario();
- $nuevo->listar($_POST["idpersona"],$_POST["nombre"],$_POST["apellido"],$_POST["telefono"],$_POST["direccion"],$_POST["email"],$_POST["numerodocumento"],$_POST["contrasena"],$_POST["genero_idgenero"],$_POST["fk_id_rol_idrol"],$_POST["tipodocumento_iddocumento"])
+ $nuevo->listar($_POST["idpersona"],$_POST["nombre"],$_POST["apellido"],$_POST["telefono"],$_POST["direccion"],$_POST["email"],$_POST["numerodocumento"],$_POST["contrasena"],$_POST["genero_idgenero"],$_POST["fk_id_rol_idrol"],$_POST["tipodocumento_iddocumento"],$_POST["estado_idestado"])
     ?>
 	 
 	 

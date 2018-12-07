@@ -52,6 +52,7 @@
        echo"<td>Genero</td>";
        echo"<td>Rol</td>";
        echo"<td>Tipo de documento</td>";
+       echo"<td>Estado</td>";
        echo "</tr>";
       
       while($row = $result->fetch_assoc())
@@ -89,10 +90,8 @@
       $ttipodocumento_iddocumento=stripslashes($row["tipodocumento_iddocumento"]);
       $_SESSION["ttipodocumento_iddocumento"]=stripslashes($row["tipodocumento_iddocumento"]);
 
-
-
-
-
+      $eestados_idestado=stripslashes($row["estado_idestado"]);
+      $_SESSION["eestados_idestado"]=stripslashes($row["estado_idestado"]);
 
 
        //subconsulta
@@ -123,6 +122,7 @@
         echo"<td>$ggenero_idgenero</td>";
         echo"<td>$ffk_id_rol_idrol</td>";
         echo"<td>$ttipodocumento_iddocumento</td>";
+        echo"<td>$eestados_idestado</td>";
         //echo "<td>$rrol</td>";
             echo "</tr>";
             
@@ -199,15 +199,15 @@
                 <?php
         
         include ('conexion.php');
-                 $sql2 = "SELECT * FROM genero ";
-           if( !$result2 = $db->query($sql2))
+                 $sql1 = "SELECT * FROM genero ";
+           if( !$result1 = $db->query($sql1))
               {
             die ('No conecta ['.$db->error.']');
              }
-            while($row2 = $result2->fetch_assoc())
+            while($row1 = $result1->fetch_assoc())
             {
-            $iddgenero=stripslashes($row2["idgenero"]);
-            $ttipogenero=stripslashes($row2["tipo_de_genero"]);
+            $iddgenero=stripslashes($row1["idgenero"]);
+            $ttipogenero=stripslashes($row1["tipo_de_genero"]);
             echo "<option value =$iddgenero>$ttipogenero</option>";
             }
                 
@@ -224,15 +224,15 @@
                 <?php
         
         include ('conexion.php');
-                 $sql3 = "SELECT * FROM tipodocumento ";
-           if( !$result3 = $db->query($sql3))
+                 $sql2 = "SELECT * FROM tipodocumento ";
+           if( !$result2 = $db->query($sql2))
               {
             die ('No conecta ['.$db->error.']');
              }
-            while($row3 = $result3->fetch_assoc())
+            while($row2 = $result2->fetch_assoc())
             {
-            $idddocumento=stripslashes($row3["iddocumento"]);
-            $ttipodocumento=stripslashes($row3["tipo_de_documento"]);
+            $idddocumento=stripslashes($row2["iddocumento"]);
+            $ttipodocumento=stripslashes($row2["tipo_de_documento"]);
             echo "<option value =$idddocumento>$ttipodocumento</option>";
             }
                 
@@ -249,15 +249,15 @@
                 <?php
         
        include ('conexion.php');
-                 $sql = "SELECT * FROM fk_id_rol ";
-           if( !$result = $db->query($sql))
+                 $sql3 = "SELECT * FROM fk_id_rol ";
+           if( !$result3 = $db->query($sql3))
               {
             die ('No conecta ['.$db->error.']');
              }
-            while($row = $result->fetch_assoc())
+            while($row3 = $result3->fetch_assoc())
             {
-            $ffk_id_rol=stripslashes($row["idrol"]);
-            $rrol=stripslashes($row["des_rol"]);
+            $ffk_id_rol=stripslashes($row3["idrol"]);
+            $rrol=stripslashes($row3["des_rol"]);
             echo "<option value =$ffk_id_rol>$rrol</option>";
             }
                 
@@ -265,6 +265,31 @@
                 </select>
             </div></td>
         </tr>
+        <tr>
+          <td ><div align="center">Estados</div></td>
+          <td ><label for="estado_idestado"></label>
+            <div align="center">
+              <select name="estado_idestado" id="estado_idestado">
+                <option value="seleccione:" >seleccione</option>
+                <?php
+        include ('conexion.php');
+                 $sql4 = "SELECT * FROM estado ";
+           if( !$result4 = $db->query($sql4))
+              {
+            die ('No conecta ['.$db->error.']');
+             }
+            while($row4 = $result4->fetch_assoc())
+            {
+            $iddestado=stripslashes($row4["idestado"]);
+            $estadonulo=stripslashes($row4["descripcion_estado"]);
+            echo "<option value =$iddestado>$estadonulo</option>";
+            }
+                
+                ?>
+                </select>
+            </div></td>
+        </tr>
+
 
             </div></td>
         </tr>
