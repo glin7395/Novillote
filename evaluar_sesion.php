@@ -36,12 +36,13 @@ session_start();
 				
 					switch ($eestado_ingreso) 
 					{
-						case '1':
+						case '1': $_SESSION["estado"]="1";
 
 							header("location:index_aplicativo.php");
 							break;
 						
-							case '2':
+
+							case '2': $_SESSION["estado"]="2";
 								header ("location:index_b.php");
 							break;
 

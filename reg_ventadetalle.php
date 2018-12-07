@@ -25,7 +25,7 @@
   
 <body>
 
-<?php include ('banner.html')
+<?php include ('banner.php')
 ?>
 <font color="white">
 

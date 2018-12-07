@@ -10,21 +10,19 @@
 </style>
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/estilonovillo.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Restaurante el novillo de oro</title>
 </head>
 <body>
-<table width="420" border="2" align="center" class="fondotabla">
+<table width="80" border="0" align="center" class="fondotabla">
   <tr>
-    <td width="420" height="120"><?php include ("banner.html")
+    <td width="80" height="120"><?php include ("banner.php")
     ?></td>
   </tr>
   <font color="white"><tr>
-    <center><td height="420" align="center" >
-      <p><br><br>
-        <label for="textfield"></label>LISTA DE CLIENTES</p>
+    <center><td height="120" align="center" >
+      <br>
+       <h3 class="fondoheaders">LISTA DE CLIENTES</h3>
+       <br>
 
 
 

@@ -35,12 +35,12 @@ $carrito = new Carro;
     <?php
 include('banner_carrito.html');
 ?>
+
 <div class="container">
-    <div class="row">
-      <h3 align="center"><font size="10%" color="white">  ¡BIENVENIDO!</font></h3>
-<h1> Productos </h1>
-    <a href="vercarrito.php" class="cart-link" title="View Cart"><i class="glyphicon glyphicon-shopping-cart"></i></a>
-    <a href="salir_cliente.php" class="cart-link" title="logout"><i class="glyphicon glyphicon-off" ></i></a>
+      <h2 align="center"><font size="10%" color="white">  ¡BIENVENIDO!</font></h2>
+ <h3 align="center"><font size="8%" color="white">Platos y Entradas de la Casa</font></h3>
+   <div class="row"> <a href="vercarrito.php" class="cart-link" title="Ver Productos en Carrito"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+    <a href="salir_cliente.php" class="cart-link" title="Salir de Aqui"><i class="glyphicon glyphicon-off" ></i></a>
     <div id="products" class="row list-group">
         <?php
         //get rows query

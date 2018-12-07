@@ -16,7 +16,7 @@
   <table width="400" border="0" align="center" >
     <tr>
      <font color="white">
-      <td width="480" height="131"><?php include ("banner.html")?></td>
+      <td width="480" height="131"><?php include ("banner.php")?></td>
         </tr>
           <tr>
             <td height="480" align="center"  border="0">

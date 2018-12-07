@@ -178,7 +178,7 @@ font-family: "Comic Sans MS", cursive, sans-serif;
 
 
   background: rgba(0,0,0,0.15);
- align-items: right;
+ position: 100%;
 
 }
 .button {

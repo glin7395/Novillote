@@ -18,46 +18,39 @@
 </head>
 
 <body>
-<?php include('banner.html');
+<?php include('banner_pro.html');
 ?>
 
 <font color="white">
-<table width="420" border="0" align="center">
+<table width="170" border="0" align="center">
   </tr>
   <tr>
-    <td height="642" align="center" ><form id="form1" name="form1" method="post" action="neg_registrar_categoria.php">
+    <td height="230" align="center" ><form id="form1" name="form1" method="post" action="neg_registrar_categoria.php">
       <p>
         <label for="id_producto"></label>
         </p>
-      <p>Registro De Categorias</p>
-      <table width="351" height="259" border="0">
-        <tr>
-          <td width="80" ><div align="center">categoria</div></td>
-          <td width="80" ><div  class="col-xs-3" align="center">
+      <h2 class="fondoheaders">Registro De Categorias</h2>
+        <table width="351" height="259" border="0">
+          <tr>
+      <td width="120" ><div class="fondotablas">CATEGORIA A REGISTRAR</div></td>
+        <td width="90"><div class="col-xs-3" align="center">
             <input type="text" name="tipo_categoria" id="textfield" class="form-control" />
-            </div></td>
+            <br>
+          <input type="submit" name="button" class="btn btn-success" id="button" value="Registrar" />
+        </div>
+      </td>
         </tr>
+
+
       <tr>
         <td colspan="2">
           <label for="contrasena">
             <div align="center">
-              <input type="submit" name="button" class="btn btn-success" id="button" value="Registrar" />
+              
               </div>
             </label>
         </td>
         </tr>
-
-
-        <style type="text/css">
-                      .btn{
-                        margin-top: 3px;
-                        margin-left: 960%;
-                      }
-                    </style>
-
-
-
-
 </font>
 </table>
 </form>
@@ -69,5 +62,3 @@
 ?>
 </body>
 </html>
-
-

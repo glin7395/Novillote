@@ -18,7 +18,7 @@
 
 <body>
 <?php
-include('banner.html');
+include('banner.php');
 ?>
  
         <center>
@@ -33,43 +33,43 @@ include('banner.html');
        
     <div class="form-group">
      <label class="control-label col-sm-2"  for="nombre">Nombre:</label> 
-      <div class="col-sm-10">
+      <div class="col-sm-8">
         <input type="nombre"  class="form-control" id="nombre" placeholder="Ingrese Nombre" name="nombre">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="apellido">Apellido:</label>
-      <div class="col-sm-10">
+      <div class="col-sm-8">
         <input type="apellido" class="form-control" id="apellido" placeholder="ingrese apellido" name="apellido">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="telefono">Telefono:</label>
-      <div class="col-sm-10">
+      <div class="col-sm-8">
         <input type="telefono" class="form-control" id="telefono" placeholder="Ingrese numero telefonico " name="telefono">
       </div>
     </div>
      <div class="form-group">
       <label class="control-label col-sm-2" for="direccion">Direccion:</label>
-      <div class="col-sm-10">
+      <div class="col-sm-8">
         <input type="direccion" class="form-control" id="direccion" placeholder="Ingrese direccion" name="direccion">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Email:</label>
-      <div class="col-sm-10">
+      <div class="col-sm-8">
         <input type="email" class="form-control" id="email" placeholder="Ingrese correo electronico" name="email">
       </div>
     </div>
      <div class="form-group">
       <label class="control-label col-sm-2" for="numerodocumento">Numero Documento:</label>
-      <div class="col-sm-10">
+      <div class="col-sm-8">
         <input type="numerodocumento" class="form-control" id="numerodocumento" placeholder="ingrese numero de identificacion" name="numerodocumento">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="contrasena">Contraseña:</label>
-      <div class="col-sm-10">          
+      <div class="col-sm-8">          
         <input type="contrasena" class="form-control" id="contrasena" placeholder="ingrese contraseña" name="contrasena">
       </div>
     </div>   
@@ -77,7 +77,7 @@ include('banner.html');
 
  <div class="form-group">
       <label class="control-label col-sm-2" for="genero_idgenero">Genero:</label>
-      <div class="col-sm-10">
+      <div class="col-sm-8">
       <select name="genero_idgenero" class="form-control">
         <?php
         
@@ -99,7 +99,7 @@ include('banner.html');
    
       <div class="form-group">
       <label class="control-label col-sm-2" for="fk_id_rol_idrol">Rol:</label>
-      <div class="col-sm-10">
+      <div class="col-sm-8">
       <select name="fk_id_rol_idrol" class="form-control">
           <?php
         
@@ -122,7 +122,7 @@ include('banner.html');
 
    <div class="form-group">
       <label class="control-label col-sm-2" for="tipodocumento_iddocumento">Tipo de documento:</label>
-      <div class="col-sm-10">
+      <div class="col-sm-8">
       <select name="tipodocumento_iddocumento" class="form-control">
           <?php
         
@@ -147,7 +147,7 @@ include('banner.html');
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="estado_idEstado">Estado:</label>
-      <div class="col-sm-10">
+      <div class="col-sm-8">
       <select name="estado_idestado" class="form-control">
           <?php
         

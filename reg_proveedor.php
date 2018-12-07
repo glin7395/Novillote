@@ -18,7 +18,7 @@
 
 <body>
 <?php
-include('banner.html');
+include('banner_pro.html');
 ?>
  
     
@@ -28,7 +28,7 @@ include('banner.html');
         <label for="numerodocumento_pro"></label>
         </p>
        <center>
-      <h1 >Registro de Proveedores</h1>
+      <h2 class="fondoheaders">Registro de Proveedores</h2>
 
     <br>
     <br>

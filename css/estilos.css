@@ -69,7 +69,7 @@
 }
 /* Custom CSS Styles */
 #cssmenu {
-  background: #424242;
+  background: #343A40;
   border-bottom: 4px solid #FF0040  ;
   font-family: Arial, sans-serif;
   font-size: 20px;
@@ -108,7 +108,7 @@
   position: relative;
 }
 #cssmenu ul ul li:first-child > a {
-  border-top: 1px solid #424242;
+  border-top: 1px solid #343A40;
 }
 #cssmenu ul ul li:hover > a {
   background: #CD6E0F;
@@ -143,7 +143,7 @@
 }
 #cssmenu ul li:hover > a,
 #cssmenu ul li.active > a {
-  background: #424242;
+  background: #343A40;
   color: #ffffff;
 }
 #cssmenu ul li.has-sub > a:after {
@@ -159,7 +159,7 @@
   right: 90.5%;
 }
 #cssmenu a {
-  background: #424242;
+  background: #343A40;
   color: #CBCBCB;
   padding: 0 20px;
 }
@@ -217,7 +217,7 @@ text-shadow: 6px 6px black;
 }
 footer
 {
-    background-color: #424242;
+    background-color: #343A40;
      text-align: center;
     
 }

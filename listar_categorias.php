@@ -16,17 +16,17 @@
 <title>Restaurante el novillo de oro</title>
 </head>
 <body>
-<table width="420" border="2" align="center" class="fondotabla">
+<table width="120" height="80" border="0" align="center" class="fondotabla">
   <tr>
-    <td width="420" height="120"><?php include ("banner.html")
+    <td width="120" height="80"
+    ><?php include ("banner_pro.html")
     ?></td>
   </tr>
   <font color="white"><tr>
-    <center><td height="420" align="center" >
-      <p><br><br>
-        <label for="textfield"></label>LISTA DE CATEGORIAS</p>
-
-
+    <center><td  width="120" height="400" align="center" >
+      <p>
+       <h3 class="fondoheaders">LISTA DE CATEGORIAS</h3>
+       <br><br>
 
         <?php 
  class usuario

@@ -17,7 +17,7 @@
 </head>
 
 <body>
-<?php include ('banner.html')
+<?php include ('banner.php')
 ?>
 <font color="white">
 <table width="80" height="140" border="0" align="center">

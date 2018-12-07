@@ -12,9 +12,9 @@
 
 <body>
 <?php
-include('banner.html');
+include('banner.php');
 ?>
- <font color="white"><table width="900" border="0" align="center" >
+ <font color="white"><table width="260" border="0" align="center" >
   <tr>
   	 
     <td height="642" align="center" class="fondotabla" >
@@ -37,6 +37,7 @@ include('banner.html');
 		 {
 			die ('No conecta ['.$db->error.']');
 		 }
+		 	echo "<br>";
 		 	echo "<form id='buscador' name='buscador' method='post' action='listar_usuarios_b.php'>"; 
 			echo "<input id='buscar' name='buscar' type='search' placeholder='Buscar usuario :' autofocus >";
 			echo  "<input type='submit' name='buscador' class='btn-dark' value='Buscar'>";

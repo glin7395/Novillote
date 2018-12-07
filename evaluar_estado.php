@@ -4,10 +4,10 @@ class login
 	public function evaluar ($contrasena,$nombre)
 	{
 		{session_start();
-		if ($contrasena=="1234")
+		if ($contrasena=="")
 			$_SESSION["eval"]="1";
 			$_SESSION["nombre"]=$nombre;
-			header ("location: capa1.php");
+			header ("location: index_aplicativo.php");
 		
 		}
 		

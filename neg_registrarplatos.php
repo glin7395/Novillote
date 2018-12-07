@@ -17,7 +17,7 @@
 <?php include('banner.html');
 ?>
 <font color="white">
-<table width="900" border="0" align="center">
+<table width="140" border="0" align="center">
   <tr>
     <td height="642" align="center" bgcolor="black">
      <form id="form1" name="form1" method="post" action="index2.html">

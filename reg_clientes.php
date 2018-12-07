@@ -17,7 +17,7 @@
 <body>
 <font  color="white" >
 <?php
-include('banner.html');
+include('banner.php');
 ?>
  
         <center>
