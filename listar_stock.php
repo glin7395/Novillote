@@ -36,7 +36,7 @@
 		 $cont='0';
 		 
 		 include ('conexion.php');
-		 $sql = " SELECT * FROM proveedor ";
+		 $sql = " SELECT * FROM stock ";
 		 if( !$result = $db->query($sql))
 		 {
 			die ('No conecta ['.$db->error.']');
@@ -45,39 +45,39 @@
 		 	
 			echo"<center><table width='40' height='180' class='fondotablas' border='0'></center>";
 			 echo '<tr  bgcolor="#424242">';
-        	 echo "<td>Representante</td>";
-			 echo "<td>Empresa</td>";
-			 echo "<td>Documento</td>";
-			 echo "<td>Numero de documento</td>";
+        	 echo "<td>Informacion de entrada</td>";
+			 echo "<td>Informacion de salida</td>";
+			 echo "<td>Informacion de la cantidad</td>";
+			 echo "<td>Proveedor</td>";
        	     echo "</tr>";
 			
 
 			while($row = $result->fetch_assoc())
 			{
 	
-			$nnombre=stripslashes($row["representante"]);
-			$eempresa=stripslashes($row["empresa"]);
-			$iddocumento=stripslashes($row["tipodocumento_iddocumento"]);
-			$nnumero=stripslashes($row["numerodocumento_pro"]);
+			$eentrada=stripslashes($row["entrada"]);
+			$ssalida=stripslashes($row["salida"]);
+			$ccantidad=stripslashes($row["cantidad"]);
+			$iddproveedor=stripslashes($row["proveedor_idproveedor"]);
 
 			
-			$sql2 = "SELECT * FROM tipodocumento WHERE iddocumento= '$iddocumento' ";
+			$sql2 = "SELECT * FROM proveedor WHERE idproveedor= '$iddproveedor' ";
 					 if( !$result2 = $db->query($sql2))
 					 		{
 						die ('No conecta ['.$db->error.']');
 						 }
 						while($row2 = $result2->fetch_assoc())
 						{
-						$ttipodocumento=stripslashes($row2["tipo_de_documento"]);
+						$ttipodocumento=stripslashes($row2["representante"]);
 						}
   
 		  //consulta productos
 		  		echo"<tr>";
          		
-				echo "<td>$nnombre</td>";
-       			echo "<td>$eempresa</td>";
+				echo "<td>$eentrada</td>";
+       			echo "<td>$ssalida</td>";
+				echo "<td>$ccantidad</td>";
 				echo "<td>$ttipodocumento</td>";
-				echo "<td>$nnumero</td>";
 				/*//editar
 				echo "<td>";
 				echo "<form id=form1 name=form1 method=post action='modificardatos.php'>";
@@ -111,7 +111,7 @@
       <center>
   
     <p><a href="index_aplicativo.php" class="btn btn-danger role"  aria-pressed="true">Volver</a>
-    	<a href="reg_proveedor.php" class="btn btn-warning role"  aria-pressed="true">Registrar Proveedor</a></p>
+    	<a href="reg_stock.php" class="btn btn-warning role"  aria-pressed="true">Registrar informacion del inventario</a></p>
     </center>
 
     </center>

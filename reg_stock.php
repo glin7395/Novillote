@@ -28,27 +28,27 @@ include('banner_pro.html');
      <div class="container">
 
   
-  <form class="form-horizontal" id="form1" name="form1" method="post" action="neg_registrar_usuarios.php">
+  <form class="form-horizontal" id="form1" name="form1" method="post" action="neg_registrar_stock.php">
       
        
     <div class="form-group">
-     <label class="control-label col-sm-2"  for="nombre">Entrada:</label> 
+     <label class="control-label col-sm-2"  for="entrada">Entrada:</label> 
       <div class="col-sm-8">
-        <input type="nombre"  class="form-control" id="nombre" placeholder="Ingrese Nombre" name="nombre">
+        <input type="entrada"  class="form-control" id="entrada" placeholder="Ingrese informacion del producto de entrada " name="entrada">
       </div>
     </div>
     
     <div class="form-group">
-      <label class="control-label col-sm-2" for="telefono">Salida:</label>
+      <label class="control-label col-sm-2" for="salida">Salida:</label>
       <div class="col-sm-8">
-        <input type="telefono" class="form-control" id="telefono" placeholder="Ingrese numero telefonico " name="telefono">
+        <input type="salida" class="form-control" id="salida" placeholder="Ingrese informacion del producto de salida " name="salida">
       </div>
     </div>
 
      <div class="form-group">
-      <label class="control-label col-sm-2" for="direccion">cantidad:</label>
+      <label class="control-label col-sm-2" for="cantidad">cantidad:</label>
       <div class="col-sm-8">
-        <input type="direccion" class="form-control" id="direccion" placeholder="Ingrese direccion" name="direccion">
+        <input type="cantidad" class="form-control" id="cantidad" placeholder="Ingrese informacion de la antidad del producto" name="cantidad">
       </div>
     </div>
  
