@@ -1,10 +1,10 @@
 <?php 
 
-session_destroy();
+session_start();
 $_SESSION["estado"]='0';
  unset($_SESSION['contenido_carrito']);
 
-	header ("location: ../inicio_sesion.php")
+	header ("location: ../index.html")
 	
 ?>
  

@@ -43,8 +43,10 @@ $carrito = new Carro;
         <?php
 include('banner_carrito.html');
 ?>
-<div class="container">
-    <h1>Carrito de Compras</h1>
+<br> 
+<br>
+<div class="container" style="background-color: rgb(10,25,25);opacity:0.8;">
+    <font color="white"><h1>Carrito de Compras</h1>
     <div class="table-responsive" >
     <table class="table table-bordered ">
     <thead>
@@ -72,6 +74,7 @@ include('banner_carrito.html');
                 <a href="carritoAction.php?action=removeCartItem&id=<?php echo $item["rowid"]; ?>" class="btn btn-danger" onclick="return confirm('Estas seguro?')"><i class="glyphicon glyphicon-trash"></i></a>
             </td>
         </tr>
+        </font>
         <?php } }else{ ?>
         <tr><td colspan="5"><p>Tu Carrito esta Vacio.....</p></td>
         <?php } ?>

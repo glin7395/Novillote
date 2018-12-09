@@ -35,12 +35,11 @@ $carrito = new Carro;
     <?php
 include('banner_carrito.html');
 ?>
-
 <div class="container">
-      <h2 align="center"><font size="10%" color="white">  ¡BIENVENIDO!</font></h2>
- <h3 align="center"><font size="8%" color="white">Platos y Entradas de la Casa</font></h3>
-   <div class="row"> <a href="vercarrito.php" class="cart-link" title="Ver Productos en Carrito"><i class="glyphicon glyphicon-shopping-cart"></i></a>
-    <a href="salir_cliente.php" class="cart-link" title="Salir de Aqui"><i class="glyphicon glyphicon-off" ></i></a>
+    <div class="row">
+      <h3 align="center"><font size="10%" color="white">  ¡BIENVENIDO!</font></h3>
+<h1> Productos </h1>
+    <a href="vercarrito.php" class="cart-link" title="View Cart"><i class="glyphicon glyphicon-shopping-cart"></i></a>
     <div id="products" class="row list-group">
         <?php
         //get rows query
@@ -50,7 +49,7 @@ include('banner_carrito.html');
         ?>
 
         <div class="item col-lg-4" style="border-radius:5px;" >
-            <div class="thumbnail" style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px; height:400px;" align="center">
+            <div class="thumbnail" style="border:1px solid black; background-color:white; border-radius:5px; padding:16px; height:400px; font-family: white; " align="center">
                 <img src="img/<?php echo $row["imagen_plato"]; ?>" class="img-responsive" /><br />  
                 <div class="caption" align="center">
                     <h4 class="list-group-item-heading"><?php echo $row["nombre_plato"]; ?></h4>

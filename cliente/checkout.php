@@ -25,7 +25,7 @@ $custRow = $query->fetch_assoc();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Checkout confirmar compra</title>
+    <title>Confirmar compra</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -44,8 +44,9 @@ $custRow = $query->fetch_assoc();
     <?php
 include('banner_carrito.html');
 ?>
-<div class="container">
-    <h1>Datos del Pedido</h1><hr>
+<br>
+<div class="container" style="background-color: rgb(10,25,25);opacity:0.8;">
+    <font color="white"><h1>Datos del Pedido</h1><hr>
     <table class="table">
     <thead>
         <tr>
@@ -91,6 +92,7 @@ include('banner_carrito.html');
         <a href="index_carrito.php" class="btn btn-warning"><i class="glyphicon glyphicon-menu-left"></i> Seguir Comprando</a>
         <a href="carritoAction.php?action=placeOrder" class="btn btn-success orderBtn">Realizar Pedido <i class="glyphicon glyphicon-menu-right"></i></a>
     </div>
+    </font>
 </div>
 </body>
 </html>

@@ -183,3 +183,11 @@ text-shadow: 6px 6px black;
 >>>>>>> master
 
 }
+.fondotabla { 
+
+
+  background: rgba(0,0,0,0.15);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+
+
+   }
