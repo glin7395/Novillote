@@ -63,11 +63,7 @@ include('banner.php');
 			$ppedidos=stripslashes($row["total_pedido"]);
 			$iddestados=stripslashes($row["estados_idestados"]);
 
-		
-
 			//$iddforma=stripslashes($row["formadepago_idformadepago"]);
-
-
 			 //subconsulta
 			  
 				
@@ -92,23 +88,6 @@ include('banner.php');
 						$descripcion=stripslashes($row2["nombre_estado"]);
 						}
 
-
-			/*$sql3 = "SELECT * FROM formadepago where idformadepago='$iddforma'";
-           if( !$result3 = $db->query($sql2))
-              {
-            die ('No conecta ['.$db->error.']');
-             }
-            while($row3 = $result3->fetch_assoc())
-            {
-      
-            $ttipopago=stripslashes($row3["tipo_de_pago"]);
-            }
-			*/
-
-
-
-
-
 		  //consulta productos
 		  		echo"<tr >";
 		  		echo "<td>$iddpedidos</td>";
@@ -132,17 +111,16 @@ include('banner.php');
       echo "</form>";
 	  echo "</td>";
 	  
-	  //eliminar
-	 // echo "<td>";
+	  //ver orden
+			echo "<td>";
+				echo "<form id=form2 name=form2 method=post action='listar_detalleventa.php'>";
 
+				echo "<input type='hidden'  name=idpedidos value=$iddpedidos />";
 
-
-	  // aqui se hace la puta funcion en el puto form2 
-
-	  //echo "<form id=form2 name=form2 method=post action='eliminar_usuario.php'>";
-	  //echo "<input type='hidden'  name=numerodocumento value=$ddocumento />";
-	  //echo "<input type=submit  name=submit value=eliminar class='btn btn-danger' />";
-      //echo "</form>";
+				echo "<input type=submit  name=submit value= pedido class='btn btn-warning' />";
+      echo "</form>";
+	  echo "</td>";
+	 // echo "<td
 	  echo "</td>";
       echo "</tr>";
       			
