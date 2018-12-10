@@ -87,7 +87,7 @@ include('banner_cliente.html');
                             <p class="lead">$8.000 Pesos</p>
                         </div>
                         <div class="col-md-6">
-                            <a class="btn btn-success" href="cliente/carritoAction.php?action=addToCart&id=5">Agregar al carrito</a>
+                            <a class="btn btn-success" href="cliente/carritoAction.php?action=addToCart&id=5">Ir al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@ include('banner_cliente.html');
                             <p class="lead">$10.000 Pesos</p>
                         </div>
                         <div class="col-md-6">
-                            <a class="btn btn-success" href="cliente/carritoAction.php?action=addToCart&id=5">Agregar al carrito</a>
+                            <a class="btn btn-success" href="cliente/carritoAction.php?action=addToCart&id=5">Ir al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@ include('banner_cliente.html');
                             <p class="lead">$15.000 Pesos</p>
                         </div>
                         <div class="col-md-6">
-                            <a class="btn btn-success" href="cliente/carritoAction.php?action=addToCart&id=5">Agregar al carrito</a>
+                            <a class="btn btn-success" href="cliente/carritoAction.php?action=addToCart&id=5">Ir al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -140,7 +140,7 @@ include('banner_cliente.html');
                             <p class="lead">$10.000 Pesos</p>
                         </div>
                         <div class="col-md-6">
-                            <a class="btn btn-success" href="cliente/carritoAction.php?action=addToCart&id=5">Agregar al carrito</a>
+                            <a class="btn btn-success" href="cliente/carritoAction.php?action=addToCart&id=5">Ir al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -156,6 +156,41 @@ include('banner_cliente.html');
                     <div class="row"><br>
                         <div class="col-md-6">
                             <p class="lead">$15.000 Pesos</p>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="btn btn-success" href="cliente/carritoAction.php?action=addToCart&id=5">Ir al carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item col-lg-4" style="border-radius:5px;" >
+            <div class="thumbnail" style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px; height:400px;" align="center">
+                <img src="cliente/img/pechugas.jpg" class="img-responsive" /><br />  
+                <div class="caption" align="center">
+                    <h4 class="list-group-item-heading">Pechugas Gratinadas</h4>
+                    <p class="list-group-item-text">Pechugas como para un rusa</p>
+                    <br>
+                    <div class="row"><br>
+                        <div class="col-md-6">
+                            <p class="lead">$11.000 Pesos</p>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="btn btn-success" href="cliente/carritoAction.php?action=addToCart&id=5">Ir al carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!--  <div class="item col-lg-4" style="border-radius:5px;" >
+            <div class="thumbnail" style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px; height:400px;" align="center">
+                <img src="cliente/img/pepsi.jpg" class="img-responsive" /><br />  
+                <div class="caption" align="center">
+                    <h4 class="list-group-item-heading">Pepsi</h4>
+                    <p class="list-group-item-text">Pepsi Arabe </p>
+                    <div class="row"><br>
+                        <div class="col-md-6">
+                            <p class="lead">$3.000 Pesos</p>
                         </div>
                         <div class="col-md-6">
                             <a class="btn btn-success" href="cliente/carritoAction.php?action=addToCart&id=5">Ir al carrito</a>

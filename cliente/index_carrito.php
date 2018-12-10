@@ -20,6 +20,7 @@ $carrito = new Carro;
 <head>
     <title>Carrito</title>
     <meta charset="utf-8">
+    <link href="css/estilonovillo.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -37,9 +38,11 @@ include('banner_carrito.html');
 ?>
 <div class="container">
     <div class="row">
-      <h3 align="center"><font size="10%" color="white">  ¡BIENVENIDO!</font></h3>
-<h1> Productos </h1>
-    <a href="vercarrito.php" class="cart-link" title="View Cart"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+      <h3  class="fondoheaders"  align="center"><font size="10%" color="white">  ¡BIENVENIDO!</font></h3>
+      <h3   class="fondoheaders"  align="center"><font size="8%" color="white">Platos y Entradas de la Casa</font></h3>
+   <div class="row"> <a href="vercarrito.php" class="cart-link" title="Ver Productos en Carrito"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+    <a href="salir_cliente.php" class="cart-link" title="Salir de Aqui"><i class="glyphicon glyphicon-off" ></i></a>
+   
     <div id="products" class="row list-group">
         <?php
         //get rows query

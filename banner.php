@@ -50,12 +50,8 @@
          <li class='has-sub'><a href='#'><span>Categoria</span></a>
             <ul>
                <li><a href='reg_categoria_admin.php'><span>Registrar Categorias</span></a></li>
-              <li class='has-sub'><a href='#'><span>Categoria</span></a>
-            <ul>
-               <li><a href='reg_categoria_admin.php'><span>Registrar Categorias</span></a></li>
-               <li class='last'><a href='listar_categorias_admin.php'><span>Listar Categorias</span></a></li>
-            
-            </ul>
+              <li class='has-sub'><a href='#'><span>Ver Categorias</span></a>
+          
          </li>
             
             </ul>
