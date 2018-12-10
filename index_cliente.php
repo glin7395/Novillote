@@ -28,7 +28,7 @@ include('banner_cliente.html');
           <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
               <h4 class="text-white">WE ARE BIG, WE ARE POWERFUL, PGLO</h4>
-              <p class="text-muted">Facebook , Instagram , Twitter , Xvideos</p>
+              <p class="text-muted">Facebook , Instagram , Twitter , Xvideos , Brazzers , Redtube , Youporn </p>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
               <h4 class="text-white">Contacto</h4>
@@ -58,7 +58,7 @@ include('banner_cliente.html');
 
       <header class="masthead">
       <div class="overlay">
-        <div class="container" style="background-color: rgb(25,45,45);opacity:0.8;}  ">
+        <div class="container" style="background-color:rgb(52, 58, 64);opacity:1.0;}  ">
           <center><h1 class="display-2 text-white" class="fondotabla">Bienvenido</h1>
           <h2 class="display-3 text-white">Realiza tu Pedido Desde Casa</h2><br></center>
           <center>
@@ -170,7 +170,6 @@ include('banner_cliente.html');
                 <div class="caption" align="center">
                     <h4 class="list-group-item-heading">Pechugas Gratinadas</h4>
                     <p class="list-group-item-text">Pechugas como para un rusa</p>
-                    <br>
                     <div class="row"><br>
                         <div class="col-md-6">
                             <p class="lead">$11.000 Pesos</p>

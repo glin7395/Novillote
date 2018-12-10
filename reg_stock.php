@@ -22,7 +22,7 @@ include('banner.php');
 ?>
  
         <center>
-       <font color="white"><h2 >Registro de inventario</h2>
+       <font color="white"><h2 >Registro de Stock</h2>
 	  </center>	  
 	  <!-- Formulario !-->
      <div class="container">

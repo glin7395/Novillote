@@ -60,6 +60,8 @@
     
   <form id="form3" name="form1" method="post" action="neg_registro_clientes.php">
       
+     
+
     <div class="form-group">
       <label class="control-label col-sm-2" for="nombre_cliente">Nombre:</label>
       <div class="col-sm-10">
@@ -88,15 +90,71 @@
       <label class="control-label col-sm-2" for="contrasena_cliente">Contraseña:</label>
       <div class="col-sm-10">          
         <input type="contrasena_cliente" class="form-control" id="contrasena_cliente" placeholder="Ingresa  tu Contraseña" name="contrasena_cliente">
-         <br> <br>
       </div>
-    </div>                             
-<center>
-</font>
- <input type="submit" name="button" id="button"   class="btn btn-danger role"  value="Registrate" />
-</center>
-</div>
+    </div> 
 
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="genero_idgenero">Genero:</label>
+      <div class="col-sm-6 col-md-4">
+      <select name="genero_idgenero" class="form-control btn btn-default dropdown-toggle"  style="height: 110%;" >
+        <?php
+        
+        include ('conexion.php');
+                 $sql2 = "SELECT * FROM genero ";
+           if( !$result2 = $db->query($sql2))
+              {
+            die ('No conecta ['.$db->error.']');
+             }
+            while($row2 = $result2->fetch_assoc())
+            {
+            $iddgenero=stripslashes($row2["idgenero"]);
+            $ttipogenero=stripslashes($row2["tipo_de_genero"]);
+            echo "<option value =$iddgenero>$ttipogenero</option>";
+            }
+                
+                ?>
+                </select>
+              </div>
+            </div>
+  
+   <div class="form-group">
+      <label class="control-label col-sm-2" for="tipodocumento_iddocumento">Tipo de documento:</label>
+      <div class="col-sm-6 col-md-4">
+      <select name="tipodocumento_iddocumento" class="form-control btn btn-default dropdown-toggle" style="height: 110%;">
+          <?php
+        
+        include ('conexion.php');
+                 $sql3 = "SELECT * FROM tipodocumento ";
+           if( !$result3 = $db->query($sql3))
+              {
+            die ('No conecta ['.$db->error.']');
+             }
+            while($row3 = $result3->fetch_assoc())
+            {
+            $idddocumento=stripslashes($row3["iddocumento"]);
+            $ttipodocumento=stripslashes($row3["tipo_de_documento"]);
+            echo "<option value =$idddocumento>$ttipodocumento</option>";
+            }
+                ?>
+
+                
+      
+      </select>
+                 
+      </div>
+
+    </div>  
+
+
+
+</font>
+<center>
+  <br>
+ <input type="submit" name="button" id="button"   class="btn btn-danger role"  value="Registrate" /></center>
+
+
+</div>
+</form>
 <br>
 <div class="container"  style="background-color: rgb(25,45,45);opacity:0.8;}  ">
                  <center>><div style= 'color:#FFFFFF; font-size:12px;'>Ingresaras al sistema con tu Correo Electronico / E-mail</div></center>

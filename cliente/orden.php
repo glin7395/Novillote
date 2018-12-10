@@ -26,9 +26,11 @@ if(!isset($_REQUEST['id'])){
     include ("banner_carrito.html");
     ?>
 <div class="container-fuid" align="center" >
-    <h1>Orden</h1><br>
-    <p>su pedido ha sido Enviado. ID de Orden # <?php echo $_GET['id']; ?></p><br><br>
+    <font color="white">
+    <h1 class="fondoheaders   " style="background-color:rgb(52, 58, 64);opacity:0.8;}  ">Tu orden se realizo Correctamente</h1><br>
+    <p class="fondoheaders">su pedido ha sido Enviado. ID de Orden # <?php echo $_GET['id']; ?></p><br><br>
     <a href="index_carrito.php" class="btn btn-warning"><i class="glyphicon glyphicon-menu-left"></i> Regresar</a>
+    </font>
 </div>
 </body>
 </html>
