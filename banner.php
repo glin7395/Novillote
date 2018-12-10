@@ -56,6 +56,17 @@
             
             </ul>
          </li>
+
+         <li class='has-sub'><a href='#'><span>Stock</span></a>
+            <ul>
+               <li><a href='reg_stock.php'><span>Registrar Stock</span></a></li>
+              <li class='has-sub'><a href='listar_stock.php'><span>Ver Stock</span></a>
+          
+         </li>
+            
+            </ul>
+         </li>
+     
      
 
 

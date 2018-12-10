@@ -18,7 +18,7 @@
 
 <body>
 <?php
-include('banner_pro.html');
+include('banner.php');
 ?>
  
         <center>
@@ -79,7 +79,7 @@ include('banner_pro.html');
 
 
 
-    <input type="submit" name="button" id="button" value="Registrar usuario"  class="btn btn-danger role=" />
+    <input type="submit" name="button" id="button" value="Registrar Stock"  class="btn btn-danger role=" />
   </form>
 </div>
 </font>

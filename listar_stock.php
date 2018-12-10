@@ -18,7 +18,7 @@
 <body>
 <table width="120" height="120" border="0" align="center" >
   <tr>
-    <td width="120" height="120"><?php include ("banner_pro.html")
+    <td width="120" height="120"><?php include ("banner.php")
     ?></td>
   </tr>
   <font color="white"><tr>
