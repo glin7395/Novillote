@@ -28,7 +28,7 @@
       <p><?php
 	  class Registro 
 	  {
-		public function Registrar ($nombre_cliente,$apellido_cliente,$celular,$email_cliente,$contrasena_cliente,$tipo_documento,$genero_cliente )
+		public function Registrar ($nombre_cliente,$apellido_cliente,$celular,$email_cliente,$contrasena_cliente,$numerodocumento_cliente,$tipo_documento_cliente,$genero_idgenero )
 		  { 
 			 include ('conexion.php');
 			 // consultar usuario existente
@@ -46,8 +46,8 @@
 			 // 
 			 if ($existencia=="0")
 			 {
-		 $sql2 = "INSERT INTO  clientes (idclientes,nombre_cliente,apellido_cliente,celular,email_cliente,contrasena_cliente,tipo_documento_cliente,genero_idgenero) 
-		 VALUES (NULL,'$nombre_cliente','$apellido_cliente','$celular','$email_cliente','$contrasena_cliente','$tipo_documento','$genero_cliente')";
+		 $sql2 = "INSERT INTO  clientes (idclientes,nombre_cliente,apellido_cliente,celular,email_cliente,contrasena_cliente,numerodocumento_cliente,tipo_documento_cliente,genero_idgenero) 
+		 VALUES (NULL,'$nombre_cliente','$apellido_cliente','$celular','$email_cliente','$contrasena_cliente','$numerodocumento_cliente','$tipo_documento_cliente','$genero_idgenero')";
 		 if( !$result2 = $db->query($sql2))
 		 					{
 						die ('No conecta ['.$db->error.']');
@@ -64,7 +64,7 @@
 	  }
 	   
 	$nuevo=new Registro();	
-	$nuevo->Registrar($_POST["nombre_cliente"],$_POST["apellido_cliente"],$_POST["celular"],$_POST["email_cliente"],$_POST["contrasena_cliente"],$_POST["tipodocumento_iddocumento"],$_POST["genero_idgenero"])
+	$nuevo->Registrar($_POST["nombre_cliente"],$_POST["apellido_cliente"],$_POST["celular"],$_POST["email_cliente"],$_POST["contrasena_cliente"],$_POST["numerodocumento_cliente"],$_POST["tipodocumento_iddocumento"],$_POST["genero_idgenero"])
 	  	  ?>    
         
       </p>

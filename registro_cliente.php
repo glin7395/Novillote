@@ -89,9 +89,18 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="contrasena_cliente">Contraseña:</label>
       <div class="col-sm-10">          
-        <input type="contrasena_cliente" class="form-control" id="contrasena_cliente" placeholder="Ingresa  tu Contraseña" name="contrasena_cliente">
+        <input type="contrasena_cliente" class="form-control" id="contrasena_cliente" placeholder="Cree su Contraseña" name="contrasena_cliente">
       </div>
     </div> 
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="contrasena_cliente">Documento:</label>
+      <div class="col-sm-10">          
+        <input type="numerodocumento_cliente" class="form-control" id="numerodocumento_cliente" placeholder="Ingresa su numero de documento" name="numerodocumento_cliente">
+      </div>
+    </div> 
+
+
+
 
      <div class="form-group">
       <label class="control-label col-sm-2" for="genero_idgenero">Genero:</label>

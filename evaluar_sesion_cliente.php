@@ -38,7 +38,7 @@ session_start();
 			{
 				$_SESSION["estado"]="1";
 				$_SESSION["email_cliente"]=$email_cliente;
-			     header ("location:index_cliente.php");
+			     header ("location:index_carrito.php");
 
 			}		
 		 
