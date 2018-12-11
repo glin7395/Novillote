@@ -83,7 +83,7 @@
                                   </tr><br>
 
           
-              <th width="20" height="120" align="center" nowrap="now|rap">
+              <th width="20" height="120" align="center" nowrap="nowrap">
                <div class="row">
                 <br>
                   <div class="col-md-12" align="center">
