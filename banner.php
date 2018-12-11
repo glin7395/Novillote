@@ -50,7 +50,7 @@
          <li class='has-sub'><a href='#'><span>Categoria</span></a>
             <ul>
                <li><a href='reg_categoria_admin.php'><span>Registrar Categorias</span></a></li>
-              <li class='has-sub'><a href='#'><span>Ver Categorias</span></a>
+              <li class='has-sub'><a href='listar_Categorias_admin.php'><span>Ver Categorias</span></a>
           
          </li>
             
@@ -87,6 +87,7 @@
                
                 <li class='last'><a href='listar_ventas.php' target="iframe_a"><span>Listar Ventas</span></a></li>
                  <li class='last'><a href='listar_detalleventa.php' target="iframe_a"><span>Listar informacion</span></a></li>
+                  
       </ul>
   </li>
 

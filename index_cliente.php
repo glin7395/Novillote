@@ -28,7 +28,7 @@ include('banner_cliente.html');
           <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
               <h4 class="text-white">WE ARE BIG, WE ARE POWERFUL, PGLO</h4>
-              <p class="text-muted">Facebook , Instagram , Twitter , Xvideos , Brazzers , Redtube , Youporn </p>
+              <p class="text-muted">Facebook , Instagram , Twitter  </p>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
               <h4 class="text-white">Contacto</h4>
@@ -245,7 +245,7 @@ include('banner_cliente.html');
 
  <footer  class="foot">
       <div class="container">
-        <p class="m-0 text-center text-white">Derechos reservados © 2017 Fumanji</p>
+        <p class="m-0 text-center text-white">Derechos reservados © 2017 </p>
           </div>
             </footer> 
 </body>

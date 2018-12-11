@@ -18,7 +18,7 @@
 </head>
   
 <body>
-<?php include ('banner.html')
+<?php include ('banner.php')
 ?>
 <table width="120"  height="260" border="0" align="center">
 <form id="form1" name="form1" method="post" action="neg_registrar_venta.php">
@@ -28,15 +28,7 @@
       
       <table width="140" height="259" border="0">
         
-        <tr>
-          <font color="white"><td ><div align="center"class="fondotablas" >FECHA</div></td></font>
-          <td ><div align="center">
-
- <input type="date" name="fecha" min="2018-10-25"
-                                 max="2020-12-30" >
-          </div></td>
-        </tr>
-          <tr>
+<tr>
           <td ><div align="center"class="fondotablas">NOMBRE DEL CLIENTE</div></td>
           <td ><div align="center">
             <select name="clientes_idclientes" id="clientes_idclientes">
@@ -60,23 +52,42 @@
             </select>
           </div></td>
         </tr>
+
         <tr>
-          <td><div align="center"class="fondotablas">NOMBRE DEL VENDEDOR</div></td>
+          <font color="white"><td ><div align="center"class="fondotablas" >FECHA</div></td></font>
           <td ><div align="center">
-            <select name="persona_idpersona" id="persona_idpersona">
+
+ <input type="date" name="fecha_pedido" min="2018-10-25"
+                                 max="2020-12-30" >
+          </div></td>
+        </tr>
+
+
+            <div class="form-group">
+      <label class="control-label col-sm-2" for="total_pedido">pedido:</label>
+      <div class="col-sm-10">
+        <input type="total_pedido" class="form-control" id="total_pedido"  name="total_pedido">
+      </div>
+    </div>
+
+          
+        <tr>
+          <td><div align="center"class="fondotablas">Estados</div></td>
+          <td ><div align="center">
+            <select name="estados_idestados" id="estados_idestados">
               <option value="seleccione:" >seleccione</option>
               <?php
 				
 				include ('conexion.php');
-                 $sql3 = "SELECT * FROM persona ";
+                 $sql3 = "SELECT * FROM estados ";
 					 if( !$result3 = $db->query($sql3))
 					 		{
 						die ('No conecta ['.$db->error.']');
 						 }
 						while($row3 = $result3->fetch_assoc())
 						{
-						$iddpersona=stripslashes($row3["idpersona"]);
-						$nnombre=stripslashes($row3["nombre"]);
+						$iddpersona=stripslashes($row3["idestados"]);
+						$nnombre=stripslashes($row3["nombre_estado"]);
 						echo "<option value =$iddpersona>$nnombre</option>";
 						}
                 

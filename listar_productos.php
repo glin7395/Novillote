@@ -45,7 +45,7 @@
         	 echo "<td>ID</td>";
 			 echo "<td>Producto</td>";
 			 echo "<td>Informacion</td>";
-			 echo "<td>imagen</td>";
+			
 			 echo "<td>Fecha</td>";
          	 echo"<td>Precio</td>";
          	 echo"<td>Categoria</td>";
@@ -58,7 +58,7 @@
 			$iddplato=stripslashes($row["idplato"]);
 			$nnombreplato=stripslashes($row["nombre_plato"]);
 			$ddescripcion=stripslashes($row["descripcion_plato"]);
-			$img=stripslashes($row["imagen_plato"]);
+		
 			$ffecha=stripslashes($row["fecha_plato"]);
 			$pprecio=stripslashes($row["precio_plato"]);
 			$iddcategoria=stripslashes($row["categoria_idcategoria"]);
@@ -81,7 +81,7 @@
 				echo "<td>$iddplato</td>";
          		echo "<td>$nnombreplato</td>";
 				echo "<td>$ddescripcion</td>";
-				echo "<td>$img</td>";
+		
 				echo "<td>$ffecha</td>";
 				echo "<td>$pprecio</td>";
 				echo"<td>$categorias</td>";

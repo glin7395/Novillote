@@ -57,7 +57,7 @@ include('banner.php');
 
  <footer  class="foot">
       <div class="container">
-        <p class="m-0 text-center text-white">Derechos reservados © 2017 Fumanji</p>
+        <p class="m-0 text-center text-white">Derechos reservados © 2017</p>
           </div>
             </footer> 
 </body>
