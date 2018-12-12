@@ -18,7 +18,7 @@
 
 <body>
 <?php
-include('banner.php');
+include('banner_pro.html');
 ?>
  
         <center>

@@ -6,6 +6,7 @@ session_start();
  {
 	 public function evaluar ($contrasena,$numerodocumento)
 	 {
+	 	$contrasenam= md5($contrasena);
 
 		 $cont='0';
 		 include ("conexion.php");
@@ -25,7 +26,7 @@ session_start();
 			}
 			$ffk_id_rol=stripslashes($row["des_rol"]);
 			
-			if(($ddocumento==$numerodocumento)&&($ccontrasena==$contrasena))
+			if(($ddocumento==$numerodocumento)&&($ccontrasena==$contrasenam))
 			{
 			$cont=$cont+1;
 			}

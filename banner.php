@@ -129,7 +129,7 @@
 <?php 
 echo "Usuario #Identificacion : ";
 echo $_SESSION['numerodocumento'];
- ?>
+?>
 
 
 
